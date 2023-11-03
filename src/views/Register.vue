@@ -63,10 +63,15 @@
       </div>
     </div>
   </div>
+  <navbuttom/>
 </template>
 
 <script>
+import navbuttom from '@/components/navbuttom.vue';
 export default {
+  components:{
+    navbuttom,
+  },
   data() {
     return {
       username: '',
@@ -133,7 +138,7 @@ signUp() {
 }
 .card {
   border-radius: 1rem;
-  background: linear-gradient(to bottom, white 50%, #ADD8E6); 
+  background: linear-gradient(to bottom, white 50%, #ADD8E6); /* Vertical gradient from white to light blue */
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);

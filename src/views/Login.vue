@@ -46,12 +46,16 @@
       </div>
     </div>
   </div>
+  <navbuttom/>
 </template>
 
 <script>
 
-
+import navbuttom from '@/components/navbuttom.vue';
 export default {
+  components:{
+    navbuttom,
+  },
   data() {
     return {
       email: '',

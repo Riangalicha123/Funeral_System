@@ -1,16 +1,13 @@
-// router.js
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue'; // Import your existing components
+import { createRouter, createWebHistory } from 'vue-router'
+import Homeview from '../views/HomeView.vue';
 import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
-import Payment from '../views/Payment.vue';
-
 const routes = [
   {
-    path: '/',
+    path: '/', // Add a new route for registration
     name: 'home',
-    component: HomeView,
+    component: Homeview,
   },
   {
     path: '/register', // Add a new route for registration
@@ -22,23 +19,16 @@ const routes = [
     name: 'login',
     component: Login,
   },
-  
   {
     path: '/account', // Add a new route for registration
     name: 'account',
     component: Account,
   },
-  {
-    path: '/payment', // Add a new route for registration
-    name: 'payment',
-    component: Payment,
-  },
-  // Add other routes as needed
-];
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
-});
+  routes
+})
 
-export default router;
+export default router
