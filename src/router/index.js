@@ -3,6 +3,7 @@ import Homeview from '../views/HomeView.vue';
 import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
+import Admin from '../views/Admin.vue';
 const routes = [
   {
     path: '/', // Add a new route for registration
@@ -23,6 +24,11 @@ const routes = [
     path: '/account', // Add a new route for registration
     name: 'account',
     component: Account,
+  },
+  {
+    path: '/admin', // Add a new route for registration
+    name: 'admin',
+    component: Admin,
   },
 ]
 

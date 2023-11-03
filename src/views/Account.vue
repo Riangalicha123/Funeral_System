@@ -14,7 +14,7 @@
               <div class="card-body p-4 p-lg-3 text-black">
                 <form class="form" @submit.prevent="signUp">
                   <!-- Title -->
-                  <p class="title"> Agent Create Account</p>
+                  <p class="title">Agent Create Account</p>
 
                   <!-- First Name and Last Name Inputs -->
                   <div class="flex">

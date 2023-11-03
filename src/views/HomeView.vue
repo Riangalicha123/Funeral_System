@@ -2,8 +2,7 @@
   <v-navigation-drawer v-model="drawer" app location="right">
     <v-list-item>
       <v-list-title-content>
-        <v-list-item-title class="title"> Application </v-list-item-title>
-        <v-list-item-subtitle> subtext </v-list-item-subtitle>
+        <v-list-item-title class="title"> My Account </v-list-item-title>
       </v-list-title-content>
     </v-list-item>
     <v-divider></v-divider>
