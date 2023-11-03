@@ -1,229 +1,170 @@
 <template>
-    <div class="container">
-      <div class="card">
-        <h1 class="title">Sign Up</h1>
-        <form @submit.prevent="createAccount" class="form">
-          <div class="flex">
-            <label>
-              <input type="text" id="name" v-model="name" required>
-              <span>Name</span>
-            </label>
-            <label>
-              <input type="email" id="email" v-model="email" required>
-              <span>Email</span>
-            </label>
-            <label>
-              <input type="tel" id="contact" v-model="contact" required>
-              <span>Contact Number</span>
-            </label>
-            <label>
-                <input type="tel" id="adress" v-model="adress" required>
-                <span>Address</span>
-              </label>
-            <label>
-              <input type="password" id="password" v-model="password" required>
-              <span>Password</span>
-            </label>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-12">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="row g-0">
+              <!-- Left Column (Image) -->
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <!-- Your image here -->
+              </div>
+
+              <!-- Right Column (Registration Form) -->
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+                  <form class="form" @submit.prevent="createAccount">
+                    <!-- Title -->
+                    <p class="title">Create Account</p>
+
+                    <!-- First Name Input -->
+                    <div class="flex">
+                      <div class="input-wrapper">
+                        <label>
+                          <span>Name</span>
+                          <input type="text" id="name" v-model="name" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="flex">
+                      <div class="input-wrapper">
+                        <label>
+                          <span>Email</span>
+                          <input type="email" id="email" v-model="email" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Contact Number Input -->
+                    <div class="flex">
+                      <div class="input-wrapper">
+                        <label>
+                          <span>Contact Number</span>
+                          <input type="tel" id="contact" v-model="contact" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Address Input -->
+                    <div class="flex">
+                      <div class="input-wrapper">
+                        <label>
+                          <span>Address</span>
+                          <input type="text" id="address" v-model="address" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="flex">
+                      <div class="input-wrapper">
+                        <label>
+                          <span>Password</span>
+                          <input type="password" id="password" v-model="password" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Create Account Button -->
+                    <button class="submit" type="submit">Create Account</button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="submit">Create Account</button>
-        </form>
-        <div class="message">
-          <p>Already have an account? <a href="#" class="signin">Sign in</a></p>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        name: '',
-        email: '',
-        contact: '',
-        password: '',
-      };
-    },
-    methods: {
-      createAccount() {
-        // Handle user account creation logic here
-        console.log('Creating account with the following details:');
-        console.log('Name:', this.name);
-        console.log('Email:', this.email);
-        console.log('Contact Number:', this.contact);
-        console.log('Password:', this.password);
-      },
-    },
-  };
-  </script>
-  
-  <style scoped>
+  </div>
+</template>
+
+<style scoped>
+  /* Your CSS styles here */
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+  }
+
+  .card-wrapper {
+    border: 1px solid #ccc; /* Add a light border to the card */
+    border-radius: 5px;
     width: 100%;
-    text-align: center;
-    margin: 2%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 20%;
   }
-  
+
   .card {
+    width: 170%;
+    height: 90%;
+    max-width: none;
     background: linear-gradient(to bottom, white 50%, #ADD8E6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
-    width: 90%;
-    max-width: 400px;
-    text-align: left;
+  }
+
+  .form {
     margin: 20px;
-    margin-top: 100px;
+    padding: 20px;
   }
-  
-  .title {
-    font-size: 24px;
-    color: royalblue;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 30px;
-    transition: 0.3s ease;
-  }
-  
-  .title::before, .title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 35%;
-    background-color: royalblue;
-    transform: translateX(-50%);
-  }
-  
-  .title::before {
-    width: 18px;
-    height: 18px;
-    background-color: royalblue;
-    transition: 0.3s ease;
-  }
-  
-  .title::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-color: royalblue;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
-    transition: box-shadow 0.3s;
-  }
-  
-  .title:hover::after {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .message, .signin {
-    color: rgba(56, 53, 53, 0.822);
-    font-size: 16px;
-    transition: 0.3s ease;
-    text-align: center;
-  }
-  
-  .signin {
-    text-align: center;
-    transition: 0.3s ease;
-  }
-  
-  .signin a {
-    color: royalblue;
-    transition: 0.3s ease;
-  }
-  
-  .signin a:hover {
-    text-decoration: underline royalblue;
-  }
-  
+
   .flex {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    transition: 0.3s ease;
+    flex-wrap: wrap;
+    gap: 20px;
   }
-  
-  .form label {
-    position: relative;
+
+  .input-wrapper {
+    flex: 1;
+    width: 100%;
+  }
+
+  /* Style the input fields and labels within the input wrappers */
+  .input-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-wrapper input[type="text"],
+  .input-wrapper input[type="email"],
+  .input-wrapper input[type="tel"],
+  .input-wrapper input[type="password"] {
+    width: 100%;
+    padding: 5px;
     margin-bottom: 10px;
-  }
-  
-  .form label .input {
-    width: 100%;
-    padding: 10px 10px 20px 10px;
-    outline: 0;
-    border: 1px solid darkgrey;
-    border-radius: 10px;
-    transition: 0.3s ease;
-  }
-  
-  .form label .input + span {
-    position: absolute;
-    left: 10px;
-    top: 25px;
-    color: darkgray;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
-  
-  .form label .input:placeholder-shown + span {
-    top: 15px;
-    font-size: 0.9em;
-    transition: 0.3s ease;
-  }
-  
-  .form label .input:focus + span, .form label .input:valid + span {
-    top: 0px;
-    font-size: 0.7em;
-    font-weight: 600;
-    transition: 0.3s ease;
-  }
-  
-  .form label .input:valid + span {
-    color: darkgray;
-    transition: 0.3s ease;
-  }
-  
-  .submit {
-    border: none;
-    outline: none;
-    background-color: royalblue;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
     font-size: 16px;
-    transition: 0.3s ease;
+  }
+
+  .submit {
     width: 100%;
-  }
-  
-  .submit:hover {
-    background-color: rgba(11, 69, 243, 0.9);
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
-    transition: 0.3s ease;
   }
-  
-  @keyframes pulse {
-    from {
-      transform: scale(0.9);
-      opacity: 1;
-    }
-  
-    to {
-      transform: scale(1.8);
-      opacity: 0;
+
+  .title {
+    font-size: 30px;
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px;
+    margin-top: -30px;
+  }
+
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
     }
   }
-  </style>
-  
+</style>
