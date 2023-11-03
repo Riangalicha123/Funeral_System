@@ -1,4 +1,4 @@
-# funeralfrontend
+# frontend
 
 ## Project setup
 ```
