@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: skyblue;">
+    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: rgb(25, 152, 194);">
       <v-img
         height="140"
         class="pa-4"

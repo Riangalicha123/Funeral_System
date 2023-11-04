@@ -77,7 +77,7 @@ export default {
 }
 
 .app {
-  background: rgb(219, 216, 216);
+  background: rgb(255, 255, 255);
   min-height: 100vh;
 }
 

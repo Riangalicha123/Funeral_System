@@ -1,4 +1,10 @@
 <template>
+  <v-app-bar color="rgb(25, 152, 194)" dark dense>
+    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
+    <v-spacer></v-spacer>
+    <template v-slot:append>
+    </template>
+  </v-app-bar>
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -14,22 +20,27 @@
               <div class="card-body p-4 p-lg-3 text-black">
                 <form class="form" @submit.prevent="signUp">
                   <!-- Title -->
-                  <p class="title">Agent Create Account</p>
+                  <p class="title">Create Account</p>
 
                   <!-- First Name and Last Name Inputs -->
                   <div class="flex">
-                    <span>Name</span>
+                    <span>First Name</span>
                     <label>
-                      <input required="" placeholder="" type="text" class="input" v-model="username" />
+                      <input required="" placeholder="" type="text" class="input" v-model="firstname" />
                       
                     </label>
                   </div>
-
-                  <!-- Email Input -->
                   <div class="flex">
-                    <span>Email</span>
+                    <span>Middle Name</span>
                       <label>
-                          <input required="" placeholder="" type="email" class="input" v-model="email" />
+                          <input required="" placeholder="" type="text" class="input" v-model="middlename" />
+                          
+                        </label>
+                  </div>
+                  <div class="flex">
+                    <span>Last Name</span>
+                      <label>
+                          <input required="" placeholder="" type="text" class="input" v-model="lastname" />
                           
                         </label>
                   </div>
@@ -40,12 +51,10 @@
                           
                         </label>
                   </div>
-
-                  <!-- Password Inputs -->
                   <div class="flex">
+                    <span>Email</span>
                       <label>
-                        <span>Address</span>
-                          <input required="" placeholder="" type="address" class="input" v-model="address" />
+                          <input required="" placeholder="" type="email" class="input" v-model="email" />
                           
                         </label>
                   </div>
@@ -58,12 +67,8 @@
                         </label>
                   </div>
                   
-
-                  <!-- Sign-Up Button -->
                   <button class="submit" type="submit">Create Account</button>
 
-                  
-                 
                 </form>
               </div>
             </div>
@@ -83,7 +88,10 @@ export default {
   },
   data() {
     return {
-      username: '',
+      firstname: '',
+      middlename: '',
+      lastname: '',
+      contact: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -102,7 +110,10 @@ signUp() {
 
   // Create a user object with the form data
   const user = {
-    username: this.username,
+    firstname: this.firstname,
+    middlename: this.middlename,
+    lastname: this.lastname,
+    contact: this.contact,
     email: this.email,
     password: this.password,
   };
@@ -143,19 +154,19 @@ signUp() {
   height: 100vh;
   width: 100%;
   text-align: center;
-  margin: 2%;
+  margin: 1%;
 }
 .card {
   border-radius: 1rem;
   background: linear-gradient(to bottom, white 50%, #ADD8E6); /* Vertical gradient from white to light blue */
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
   width: 90%;
   max-width: 400px;
   text-align: left;
-  margin: 20px;
-  margin-top: 100px;
+  margin: 10px;
+  margin-top: 50px;
 }
 
 
@@ -202,7 +213,7 @@ signUp() {
   display: flex;
   flex-direction: column; /* Adjusted to stack labels vertically */
   width: 100%; /* Adjust the width of the form for mobile */
-  gap: 10px; /* Adjusted the gap to add spacing between labels */
+  gap: 3px; /* Adjusted the gap to add spacing between labels */
   transition: 0.3s ease;
 }
 

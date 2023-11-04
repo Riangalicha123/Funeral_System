@@ -1,4 +1,10 @@
 <template>
+  <v-app-bar color="rgb(25, 152, 194)" dark dense>
+    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
+    <v-spacer></v-spacer>
+    <template v-slot:append>
+    </template>
+  </v-app-bar>
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
