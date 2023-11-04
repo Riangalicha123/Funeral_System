@@ -1,3 +1,4 @@
+
 <template>
   <div class="app">
     <v-navigation-drawer v-model="drawer" app location="right" class="white--text" dark color="light-blue">
@@ -9,13 +10,11 @@
       <v-divider></v-divider>
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-  
-          <v-list-title-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-title-content>
+          <template v-slot:prepend>
+          <v-icon >{{ item.icon }}</v-icon>
+        </template>
+
+        <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -41,10 +40,11 @@ export default {
   data: () => ({
     drawer: false, // Initially set to false
     items: [
-      { title: "Login", icon: "mdi-help-box", to: "/login" },
-      { title: "Register", icon: "mdi-help-box", to: "/register" },
-      { title: "Create Account", icon: "mdi-help-box", to: "/account" },
+      { title: "Login", icon: "mdi mdi-login", to: "/login" },
+      { title: "Register", icon: "mdi-account-plus", to: "/register" },
+      { title: "Create Account", icon: "mdi-account", to: "/account" },
     ],
+    
   }),
   methods: {
     openDrawer() {
@@ -55,9 +55,8 @@ export default {
 </script>
 
 <style>
-
 .v-navigation-drawer {
-  background: linear-gradient(to bottom right, rgb(25, 152, 194),white);
+  background: linear-gradient(to bottom right, rgb(25, 152, 194), white);
   width: 260px !important;
 }
 
@@ -66,24 +65,49 @@ export default {
 }
 
 .app {
-  background: rgb(219, 216, 216); 
+  background: rgb(219, 216, 216);
   min-height: 100vh;
 }
+
 .v-icon {
-  font-size: 34px;
+  font-size: 40px;
 }
 .v-list-item-title {
-  font-size: 25px !important; 
-  padding: 15px 16px; 
+  font-size: 17px !important; 
+  padding: 5px 1px; 
   margin: 10px 0;
   
 }
 .title{
-  font-size: 30px !important; 
+  font-size: 28px !important; 
 }
 .v-app-bar-title {
-  font-size: 37px ! important; 
+  font-size: 27px ! important; 
 }
 
-</style>
+.mdi {
+  font-size: 38px;
+  color: white !important;
+}
 
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px !important;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.item-title {
+  display: inline !important;
+  margin-left: 10px !important;
+}
+</style>

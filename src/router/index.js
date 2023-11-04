@@ -4,6 +4,7 @@ import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin.vue';
+
 const routes = [
   {
     path: '/', // Add a new route for registration

@@ -24,7 +24,6 @@ export default {
   }),
 };
 </script>
-
 <style>
 .custom-bottom-nav {
   background-color: rgb(25, 152, 194); /* Change to your desired background color */
