@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer v-model="drawer" app style="background-color: skyblue;">
+    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: skyblue;">
       <v-img
         height="140"
         class="pa-4"
@@ -7,19 +7,16 @@
       >
       </v-img>
       <div class="text-center">
-          <h2 class="white--text">Funeral Homes Co.</h2>
+          <h2 class="red--text">Funeral Homes Co.</h2>
         </div>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item v-for="[icon, text] in links" :key="icon" link>
-          <v-list-item-icon>
-            <v-icon>{{ icon }}</v-icon>
-          </v-list-item-icon>
-  
-          <v-list-item-content>
-            <v-list-item-title>{{ text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <v-list-item v-for="link in links" :key="link.icon" :to="link.to" link>
+          <template v-slot:prepend>
+          <v-icon >{{ link.icon }}</v-icon>
+        </template>
+        <v-list-item-title>{{ link.text }}</v-list-item-title>
+      </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </template>
@@ -27,15 +24,12 @@
   <script>
   export default {
     name: "Sidebar",
-    
+    drawer: false,
     data() {
       return {
         links: [
-          ["mdi-microsoft-windows", "Dashboard"],
-          ["mdi-account", "Profile"],
-          ["mdi-clipboard-list-outline", "Products"],
-          ["mdi-card-account-details-outline", "Orders"],
-          ["mdi-cog", "System Setting"],
+          {icon: "mdi-microsoft-windows", text: "Dashboard", to:"/admin"},
+          {icon: "mdi-account", text: "PlanHolder", to: "/planholder"}
         ],
       };
     },

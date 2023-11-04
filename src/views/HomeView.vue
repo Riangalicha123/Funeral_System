@@ -1,7 +1,17 @@
-
 <template>
   <div class="app">
-    <v-navigation-drawer v-model="drawer" app location="right" class="white--text" dark color="light-blue">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      location="right"
+      class="white--text"
+      dark
+      color="light-blue"
+      style="
+        background: linear-gradient(to bottom right, rgb(25, 152, 194), white);
+        width: 260px !important;
+      "
+    >
       <v-list-item>
         <v-list-title-content>
           <v-list-item-title class="title"> My Account </v-list-item-title>
@@ -11,28 +21,31 @@
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <template v-slot:prepend>
-          <v-icon >{{ item.icon }}</v-icon>
-        </template>
+            <v-icon>{{ item.icon }}</v-icon>
+          </template>
 
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  
+
     <v-app-bar color="rgb(25, 152, 194)" dark dense>
       <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
       <v-spacer></v-spacer>
       <template v-slot:append>
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon
+          @click="drawer = !drawer"
+          style="font-size: 38px; color: white !important"
+        ></v-app-bar-nav-icon>
       </template>
     </v-app-bar>
-  
+
     <navbottom :openDrawer="openDrawer" />
   </div>
 </template>
 
 <script>
-import navbottom from '@/components/navbottom.vue'
+import navbottom from "@/components/navbottom.vue";
 export default {
   components: {
     navbottom,
@@ -44,7 +57,6 @@ export default {
       { title: "Register", icon: "mdi-account-plus", to: "/register" },
       { title: "Create Account", icon: "mdi-account", to: "/account" },
     ],
-    
   }),
   methods: {
     openDrawer() {
@@ -73,22 +85,21 @@ export default {
   font-size: 40px;
 }
 .v-list-item-title {
-  font-size: 17px !important; 
-  padding: 5px 1px; 
+  font-size: 17px !important;
+  padding: 5px 1px;
   margin: 10px 0;
-  
 }
-.title{
-  font-size: 28px !important; 
+.title {
+  font-size: 28px !important;
 }
 .v-app-bar-title {
-  font-size: 27px ! important; 
+  font-size: 27px !important;
 }
 
-.mdi {
+/* .mdi {
   font-size: 38px;
   color: white !important;
-}
+} */
 
 .list-container {
   display: flex;

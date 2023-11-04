@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Sidebar from "@/components/Sidebar.vue";
-import Topbar from "@/components/Topbar.vue";
-import Dashboard from "@/components/Dashboard.vue";
+import Sidebar from "@/components/Admin/Sidebar.vue";
+import Topbar from "@/components/Admin/Topbar.vue";
+import Dashboard from "@/components/Admin/Dashboard.vue";
 
 export default {
   name: "Admin",

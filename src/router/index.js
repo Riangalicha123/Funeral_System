@@ -3,7 +3,8 @@ import Homeview from '../views/HomeView.vue';
 import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
-import Admin from '../views/Admin.vue';
+import Admin from '../views/Admin/Admin.vue';
+import Planholder from '../views/Admin/Planholder.vue';
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/admin', // Add a new route for registration
     name: 'admin',
     component: Admin,
+  },
+  {
+    path: '/planholder', // Add a new route for registration
+    name: 'planholder',
+    component: Planholder,
   },
 ]
 
