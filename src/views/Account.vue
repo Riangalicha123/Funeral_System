@@ -173,7 +173,7 @@ signUp() {
 
 /* Additional styles for the form */
 .title {
-  font-size: 24px; /* Adjust font size for mobile */
+  font-size: 15px; /* Adjust font size for mobile */
   color: royalblue;
   font-weight: 600;
   letter-spacing: -1px;

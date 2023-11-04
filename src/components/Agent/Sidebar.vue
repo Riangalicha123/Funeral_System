@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: rgb(25, 152, 194);">
+    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: skyblue;">
       <v-img
         height="140"
         class="pa-4"
@@ -28,8 +28,8 @@
     data() {
       return {
         links: [
-          {icon: "mdi-microsoft-windows", text: "Dashboard", to:"/admin"},
-          {icon: "mdi-account", text: "PlanHolder", to: "/planholder"},
+        {icon: "mdi-account", text: "Payment Acceptance", to: "/payment"},
+          {icon: "mdi-account", text: "Agent", to: "/agent"}
         ],
       };
     },

@@ -67,7 +67,7 @@
                   <v-img src="https://randomuser.me/api/portraits/women/81.jpg" />
                 </v-avatar>
               </v-badge>
-              <span class="ml-3">ADMIN</span>
+              <span class="ml-3">Agent Account</span>
             </v-chip>
           </span>
         </template>
