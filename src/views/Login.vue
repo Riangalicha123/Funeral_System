@@ -46,15 +46,15 @@
       </div>
     </div>
   </div>
-  <navbuttom/>
+  <navbottom/>
 </template>
 
 <script>
 
-import navbuttom from '@/components/navbuttom.vue';
+import navbottom from '@/components/navbottom.vue';
 export default {
   components:{
-    navbuttom,
+    navbottom,
   },
   data() {
     return {

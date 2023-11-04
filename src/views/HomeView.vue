@@ -29,14 +29,14 @@
     </template>
   </v-app-bar>
 
-  <navbuttom/>
+  <navbottom/>
 </template>
 
 <script>
-import navbuttom from '@/components/navbuttom.vue'
+import navbottom from '@/components/navbottom.vue'
 export default {
     components:{
-        navbuttom,
+        navbottom,
     },
   data: () => ({
     drawer: null,
