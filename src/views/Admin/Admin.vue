@@ -10,7 +10,6 @@
     </v-main>
   </v-app>
 </template>
-
 <script>
 import Sidebar from "@/components/Admin/Sidebar.vue";
 import Topbar from "@/components/Admin/Topbar.vue";
