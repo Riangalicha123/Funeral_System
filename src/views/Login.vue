@@ -1,92 +1,108 @@
 <template>
   <v-app-bar color="rgb(25, 152, 194)" dark dense>
-    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
+    <v-app-bar-title class="white--text"
+      >Karamay Kaagapay Funeral Home.Co</v-app-bar-title
+    >
     <v-spacer></v-spacer>
-    <template v-slot:append>
-    </template>
+    <template v-slot:append> </template>
   </v-app-bar>
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-xl-10">
-        <div class="card">
-          <div class="row g-0">
+  <v-container class="py-5 h-100">
+    <v-row justify="center" align="center" class="h-100">
+      <v-col cols="12" sm="10" md="8">
+        <v-card class="elevation-3" shaped>
+          <v-row no-gutters>
             <!-- Left Column (Image) -->
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <!-- Your image here -->
-            </div>
+            <v-col md="6" lg="5" class="d-none d-md-block">
+              <v-img
+                :width="500"
+                :height="600"
+                aspect-ratio="16/9"
+                cover
+                src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+              ></v-img>
+            </v-col>
 
             <!-- Right Column (Login Form) -->
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-5 text-black">
-                <form class="form" @submit.prevent="login">
+            <v-col md="6" lg="7" class="d-flex align-center">
+              <v-card-text class="text-black">
+                <v-form @submit.prevent="login">
                   <!-- Title -->
-                  <p class="title">Login</p>
-                  <p class="message">Login to access your account.</p>
+                  <v-card-title class="title">Login</v-card-title>
+                  <v-card-subtitle class="message"
+                    >Login to access your account.</v-card-subtitle
+                  >
 
                   <!-- Email Input -->
-                  <div class="flex">
-                    <label>
-                      <input required="" placeholder="" type="email" class="input" v-model="email" />
-                      <span>Email</span>
-                    </label>
-                  </div>
+                  <v-text-field
+                    v-model="email"
+                    label="Email"
+                    required
+                    type="email"
+                  ></v-text-field>
 
                   <!-- Password Input -->
-                  <div class="flex">
-                    <label>
-                      <input required="" placeholder="" type="password" class="input" v-model="password" />
-                      <span>Password</span>
-                    </label>
-                  </div>
+                  <v-text-field
+                    v-model="password"
+                    label="Password"
+                    required
+                    type="password"
+                  ></v-text-field>
+
+                  <!-- Error Message -->
+                  <v-alert v-if="errorMsg" type="error">{{ errorMsg }}</v-alert>
 
                   <!-- Login Button -->
-                  <button class="submit" type="submit">Login</button>
+                  <v-btn class="submit" type="submit">Login</v-btn>
 
                   <!-- Registration Link -->
-                  <p class="signin">Don't have an account? <router-link to="/register">Sign up</router-link></p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <navbottom/>
+                  <v-card-subtitle class="signin"
+                    >Don't have an account?
+                    <router-link to="/register"
+                      >Sign up</router-link
+                    ></v-card-subtitle
+                  >
+                </v-form>
+              </v-card-text>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+  <navbottom />
 </template>
 
 <script>
-
-import navbottom from '@/components/navbottom.vue';
+import navbottom from "@/components/navbottom.vue";
 export default {
-  components:{
+  components: {
     navbottom,
   },
   data() {
     return {
-      email: '',
-      password: '',
-      errorMsg: '', // Add an error message property to display login errors
+      email: "",
+      password: "",
+      errorMsg: "", // Add an error message property to display login errors
     };
   },
   methods: {
     async login() {
       // Reset error message
-      this.errorMsg = '';
+      this.errorMsg = "";
 
       // Check if email and password are provided
       if (!this.email || !this.password) {
-        this.errorMsg = 'Please provide both email and password.';
+        this.errorMsg = "Please provide both email and password.";
         return;
       }
 
       // You can make an API request to authenticate the user here
       // Replace 'your-api-endpoint' with your actual API endpoint
       try {
-        const response = await fetch('https://your-api-endpoint.com/login', {
-          method: 'POST',
+        const response = await fetch("https://your-api-endpoint.com/login", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             email: this.email,
@@ -97,21 +113,20 @@ export default {
         if (response.ok) {
           // Authentication successful
           // Redirect the user to the admin site
-          this.$router.push('/admin');
+          this.$router.push("/admin");
         } else {
           // Handle authentication errors
-          this.errorMsg = 'Login failed. Please check your credentials.';
+          this.errorMsg = "Login failed. Please check your credentials.";
         }
       } catch (error) {
         // Handle network or other errors
-        this.errorMsg = 'An error occurred. Please try again later.';
+        this.errorMsg = "An error occurred. Please try again later.";
         console.error(error);
       }
     },
   },
 };
 </script>
-
 
 import Admin from 'Admin.vue';
 <style scoped>
@@ -124,12 +139,15 @@ import Admin from 'Admin.vue';
   width: 100%;
   text-align: center;
   margin: 2%;
-  
 }
 
 .card {
   border-radius: 1rem;
-  background: linear-gradient(to bottom, white 50%, #ADD8E6); /* Vertical gradient from white to light blue */
+  background: linear-gradient(
+    to bottom,
+    white 50%,
+    #add8e6
+  ); /* Vertical gradient from white to light blue */
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
@@ -188,7 +206,8 @@ import Admin from 'Admin.vue';
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.message, .signin {
+.message,
+.signin {
   color: rgba(56, 53, 53, 0.822);
   font-size: 16px; /* Adjust font size for mobile */
   transition: 0.3s ease;
@@ -239,7 +258,7 @@ import Admin from 'Admin.vue';
   position: absolute;
   left: 10px;
   top: 15px;
-  color:darkgray;
+  color: darkgray;
   font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
@@ -260,7 +279,7 @@ import Admin from 'Admin.vue';
 }
 
 .form label .input:valid + span {
-  color:darkgray;
+  color: darkgray;
   transition: 0.3s ease;
 }
 

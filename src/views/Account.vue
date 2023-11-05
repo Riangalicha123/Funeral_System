@@ -5,143 +5,133 @@
     <template v-slot:append>
     </template>
   </v-app-bar>
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem; background-color: #fff; padding: 20px; border-radius: 20px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) width:80%;">
-          <div class="row g-0">
+  <v-container class="py-5 h-100">
+    <v-row justify="center" align="center" class="h-100">
+      <v-col cols="12" sm="10" md="8">
+        <v-card class="elevation-3" shaped>
+          <v-row no-gutters>
             <!-- Left Column (Image) -->
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <!-- Your image here -->
-            </div>
+            <v-col md="6" lg="5" class="d-none d-md-block">
+              <v-img
+                :width="500"
+                :height="600"
+                aspect-ratio="16/9"
+                cover
+                src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+              ></v-img>
+            </v-col>
 
             <!-- Right Column (Registration Form) -->
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-3 text-black">
-                <form class="form" @submit.prevent="signUp">
+            <v-col md="6" lg="7" class="d-flex align-center">
+              <v-card-text class="text-black">
+                <v-form @submit.prevent="signUp">
                   <!-- Title -->
-                  <p class="title">Create Account</p>
+                  <v-card-title class="title">Create Account</v-card-title>
 
-                  <!-- First Name and Last Name Inputs -->
-                  <div class="flex">
-                    <span>First Name</span>
-                    <label>
-                      <input required="" placeholder="" type="text" class="input" v-model="firstname" />
-                      
-                    </label>
-                  </div>
-                  <div class="flex">
-                    <span>Middle Name</span>
-                      <label>
-                          <input required="" placeholder="" type="text" class="input" v-model="middlename" />
-                          
-                        </label>
-                  </div>
-                  <div class="flex">
-                    <span>Last Name</span>
-                      <label>
-                          <input required="" placeholder="" type="text" class="input" v-model="lastname" />
-                          
-                        </label>
-                  </div>
-                  <div class="flex">
-                      <label>
-                        <span>Contact Number</span>
-                          <input required="" placeholder="" type="contact" class="input" v-model="contact" />
-                          
-                        </label>
-                  </div>
-                  <div class="flex">
-                    <span>Email</span>
-                      <label>
-                          <input required="" placeholder="" type="email" class="input" v-model="email" />
-                          
-                        </label>
-                  </div>
+                  <!-- First Name, Middle Name, and Last Name Inputs -->
+                  <v-row>
+                    <v-col cols="12" sm="4">
+                      <v-text-field v-model="firstname" label="First Name" required></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="4">
+                      <v-text-field v-model="middlename" label="Middle Name" required></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="4">
+                      <v-text-field v-model="lastname" label="Last Name" required></v-text-field>
+                    </v-col>
+                  </v-row>
 
-                  <div class="flex">
-                    <span>Password</span>
-                      <label>
-                          <input required="" placeholder="" type="password" class="input" v-model="password" />
-                          
-                        </label>
-                  </div>
-                  
-                  <button class="submit" type="submit">Create Account</button>
+                  <!-- Contact Number Input -->
+                  <v-text-field v-model="contact" label="Contact Number" required></v-text-field>
+                   <!-- Address Input -->
+                  <v-text-field v-model="address" label="Address" required></v-text-field>
 
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                  <!-- Email Input -->
+                  <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+
+                  <!-- Password Input -->
+                  <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+
+                  <!-- Error Message -->
+                  <v-alert v-if="errorMsg" type="error">{{ errorMsg }}</v-alert>
+
+                  <!-- Create Account Button -->
+                  <v-btn class="submit" type="submit">Create Account</v-btn>
+                </v-form>
+              </v-card-text>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
   <navbottom/>
 </template>
 
 <script>
-import navbottom from '@/components/navbottom.vue';
+import navbottom from "@/components/navbottom.vue";
+
 export default {
-  components:{
+  components: {
     navbottom,
   },
   data() {
     return {
-      firstname: '',
-      middlename: '',
-      lastname: '',
-      contact: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-      errorMsg: '',
+      firstname: "",
+      middlename: "",
+      lastname: "",
+      contact: "",
+      address: "",
+      email: "",
+      password: "",
+      errorMsg: "",
     };
   },
   methods: {
-signUp() {
-  // Reset error message
-  this.errorMsg = '';
+    signUp() {
+      // Reset error message
+      this.errorMsg = "";
 
-  if (this.password !== this.confirmPassword) {
-    this.errorMsg = 'Passwords do not match.';
-    return;
-  }
-
-  // Create a user object with the form data
-  const user = {
-    firstname: this.firstname,
-    middlename: this.middlename,
-    lastname: this.lastname,
-    contact: this.contact,
-    email: this.email,
-    password: this.password,
-  };
-
-  // Send the user data to the server for registration (you need to replace this URL with your actual API endpoint)
-  fetch('https://your-api-endpoint.com/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  })
-    .then(response => {
-      if (response.ok) {
-        // Registration was successful, you can redirect the user to a login page or perform any other action
-        console.log('Registration successful');
-      } else {
-        // Handle registration errors
-        this.errorMsg = 'Registration failed. Please try again.';
+      if (this.password !== this.confirmPassword) {
+        this.errorMsg = "Passwords do not match.";
+        return;
       }
-    })
-    .catch(error => {
-      // Handle network or other errors
-      this.errorMsg = 'An error occurred. Please try again later.';
-      console.error(error);
-    });
-},
-},
+
+      // Create a user object with the form data
+      const user = {
+        firstname: this.firstname,
+        middlename: this.middlename,
+        lastname: this.lastname,
+        contact: this.contact,
+        address: this.address,
+        email: this.email,
+        password: this.password,
+      };
+
+      // Send the user data to the server for registration (replace with your API endpoint)
+      fetch("https://your-api-endpoint.com/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Registration was successful, you can redirect the user to a login page or perform any other action
+            console.log("Registration successful");
+          } else {
+            // Handle registration errors
+            this.errorMsg = "Registration failed. Please try again.";
+          }
+        })
+        .catch((error) => {
+          // Handle network or other errors
+          this.errorMsg = "An error occurred. Please try again later.";
+          console.error(error);
+        });
+    },
+  },
 };
 </script>
 
