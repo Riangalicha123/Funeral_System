@@ -6,6 +6,7 @@ import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import Planholder from '../views/Admin/Planholder.vue';
 import CreateAccount from '../views/Agent/CreateAccount.vue';
+import Chat from '../components/Chat.vue';
 const routes = [
   {
     path: '/', // Add a new route for registration
@@ -41,6 +42,11 @@ const routes = [
     path: '/agent', // Add a new route for registration
     name: 'agent',
     component: CreateAccount,
+  },
+  {
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
   },
 ]
 const router = createRouter({
