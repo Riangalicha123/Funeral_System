@@ -5,7 +5,11 @@ import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import Planholder from '../views/Admin/Planholder.vue';
+<<<<<<< Updated upstream
 import CreateAccount from '../views/Agent/CreateAccount.vue';
+=======
+import Chat from '../components/Chat.vue';
+>>>>>>> Stashed changes
 
 const routes = [
   {
@@ -39,9 +43,15 @@ const routes = [
     component: Planholder,
   },
   {
+<<<<<<< Updated upstream
     path: '/agent', // Add a new route for registration
     name: 'agent',
     component: CreateAccount,
+=======
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
+>>>>>>> Stashed changes
   },
 ]
 

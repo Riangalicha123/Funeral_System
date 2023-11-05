@@ -22,6 +22,7 @@
   </template>
   
   <script>
+
   export default {
     name: "Sidebar",
     drawer: false,
@@ -33,6 +34,7 @@
         ],
       };
     },
+   
   };
   </script>
   

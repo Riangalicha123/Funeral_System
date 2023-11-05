@@ -16,6 +16,7 @@
     "core-js": "^3.8.3",
     "favicons": "^7.1.4",
     "feather-icons": "^4.29.1",
+    "firebase": "^10.5.2",
     "register-service-worker": "^1.7.2",
     "roboto-fontface": "*",
     "vue": "^3.3.7",
