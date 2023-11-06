@@ -62,12 +62,12 @@
             </v-list-item-content>
           </v-list-item>
           <v-divider />
-          <v-list-item @click="viewProfile">
+          <v-list-item v-for="pro in pros" :key="pro.icon" :to="pro.to" link>
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              View Profile
+              {{pro.title}}
             </v-list-item-title>
           </v-list-item>
           <v-list-item @click="logOut">
@@ -89,6 +89,9 @@
       return {
         notificationDialogVisible: false,
         userMenuVisible: false,
+        pros: [
+        {title: "Profile", to:"/admin/profile"},
+      ],
       };
     },
     methods: {
