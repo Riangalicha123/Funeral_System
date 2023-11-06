@@ -26,41 +26,37 @@
             <v-col md="6" lg="7" class="d-flex align-center">
               <v-card-text class="text-black">
                 <v-form @submit.prevent="login">
-                  <!-- Title -->
                   <v-card-title class="title">Login</v-card-title>
                   <v-card-subtitle class="message"
                     >Login to access your account.</v-card-subtitle
                   >
-
-                  <!-- Email Input -->
-                  <v-text-field
-                    v-model="email"
-                    label="Email"
-                    required
-                    type="email"
-                  ></v-text-field>
-
-                  <!-- Password Input -->
-                  <v-text-field
-                    v-model="password"
-                    label="Password"
-                    required
-                    type="password"
-                  ></v-text-field>
-
-                  <!-- Error Message -->
-                  <v-alert v-if="errorMsg" type="error">{{ errorMsg }}</v-alert>
-
-                  <!-- Login Button -->
-                  <v-btn class="submit" type="submit">Login</v-btn>
-
-                  <!-- Registration Link -->
-                  <v-card-subtitle class="signin"
-                    >Don't have an account?
-                    <router-link to="/register"
-                      >Sign up</router-link
-                    ></v-card-subtitle
-                  >
+                  <br>
+                  <!-- Email Field -->
+                  <v-row>
+                    <v-col cols="12">
+                      <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <!-- Password Field -->
+                  <v-row>
+                    <v-col cols="12">
+                      <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <!-- Submit Button -->
+                  <v-row>
+                    <v-col cols="12">
+                      <v-btn type="submit" class="royal-blue-button">Login</v-btn>
+                    </v-col>
+                    <v-col cols="12">
+                      <v-card-subtitle class="signin">
+                        Don't have an account?
+                        <router-link to="/register">Sign up</router-link>
+                      </v-card-subtitle>
+                    </v-col>
+                   
+                  </v-row>
+                  
                 </v-form>
               </v-card-text>
             </v-col>
@@ -140,7 +136,15 @@ import Admin from 'Admin.vue';
   text-align: center;
   margin: 2%;
 }
-
+.royal-blue-button {
+  background-color: royalblue; 
+  color: white; 
+  width: 190%; 
+  height: 100%;
+  font-size: 20px; 
+  padding: 15px; 
+  text-align: center;
+ }
 .card {
   border-radius: 1rem;
   background: linear-gradient(

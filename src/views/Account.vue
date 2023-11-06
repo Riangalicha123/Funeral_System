@@ -1,131 +1,85 @@
 <template>
-  <v-app>
-    <v-app-bar color="rgb(25, 152, 194)" dark dense>
-      <v-app-bar-title class="white--text">
-        Karamay Kaagapay Funeral Home.Co
-      </v-app-bar-title>
-      <v-spacer></v-spacer>
-    </v-app-bar>
-    <v-container>
-      <v-row>
-        <v-col md="6" lg="5" class="d-none d-md-block">
-          <v-img
-            :width="500"
-            :height="600"
-            aspect-ratio="16/9"
-            cover
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-          ></v-img>
-        </v-col>
-        <v-col md="6" lg="7" class="d-flex align-center"> <!-- Adjust the size as needed -->
-          <v-card-text class="text-black">
-            <v-form @submit.prevent="signUp">
-              <!-- Your form fields here -->
-              <v-card-title
-            class="headline text-center"
-            style="color: rgb(25, 152, 194); font-size: 34px"
-          >Create an Account</v-card-title>
-              <v-row>
-                <v-col cols="12">
-                  <v-text-field
-                    v-model="fullName"
-                    label="Full Name"
-                    required
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="username"
-                    label="Username"
-                    required
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="email"
-                    label="Email"
-                    required
-                    type="email"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="password"
-                    label="Password"
-                    required
-                    type="password"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="confirmPassword"
-                    label="Confirm Password"
-                    required
-                    type="password"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12">
-                  <v-text-field
-                    v-model="address"
-                    label="Address"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" sm="4">
-                  <v-text-field
-                    v-model="age"
-                    label="Age"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="4">
-                  <v-text-field
-                    v-model="contactNumber"
-                    label="Contact Number"
-                    class="custom-text-field"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="4">
-                  <v-select
-                    v-model="gender"
-                    :items="['Male', 'Female', 'Other']"
-                    label="Gender"
-                    required
-                    class="custom-text-field"
-                  ></v-select>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" class="text-center">
-                  <v-btn
-                    color="rgb(25, 152, 194)"
-                    @click="signUp"
-                    class="extra-large-button"
-                  >
-                    Create Account
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-form>
-          </v-card-text>
-        </v-col>
-      </v-row>
-    </v-container>
-    <navbottom />
-  </v-app>
+  <v-app-bar color="rgb(25, 152, 194)" dark dense>
+    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
+    <v-spacer></v-spacer>
+    <template v-slot:append></template>
+  </v-app-bar>
+  <v-container class="py-5 h-100">
+    <v-row justify="center" align="center" class="h-100">
+      <v-col cols="12" sm="10" md="8">
+        <v-card class="elevation-3" shaped>
+          <v-row no-gutters>
+            <!-- Left Column (Image) -->
+            <v-col md="6" lg="5" class="d-none d-md-block">
+              <v-img
+                :width="500"
+                :height="740"
+                aspect-ratio="16/9"
+                cover
+                src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+              ></v-img>
+            </v-col>
+
+            <!-- Right Column (Login Form) -->
+            <v-col md="9" lg="7" class="d-flex align-center">
+              <v-card-text class="text-black">
+                <v-form @submit.prevent="submitForm">
+                  <v-card-title class="text-h5 blue--text text-center">Create Account</v-card-title>
+                  <v-row>
+                    <v-col cols="12">
+                      <v-text-field v-model="fullName" label="Full Name" required></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="username" label="Username" required></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="confirmPassword" label="Confirm Password" required type="password"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12">
+                      <v-text-field v-model="address" label="Address" required></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="age" label="Age" required type="number"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6">
+                      <v-text-field v-model="contactNumber" label="Contact Number" required type="tel"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12">
+                      <v-select v-model="gender" :items="genderOptions" label="Gender" required></v-select>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12">
+                      <v-btn type="submit" class="royal-blue-button">Submit</v-btn>
+                    </v-col>
+                  </v-row>
+                </v-form>
+              </v-card-text>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+  <navbottom />
 </template>
+
 
 <script>
 import navbottom from "@/components/navbottom.vue";
@@ -133,38 +87,30 @@ export default {
   components: {
     navbottom,
   },
+
   data() {
     return {
-      fullName: "",
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      address: "",
-      age: "",
-      contactNumber: "",
-      gender: "",
+      fullName: '',
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      address: '',
+      age: null,
+      gender: null,
+      genderOptions: ['Male', 'Female', 'Other'],
+      contactNumber: ''
     };
   },
   methods: {
-    signUp() {
-      // Handle form submission
-      console.log("User data:", {
-        fullName: this.fullName,
-        username: this.username,
-        email: this.email,
-        password: this.password,
-        confirmPassword: this.confirmPassword,
-        address: this.address,
-        age: this.age,
-        contactNumber: this.contactNumber,
-        gender: this.gender,
-      });
-    },
-  },
+    submitForm() {
+      
+    }
+  }
 };
 </script>
 
+import Admin from 'Admin.vue';
 <style scoped>
 /* Your CSS styles here */
 .container {
@@ -176,14 +122,27 @@ export default {
   text-align: center;
   margin: 2%;
 }
-
+.blue--text {
+  color: blue; 
+  font-size: 28px; 
+  padding: 10px; 
+}
+.royal-blue-button {
+  background-color: royalblue; 
+  color: white; 
+  width: 190%; 
+  height: 100%;
+  font-size: 20px; 
+  padding: 15px; 
+  text-align: center;
+ }
 .card {
   border-radius: 1rem;
   background: linear-gradient(
     to bottom,
     white 50%,
     #add8e6
-  ); /* Vertical gradient from white to light blue */
+  ); 
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
@@ -191,11 +150,10 @@ export default {
   max-width: 400px;
   text-align: left;
   margin: 20px;
-  margin-left: -50px;
-  margin-top: 100px;
+  margin-left: -60px;
+  margin-top: 50px;
 }
 
-/* Additional styles for the form */
 .title {
   font-size: 24px; /* Adjust font size for mobile */
   color: royalblue;
@@ -278,7 +236,7 @@ export default {
 
 .form label {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px; 
 }
 
 .form label .input {
@@ -293,7 +251,7 @@ export default {
 .form label .input + span {
   position: absolute;
   left: 10px;
-  top: 15px;
+  top: 10px;
   color: darkgray;
   font-size: 0.9em;
   cursor: text;
@@ -301,7 +259,7 @@ export default {
 }
 
 .form label .input:placeholder-shown + span {
-  top: 15px;
+  top: 10px;
   font-size: 0.9em;
   transition: 0.3s ease;
 }
@@ -325,7 +283,7 @@ export default {
   background-color: royalblue;
   padding: 10px;
   border-radius: 10px;
-  color: #fff;
+  color: rgb(66, 157, 187)!important;
   font-size: 16px;
   transition: 0.3s ease;
   width: 130%;
