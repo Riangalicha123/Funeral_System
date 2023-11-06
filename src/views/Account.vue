@@ -1,135 +1,162 @@
 <template>
-  <v-app-bar color="rgb(25, 152, 194)" dark dense>
-    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
-    <v-spacer></v-spacer>
-    <template v-slot:append>
-    </template>
-  </v-app-bar>
-  <v-container class="py-5 h-100">
-    <v-row justify="center" align="center" class="h-100">
-      <v-col cols="12" sm="10" md="8">
-        <v-card class="elevation-3" shaped>
-          <v-row no-gutters>
-            <!-- Left Column (Image) -->
-            <v-col md="6" lg="5" class="d-none d-md-block">
-              <v-img
-                :width="500"
-                :height="600"
-                aspect-ratio="16/9"
-                cover
-                src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-              ></v-img>
-            </v-col>
-
-            <!-- Right Column (Registration Form) -->
-            <v-col md="6" lg="7" class="d-flex align-center">
-              <v-card-text class="text-black">
-                <v-form @submit.prevent="signUp">
-                  <!-- Title -->
-                  <v-card-title class="title">Create Account</v-card-title>
-
-                  <!-- First Name, Middle Name, and Last Name Inputs -->
-                  <v-row>
-                    <v-col cols="12" sm="4">
-                      <v-text-field v-model="firstname" label="First Name" required></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="4">
-                      <v-text-field v-model="middlename" label="Middle Name" required></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="4">
-                      <v-text-field v-model="lastname" label="Last Name" required></v-text-field>
-                    </v-col>
-                  </v-row>
-
-                  <!-- Contact Number Input -->
-                  <v-text-field v-model="contact" label="Contact Number" required></v-text-field>
-                   <!-- Address Input -->
-                  <v-text-field v-model="address" label="Address" required></v-text-field>
-
-                  <!-- Email Input -->
-                  <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
-
-                  <!-- Password Input -->
-                  <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
-
-                  <!-- Error Message -->
-                  <v-alert v-if="errorMsg" type="error">{{ errorMsg }}</v-alert>
-
-                  <!-- Create Account Button -->
-                  <v-btn class="submit" type="submit">Create Account</v-btn>
-                </v-form>
-              </v-card-text>
-            </v-col>
-          </v-row>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-  <navbottom/>
+  <v-app>
+    <v-app-bar color="rgb(25, 152, 194)" dark dense>
+      <v-app-bar-title class="white--text">
+        Karamay Kaagapay Funeral Home.Co
+      </v-app-bar-title>
+      <v-spacer></v-spacer>
+    </v-app-bar>
+    <v-container>
+      <v-row>
+        <v-col md="6" lg="5" class="d-none d-md-block">
+          <v-img
+            :width="500"
+            :height="600"
+            aspect-ratio="16/9"
+            cover
+            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          ></v-img>
+        </v-col>
+        <v-col cols="12" sm="8" md="6"> <!-- Adjust the size as needed -->
+          <v-card elevation="2">
+            <v-card-title
+              class="headline text-center"
+              style="color: rgb(25, 152, 194); font-size: 34px"
+            >Create an Account</v-card-title>
+            <v-card-text>
+              <v-form @submit.prevent="signUp">
+                <!-- Your form fields here -->
+                <v-row>
+                  <v-col cols="12">
+                    <v-text-field
+                      v-model="fullName"
+                      label="Full Name"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12" sm="6">
+                    <v-text-field
+                      v-model="username"
+                      label="Username"
+                      required
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6">
+                    <v-text-field
+                      v-model="email"
+                      label="Email"
+                      required
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12" sm="6">
+                    <v-text-field
+                      v-model="password"
+                      label="Password"
+                      required
+                      type="password"
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6">
+                    <v-text-field
+                      v-model="confirmPassword"
+                      label="Confirm Password"
+                      required
+                      type="password"
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12">
+                    <v-text-field
+                      v-model="address"
+                      label="Address"
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12" sm="4">
+                    <v-text-field
+                      v-model="age"
+                      label="Age"
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="4">
+                    <v-text-field
+                      v-model="contactNumber"
+                      label="Contact Number"
+                      class="custom-text-field"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="4">
+                    <v-select
+                      v-model="gender"
+                      :items="['Male', 'Female', 'Other']"
+                      label="Gender"
+                      required
+                      class="custom-text-field"
+                    ></v-select>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12" class="text-center">
+                    <v-btn
+                      color="rgb(25, 152, 194)"
+                      @click="signUp"
+                      class="extra-large-button"
+                    >
+                      Create Account
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </v-form>
+            </v-card-text>
+            <v-divider></v-divider>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import navbottom from "@/components/navbottom.vue";
-
 export default {
-  components: {
-    navbottom,
-  },
   data() {
     return {
-      firstname: "",
-      middlename: "",
-      lastname: "",
-      contact: "",
-      address: "",
+      fullName: "",
+      username: "",
       email: "",
       password: "",
-      errorMsg: "",
+      confirmPassword: "",
+      address: "",
+      age: "",
+      contactNumber: "",
+      gender: "",
     };
   },
   methods: {
     signUp() {
-      // Reset error message
-      this.errorMsg = "";
-
-      if (this.password !== this.confirmPassword) {
-        this.errorMsg = "Passwords do not match.";
-        return;
-      }
-
-      // Create a user object with the form data
-      const user = {
-        firstname: this.firstname,
-        middlename: this.middlename,
-        lastname: this.lastname,
-        contact: this.contact,
-        address: this.address,
+      // Handle form submission
+      console.log("User data:", {
+        fullName: this.fullName,
+        username: this.username,
         email: this.email,
         password: this.password,
-      };
-
-      // Send the user data to the server for registration (replace with your API endpoint)
-      fetch("https://your-api-endpoint.com/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
-        .then((response) => {
-          if (response.ok) {
-            // Registration was successful, you can redirect the user to a login page or perform any other action
-            console.log("Registration successful");
-          } else {
-            // Handle registration errors
-            this.errorMsg = "Registration failed. Please try again.";
-          }
-        })
-        .catch((error) => {
-          // Handle network or other errors
-          this.errorMsg = "An error occurred. Please try again later.";
-          console.error(error);
-        });
+        confirmPassword: this.confirmPassword,
+        address: this.address,
+        age: this.age,
+        contactNumber: this.contactNumber,
+        gender: this.gender,
+      });
     },
   },
 };
@@ -144,26 +171,30 @@ export default {
   height: 100vh;
   width: 100%;
   text-align: center;
-  margin: 1%;
+  margin: 2%;
 }
+
 .card {
   border-radius: 1rem;
-  background: linear-gradient(to bottom, white 50%, #ADD8E6); /* Vertical gradient from white to light blue */
-  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    white 50%,
+    #add8e6
+  ); /* Vertical gradient from white to light blue */
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
-  width: 90%;
+  width: 140%;
   max-width: 400px;
   text-align: left;
-  margin: 10px;
-  margin-top: 50px;
+  margin: 20px;
+  margin-left: -50px;
+  margin-top: 100px;
 }
-
-
 
 /* Additional styles for the form */
 .title {
-  font-size: 15px; /* Adjust font size for mobile */
+  font-size: 24px; /* Adjust font size for mobile */
   color: royalblue;
   font-weight: 600;
   letter-spacing: -1px;
@@ -173,16 +204,52 @@ export default {
   align-items: center;
   padding-left: 30px;
   transition: 0.3s ease;
-  
 }
 
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 35%;
+  background-color: royalblue;
+  transform: translateX(-50%);
+}
 
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+  transition: 0.3s ease;
+}
 
-.message, .signin {
+.title::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: royalblue;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s;
+}
+
+.title:hover::after {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.message,
+.signin {
   color: rgba(56, 53, 53, 0.822);
   font-size: 16px; /* Adjust font size for mobile */
   transition: 0.3s ease;
   text-align: center; /* Centers the text horizontally */
+}
+.signin {
+  color: rgba(56, 53, 53, 0.822);
+  font-size: 16px;
+  text-align: center;
 }
 
 .signin {
@@ -196,24 +263,23 @@ export default {
 }
 
 .signin a:hover {
-  text-decoration: underline royalblue; /* Fix the underline property */
+  text-decoration: underline royalblue;
 }
 
 .flex {
   display: flex;
-  flex-direction: column; /* Adjusted to stack labels vertically */
-  width: 100%; /* Adjust the width of the form for mobile */
-  gap: 3px; /* Adjusted the gap to add spacing between labels */
-  transition: 0.3s ease;
+  flex-direction: column;
+  width: 130%;
+  gap: 10px;
 }
 
 .form label {
   position: relative;
-  margin-bottom: 10px; /* Added margin to create spacing between labels */
+  margin-bottom: 10px;
 }
 
 .form label .input {
-  width: 100%; /* Adjusted input width for mobile */
+  width: 100%;
   padding: 10px 10px 20px 10px;
   outline: 0;
   border: 1px solid darkgrey;
@@ -224,28 +290,29 @@ export default {
 .form label .input + span {
   position: absolute;
   left: 10px;
-  top: 25px;
-  color:darkgray;
-  font-size: 0.9em; /* Adjusted font size for mobile */
+  top: 15px;
+  color: darkgray;
+  font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
 }
 
 .form label .input:placeholder-shown + span {
   top: 15px;
-  font-size: 0.9em; /* Adjusted font size for mobile */
+  font-size: 0.9em;
   transition: 0.3s ease;
 }
 
-.form label .input:focus + span, .form label .input:valid + span {
+.form label .input:focus + span,
+.form label .input:valid + span {
   top: 0px;
-  font-size: 0.7em; /* Adjusted font size for mobile */
+  font-size: 0.7em;
   font-weight: 600;
   transition: 0.3s ease;
 }
 
 .form label .input:valid + span {
-  color:darkgray;
+  color: darkgray;
   transition: 0.3s ease;
 }
 
@@ -256,27 +323,14 @@ export default {
   padding: 10px;
   border-radius: 10px;
   color: #fff;
-  font-size: 16px; /* Adjusted font size for mobile */
-  transform: 0.3s ease;
+  font-size: 16px;
   transition: 0.3s ease;
-  width: 100%; /* Adjusted the width for mobile */
+  width: 130%;
 }
 
 .submit:hover {
   background-color: rgba(11, 69, 243, 0.9);
   cursor: pointer;
   transition: 0.3s ease;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
 }
 </style>
