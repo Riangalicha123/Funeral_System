@@ -17,119 +17,122 @@
             src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
           ></v-img>
         </v-col>
-        <v-col cols="12" sm="8" md="6"> <!-- Adjust the size as needed -->
-          <v-card elevation="2">
-            <v-card-title
-              class="headline text-center"
-              style="color: rgb(25, 152, 194); font-size: 34px"
-            >Create an Account</v-card-title>
-            <v-card-text>
-              <v-form @submit.prevent="signUp">
-                <!-- Your form fields here -->
-                <v-row>
-                  <v-col cols="12">
-                    <v-text-field
-                      v-model="fullName"
-                      label="Full Name"
-                      required
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="12" sm="6">
-                    <v-text-field
-                      v-model="username"
-                      label="Username"
-                      required
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="6">
-                    <v-text-field
-                      v-model="email"
-                      label="Email"
-                      required
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="12" sm="6">
-                    <v-text-field
-                      v-model="password"
-                      label="Password"
-                      required
-                      type="password"
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="6">
-                    <v-text-field
-                      v-model="confirmPassword"
-                      label="Confirm Password"
-                      required
-                      type="password"
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="12">
-                    <v-text-field
-                      v-model="address"
-                      label="Address"
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="12" sm="4">
-                    <v-text-field
-                      v-model="age"
-                      label="Age"
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="4">
-                    <v-text-field
-                      v-model="contactNumber"
-                      label="Contact Number"
-                      class="custom-text-field"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="4">
-                    <v-select
-                      v-model="gender"
-                      :items="['Male', 'Female', 'Other']"
-                      label="Gender"
-                      required
-                      class="custom-text-field"
-                    ></v-select>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="12" class="text-center">
-                    <v-btn
-                      color="rgb(25, 152, 194)"
-                      @click="signUp"
-                      class="extra-large-button"
-                    >
-                      Create Account
-                    </v-btn>
-                  </v-col>
-                </v-row>
-              </v-form>
-            </v-card-text>
-            <v-divider></v-divider>
-          </v-card>
+        <v-col md="6" lg="7" class="d-flex align-center"> <!-- Adjust the size as needed -->
+          <v-card-text class="text-black">
+            <v-form @submit.prevent="signUp">
+              <!-- Your form fields here -->
+              <v-card-title
+            class="headline text-center"
+            style="color: rgb(25, 152, 194); font-size: 34px"
+          >Create an Account</v-card-title>
+              <v-row>
+                <v-col cols="12">
+                  <v-text-field
+                    v-model="fullName"
+                    label="Full Name"
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="username"
+                    label="Username"
+                    required
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="email"
+                    label="Email"
+                    required
+                    type="email"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="password"
+                    label="Password"
+                    required
+                    type="password"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="confirmPassword"
+                    label="Confirm Password"
+                    required
+                    type="password"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12">
+                  <v-text-field
+                    v-model="address"
+                    label="Address"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" sm="4">
+                  <v-text-field
+                    v-model="age"
+                    label="Age"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="4">
+                  <v-text-field
+                    v-model="contactNumber"
+                    label="Contact Number"
+                    class="custom-text-field"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="4">
+                  <v-select
+                    v-model="gender"
+                    :items="['Male', 'Female', 'Other']"
+                    label="Gender"
+                    required
+                    class="custom-text-field"
+                  ></v-select>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" class="text-center">
+                  <v-btn
+                    color="rgb(25, 152, 194)"
+                    @click="signUp"
+                    class="extra-large-button"
+                  >
+                    Create Account
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-form>
+          </v-card-text>
         </v-col>
       </v-row>
     </v-container>
+    <navbottom />
   </v-app>
 </template>
 
 <script>
+import navbottom from "@/components/navbottom.vue";
 export default {
+  components: {
+    navbottom,
+  },
   data() {
     return {
       fullName: "",
