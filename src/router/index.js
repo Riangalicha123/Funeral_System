@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Homeview from '../views/HomeView.vue';
+import Service from '../views/Service.vue';
+import Messages from '../views/Messages.vue';
+import Feedback from '../views/Feedback.vue';
 import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
@@ -14,6 +17,23 @@ const routes = [
     name: 'home',
     component: Homeview,
   },
+  {
+    path: '/services', // Add a new route for registration
+    name: 'Service',
+    component: Service,
+  },
+  {
+    path: '/message', // Add a new route for registration
+    name: 'Messages',
+    component: Messages,
+  },
+  {
+    path: '/feedback', // Add a new route for registration
+    name: 'Feedback',
+    component: Feedback,
+  },
+
+
   {
     path: '/register', // Add a new route for registration
     name: 'register',
@@ -45,7 +65,7 @@ const routes = [
     component: CreateAccount,
   },
   {
-    path: '/message',
+    path: '/chat',
     name: 'chat',
     component: Chat,
   },
