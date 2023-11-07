@@ -35,19 +35,19 @@
                     <!-- Username Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="username" label="Username" required></v-text-field>
+                        <v-text-field v-model="Username" label="Username" required></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Email Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+                        <v-text-field v-model="Email" label="Email" required type="email"></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Password Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+                        <v-text-field v-model="Password" label="Password" required type="password"></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Confirm Password Field -->
@@ -85,59 +85,38 @@
 
 <script>
 import navbottom from "@/components/navbottom.vue";
+import axios from "axios";
 export default {
   components: {
     navbottom,
   },
   data() {
     return {
-      username: "",
-      email: "",
-      password: "",
+      user:[],
+      Username: "",
+      Email: "",
+      Password: "",
       confirmPassword: "",
-      errorMsg: "", // Add an error message property to display registration errors
+      User_Role: "User",
     };
   },
   methods: {
     async register() {
-      // Reset error message
-      this.errorMsg = "";
-
-      // Check if fields are provided
-      if (!this.username || !this.email || !this.password || !this.confirmPassword) {
-        this.errorMsg = "Please fill in all fields.";
-        return;
+        if (this.Password !== this.confirmPassword) {
+        // Display an error message to the user.
+        // You can use a snackbar or a simple alert for this.
+        alert("Password and Confirm Password do not match");
+        return; // Prevent form submission.
       }
-
-      // Check if password and confirm password match
-      if (this.password !== this.confirmPassword) {
-        this.errorMsg = "Password and Confirm Password do not match.";
-        return;
-      }
-
-      // You can make an API request to register the user here
-      // Replace 'your-api-endpoint' with your actual API endpoint
       try {
-        const response = await fetch("https://your-api-endpoint.com/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: this.username,
-            email: this.email,
-            password: this.password,
-          }),
-        });
-
-        if (response.ok) {
-          // Registration successful
-          // Redirect the user to the login page
-          this.$router.push("/login");
-        } else {
-          // Handle registration errors
-          this.errorMsg = "Registration failed. Please check your information.";
-        }
+        const response = await axios.post("register",{
+          Username: this.Username,
+          Email: this.Email,
+          Password: this.Password,
+          confirmPassword: this.confirmPassword,
+          User_Role :this.User_Role,
+        })
+        this.getInfo();
       } catch (error) {
         // Handle network or other errors
         this.errorMsg = "An error occurred. Please try again later.";
