@@ -1,83 +1,86 @@
 <template>
-  <v-app-bar color="rgb(25, 152, 194)" dark dense>
-    <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
-    <v-spacer></v-spacer>
-    <template v-slot:append></template>
-  </v-app-bar>
-  <v-container class="py-5 h-100">
-    <v-row justify="center" align="center" class="h-100">
-      <v-col cols="12" sm="10" md="8">
-        <v-card class="elevation-3" shaped>
-          <v-row no-gutters>
-            <!-- Left Column (Image) -->
-            <v-col md="6" lg="5" class="d-none d-md-block">
-              <v-img
-                :width="500"
-                :height="740"
-                aspect-ratio="16/9"
-                cover
-                src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-              ></v-img>
-            </v-col>
-
-            <!-- Right Column (Login Form) -->
-            <v-col md="9" lg="7" class="d-flex align-center">
-              <v-card-text class="text-black">
-                <v-form @submit.prevent="submitForm">
-                  <v-card-title class="text-h5 blue--text text-center">Create Account</v-card-title>
-                  <v-row>
-                    <v-col cols="12">
-                      <v-text-field v-model="fullName" label="Full Name" required></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="username" label="Username" required></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="confirmPassword" label="Confirm Password" required type="password"></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12">
-                      <v-text-field v-model="address" label="Address" required></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="age" label="Age" required type="number"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6">
-                      <v-text-field v-model="contactNumber" label="Contact Number" required type="tel"></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12">
-                      <v-select v-model="gender" :items="genderOptions" label="Gender" required></v-select>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col cols="12">
-                      <v-btn type="submit" class="royal-blue-button">Submit</v-btn>
-                    </v-col>
-                  </v-row>
-                </v-form>
-              </v-card-text>
-            </v-col>
-          </v-row>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-  <navbottom />
+  <v-app>
+    <v-app-bar color="rgb(25, 152, 194)" dark dense>
+      <v-app-bar-title class="white--text">Karamay Kaagapay Funeral Home.Co</v-app-bar-title>
+      <v-spacer></v-spacer>
+      <template v-slot:append></template>
+    </v-app-bar>
+    <v-container class="py-5 h-100">
+      <v-row justify="center" align="center" class="h-100">
+        <v-col cols="12" sm="10" md="8">
+          <v-card class="elevation-3" shaped>
+            <v-row no-gutters>
+              <!-- Left Column (Image) -->
+              <v-col md="6" lg="5" class="d-none d-md-block">
+                <v-img
+                  :width="550"
+                  :height="650"
+                  aspect-ratio="16/9"
+                  cover
+                  src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                ></v-img>
+              </v-col>
+  
+              <!-- Right Column (Login Form) -->
+              <v-col cols="12" md="9" lg="7" class="d-flex align-center">
+                <v-card-text class="text-black">
+                  <v-form @submit.prevent="submitForm">
+                    <v-card-title class="text-h4 blue--text text-center" style="margin-top: -50px;">Create Account</v-card-title>
+                    
+                    <v-row dense>
+                      <v-col cols="12">
+                        <v-text-field v-model="fullName" label="Full Name" required></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row dense>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="username" label="Username" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row dense>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="confirmPassword" label="Confirm Password" required type="password"></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row dense>
+                      <v-col cols="12">
+                        <v-text-field v-model="address" label="Address" required></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row dense>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="age" label="Age" required type="number"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="contactNumber" label="Contact Number" required type="tel"></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row dense>
+                      <v-col cols="12">
+                        <v-select v-model="gender" :items="genderOptions" label="Gender" required></v-select>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12">
+                        <v-btn type="submit" class="royal-blue-button">Submit</v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-form>
+                </v-card-text>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <navbottom />
+  </v-app>
 </template>
 
 
@@ -136,6 +139,13 @@ import Admin from 'Admin.vue';
   padding: 15px; 
   text-align: center;
  }
+ .v-application {
+  background-image: url('https://img.freepik.com/free-vector/white-minimal-hexagons-background_79603-1453.jpg?size=626&ext=jpg&ga=GA1.1.1704544460.1673071579&semt=ais');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
 .card {
   border-radius: 1rem;
   background: linear-gradient(
