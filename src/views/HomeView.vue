@@ -1,52 +1,70 @@
 <template>
   <div class="app" >
-    <v-main>
-      
+    <v-app>
+      <v-app-bar color="rgb(25, 152, 194)" dark dense>
+        <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
+        <v-spacer></v-spacer>
+        <template v-slot:append>
+          <v-app-bar-nav-icon
+            @click="drawer = !drawer"
+            style="font-size: 38px; color: white !important"
+          ></v-app-bar-nav-icon>
+        </template>
+        <v-btn @click="showNotification" icon>
+          <v-icon>mdi-bell</v-icon>
+        </v-btn>
+        <v-dialog v-model="notificationMessage" max-width="400">
+          <v-card>
+            <v-card-title>Notification</v-card-title>
+            <v-card-text>
+              {{ notificationMessage }}
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" @click="notificationMessage = false">Close</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
         
-        <!-- Section 1: Hero Banner -->
-        <v-row class="d-flex justify-center">
-          <v-col cols="12">
-            <v-card
-              class="mx-auto"
-              max-width="3000" 
-              shaped
-              outlined
-            >
+      </v-app-bar>
+      <v-main>
+        
+        <!-- Section 1: Hero Banner --><v-row class="d-flex justify-center">
+        <v-col cols="12">
+          <v-card class="mx-auto" max-width="3000" shaped outlined>
+            <div class="hero-banner">
               <v-img
                 src="https://onecms-res.cloudinary.com/image/upload/s--tAxVrlOy--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2023/08/21/istock-451187387.jpg?itok=Wyyz8uNO"
                 alt="Home Background"
-              />
-              <br>
-              <v-card-title
-                class="text-h3 text-center"
-                style="font-weight: bold; font-size: 15px; background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230)); background-clip: text; -webkit-background-clip: text; color: transparent; transition: background 0.3s ease, color 0.3s ease"
-              >
-                Welcome
-              </v-card-title>
-              <v-card-title
-                class="text-h7 text-center"
-                style="font-weight: bold; color: royalblue; font-size: 20px; transition: color 0.3s ease"
-              >
-                Karamay Kaagapay Funeral Home.Co
-              </v-card-title>
-              <br>
-              <v-card-text style="text-align: center;">
-                <p style="display: inline-block; padding: 20px; background-color: rgb(240, 241, 241);font-size: 20px; border-radius: 5px;">
-                  At Our Funeral Home, we understand the importance of providing compassionate and supportive funeral services during your difficult time of loss. We are committed to helping you through the grieving process and ensuring a meaningful farewell for your loved ones.
-                  <p>
-                    Our services include funeral planning, memorial services, cremation, and burial. We have a dedicated and professional team to assist you with every aspect of the funeral arrangements.
+              ></v-img>
+              <div class="hero-text">
+                <v-card-title
+                  class="text-h3 text-center"
+                  style="font-weight: bold; font-size: 15px; background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230)); background-clip: text; -webkit-background-clip: text; color: transparent; transition: background 0.3s ease, color 0.3s ease"
+                >
+                  Welcome
+                </v-card-title>
+                <v-card-title
+                  class="text-h7 text-center"
+                  style="font-weight: bold; color: royalblue; font-size: 20px; transition: color 0.3s ease"
+                >
+                  Karamay Kaagapay Funeral Home.Co
+                </v-card-title>
+                <v-card-text style="text-align: center;">
+                  <p style="display: inline-block; padding: 20px; background-color: rgba(255, 255, 255, 0.7); font-size: 20px; border-radius: 5px;">
+                    At Our Funeral Home, we understand the importance of providing compassionate and supportive funeral services during your difficult time of loss. We are committed to helping you through the grieving process and ensuring a meaningful farewell for your loved ones.
                   </p>
-                </p>
-              </v-card-text>
-              <v-card-actions class="text-center" style="padding: 20px;">
-                <v-btn color="primary" to="/about">
-                  <v-icon left>mdi-information</v-icon>
-                  Learn More
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </v-row>
+                </v-card-text>
+                <v-card-actions class="text-center" style="padding: 20px;">
+                  <v-btn color="primary" to="/about">
+                    <v-icon left>mdi-information</v-icon>
+                    Learn More
+                  </v-btn>
+                </v-card-actions>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
         
         <!-- Section 2: Services -->
         <v-row class="d-flex justify-center">
@@ -132,14 +150,12 @@
               <v-icon left>mdi-email</v-icon>
               Get in Touch
             </v-btn>
-          </v-card-actions>
-          
+          </v-card-actions> 
           </v-card>
           </v-col>
         </v-row>
-        <Dashboard />
-      
     </v-main>
+    </v-app>
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -168,31 +184,20 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-    <v-app-bar color="rgb(25, 152, 194)" dark dense>
-      <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
-      <v-spacer></v-spacer>
-      <template v-slot:append>
-        <v-app-bar-nav-icon
-          @click="drawer = !drawer"
-          style="font-size: 38px; color: white !important"
-        ></v-app-bar-nav-icon>
-      </template>
-    </v-app-bar>
-
     <navbottom :openDrawer="openDrawer" />
   </div>
   
 </template>
-
 <script>
 import navbottom from "@/components/navbottom.vue";
+
 export default {
   components: {
     navbottom,
   },
   data: () => ({
     drawer: false, // Initially set to false
+    notificationMessage: "", // Initialize as an empty string
     items: [
       { title: "Login", icon: "mdi mdi-login", to: "/login" },
       { title: "Register", icon: "mdi-account-plus", to: "/register" },
@@ -203,9 +208,14 @@ export default {
     openDrawer() {
       this.drawer = true; // Set the drawer to open when this method is called
     },
+    showNotification() {
+      // Set the notification message you want to display
+      this.notificationMessage = "This is a sample notification message.";
+    },
   },
 };
 </script>
+
 
 <style>
 .v-navigation-drawer {

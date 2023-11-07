@@ -9,7 +9,6 @@
       </v-btn>
     </v-list-item>
   </v-bottom-navigation>
-  
 </template>
 
 <script>
@@ -18,28 +17,36 @@ export default {
     drawer: null,
     ns: [
       { title: "Home", icon: "mdi-home", to: "/" },
-      { title: "Favorite", icon: "mdi-heart", to: "/favorite" },
-      { title: "Notification", icon: "mdi-bell-ring", to: "/notification" },
+      { title: "Service", icon: "mdi-coffin", to: "/services" },
+      { title: "Message", icon: "mdi-email" },
       { title: "Feedback", icon: "mdi-comment", to: "/feedback" },
     ],
   }),
 };
 </script>
+
 <style>
 .custom-bottom-nav {
-  background-color: rgb(25, 152, 194); /* Change to your desired background color */
+  background-color: rgb(25, 152, 194); 
   box-shadow: 0px 0px 8px rgba(0, 0, 0.1, 0.2);
-  padding: 10px; /* Adjust the padding as needed */
-  height: 70px !important; /* Increase the height as desired */
+  padding: 10px; 
+  height: 70px !important; 
 }
 
 .custom-bottom-nav .v-btn {
-  color: white; /* Change text color to your desired color */
-  margin-top: 20px !important; /* Adjust the spacing */
+  color: white; 
+  margin-top: 20px !important; 
 }
 
 .custom-bottom-nav .v-list-item-title {
-  font-size: 15px; /* Adjust the font size */
-  margin-top: 2px; /* Adjust the spacing */
+  font-size: 15px; 
+  margin-top: 2px; 
+}
+
+@media (max-width: 600px) {
+  .custom-bottom-nav .v-list-item-title {
+    font-size: 10px; 
+    margin-top: 0;
+  }
 }
 </style>
