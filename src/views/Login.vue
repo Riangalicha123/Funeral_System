@@ -148,7 +148,7 @@ import Admin from 'Admin.vue';
   text-align: center;
  }
  .v-application {
-  background-image: url('https://img.freepik.com/free-vector/white-minimal-hexagons-background_79603-1453.jpg?size=626&ext=jpg&ga=GA1.1.1704544460.1673071579&semt=ais');
+  background-image: url('https://t3.ftcdn.net/jpg/03/27/46/14/360_F_327461491_FWBhMuNNJLZQe1vXboG8eMu8uHGGZ2jf.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
