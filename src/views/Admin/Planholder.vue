@@ -3,7 +3,7 @@
       <Sidebar :drawer="drawer" />
       <Topbar @drawerEvent="drawer = !drawer" />
       <v-main style="background-color: #f5f5f5;">
-        <v-container class="py-8 px-6" fluid>
+        <v-container>
           <Plan/>
         </v-container>
       </v-main>

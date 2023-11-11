@@ -1,28 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar color="rgb(25, 152, 194)" dark dense>
-      <v-app-bar-title class="white--text"
-        >Karamay Kaagapay Funeral Home.Co</v-app-bar-title
-      >
-      <v-spacer></v-spacer>
-      <template v-slot:append> </template>
-    </v-app-bar>
     <v-container class="py-5 h-100">
       <v-row justify="center" align="center" class="h-100">
-        <v-col cols="12" sm="10" md="8">
+        <v-col>
           <v-card class="elevation-3" shaped>
             <v-row no-gutters>
               <!-- Left Column (Image) -->
               <v-col md="6" lg="5" class="d-none d-md-block">
                 <v-img
                   :width="500"
-                  :height="600"
+                  :height="390"
                   aspect-ratio="16/9"
                   cover
                   src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
                 ></v-img>
               </v-col>
-  
+
               <!-- Right Column (Login Form) -->
               <v-col md="6" lg="7" class="d-flex align-center">
                 <v-card-text class="text-black">
@@ -31,23 +24,35 @@
                     <v-card-subtitle class="message"
                       >Login to access your account.</v-card-subtitle
                     >
-                    <br>
+                    <br />
                     <!-- Email Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="email" label="Email" required type="email"></v-text-field>
+                        <v-text-field
+                          v-model="Email"
+                          label="Email"
+                          required
+                          type="email"
+                        ></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Password Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="password" label="Password" required type="password"></v-text-field>
+                        <v-text-field
+                          v-model="Password"
+                          label="Password"
+                          required
+                          type="password"
+                        ></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Submit Button -->
                     <v-row>
                       <v-col cols="12">
-                        <v-btn type="submit" class="royal-blue-button">Login</v-btn>
+                        <v-btn type="submit" class="royal-blue-button"
+                          >Login</v-btn
+                        >
                       </v-col>
                       <v-col cols="12">
                         <v-card-subtitle class="signin">
@@ -55,9 +60,7 @@
                           <router-link to="/register">Sign up</router-link>
                         </v-card-subtitle>
                       </v-col>
-                     
                     </v-row>
-                    
                   </v-form>
                 </v-card-text>
               </v-col>
@@ -78,55 +81,34 @@ export default {
   },
   data() {
     return {
-      email: "",
-      password: "",
-      errorMsg: "", // Add an error message property to display login errors
+      users: [],
+      Email: "",
+      Password: "",
     };
   },
   methods: {
     async login() {
-      // Reset error message
-      this.errorMsg = "";
-
-      // Check if email and password are provided
-      if (!this.email || !this.password) {
-        this.errorMsg = "Please provide both email and password.";
-        return;
-      }
-
-      // You can make an API request to authenticate the user here
-      // Replace 'your-api-endpoint' with your actual API endpoint
       try {
-        const response = await fetch("https://your-api-endpoint.com/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: this.email,
-            password: this.password,
-          }),
+        const response = await axios.post("loginAuth", {
+          Email: this.Email,
+          Password: this.Password,
         });
-
-        if (response.ok) {
-          // Authentication successful
-          // Redirect the user to the admin site
-          this.$router.push("/admin");
-        } else {
-          // Handle authentication errors
-          this.errorMsg = "Login failed. Please check your credentials.";
-        }
+        if (response.data.role === "Admin") {
+            // Redirect to admin page
+            this.$router.push("/admin");
+          } else if (response.data.role === "PlanHolder") {
+ 
+            this.$router.push("/");
+          }
+        this.getInfo();
       } catch (error) {
-        // Handle network or other errors
-        this.errorMsg = "An error occurred. Please try again later.";
-        console.error(error);
+        // Handle errors
+        console.error("Login error:", error);
       }
     },
   },
 };
 </script>
-
-import Admin from 'Admin.vue';
 <style scoped>
 /* Your CSS styles here */
 .container {
@@ -139,43 +121,30 @@ import Admin from 'Admin.vue';
   margin: 2%;
 }
 .royal-blue-button {
-  background-color: royalblue; 
-  color: white; 
-  width: 190%; 
+  background-color: #5ce1e6;
+  color: white;
+  width: 190%;
   height: 100%;
-  font-size: 20px; 
-  padding: 15px; 
+  font-size: 20px;
+  padding: 15px;
   text-align: center;
- }
- .v-application {
-  background-image: url('https://t3.ftcdn.net/jpg/03/27/46/14/360_F_327461491_FWBhMuNNJLZQe1vXboG8eMu8uHGGZ2jf.jpg');
+}
+.v-card-text {
+  background: linear-gradient(#ffffff, #ffffff, #5ce1e6, #5ce1e6);
+}
+
+.v-application {
+  background-image: url("https://t3.ftcdn.net/jpg/03/27/46/14/360_F_327461491_FWBhMuNNJLZQe1vXboG8eMu8uHGGZ2jf.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
-.card {
-  border-radius: 1rem;
-  background: linear-gradient(
-    to bottom,
-    white 50%,
-    #add8e6
-  ); /* Vertical gradient from white to light blue */
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
-  width: 140%;
-  max-width: 400px;
-  text-align: left;
-  margin: 20px;
-  margin-left: -50px;
-  margin-top: 100px;
+  background-attachment: fixed;
 }
 
 /* Additional styles for the form */
 .title {
   font-size: 24px; /* Adjust font size for mobile */
-  color: royalblue;
+  color: #5ce1e6;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -194,14 +163,14 @@ import Admin from 'Admin.vue';
   width: 16px;
   border-radius: 50%;
   left: 35%;
-  background-color: royalblue;
+  background-color: #5ce1e6;
   transform: translateX(-50%);
 }
 
 .title::before {
   width: 18px;
   height: 18px;
-  background-color: royalblue;
+  background-color: #5ce1e6;
   transition: 0.3s ease;
 }
 
@@ -209,7 +178,7 @@ import Admin from 'Admin.vue';
   content: "";
   width: 15px;
   height: 15px;
-  background-color: royalblue;
+  background-color: #5ce1e6;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s;

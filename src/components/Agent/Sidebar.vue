@@ -29,7 +29,7 @@
       return {
         links: [
         {icon: "mdi-account", text: "Payment Acceptance", to: "/payment"},
-          {icon: "mdi-account", text: "Agent", to: "/agent"}
+          {icon: "mdi-account", text: "Create User Account", to: "/agent"}
         ],
       };
     },

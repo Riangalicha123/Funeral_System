@@ -1,22 +1,15 @@
 <template>
   <v-app>
-    <v-app-bar color="rgb(25, 152, 194)" dark dense>
-      <v-app-bar-title class="white--text"
-        >Karamay Kaagapay Funeral Home.Co</v-app-bar-title
-      >
-      <v-spacer></v-spacer>
-      <template v-slot:append> </template>
-    </v-app-bar>
     <v-container class="py-5 h-100">
       <v-row justify="center" align="center" class="h-100">
-        <v-col cols="12" sm="10" md="8">
+        <v-col >
           <v-card class="elevation-3" shaped>
             <v-row no-gutters>
               <!-- Left Column (Image) -->
               <v-col md="6" lg="5" class="d-none d-md-block">
                 <v-img
                   :width="500"
-                  :height="630"
+                  :height="760"
                   aspect-ratio="16/9"
                   cover
                   src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -25,7 +18,7 @@
   
               <!-- Right Column (Register Form) -->
               <v-col md="6" lg="7" class="d-flex align-center">
-                <v-card-text class="text-black">
+                <v-card-text>
                   <v-form @submit.prevent="register">
                     <v-card-title class="title">Register</v-card-title>
                     <v-card-subtitle class="message"
@@ -34,26 +27,41 @@
                     <br>
                     <!-- Username Field -->
                     <v-row>
+                      <v-col cols="6">
+                        <v-text-field v-model="FirstName" label="First Name" required></v-text-field>
+                      </v-col>
+                      <v-col cols="6">
+                        <v-text-field v-model="MiddleName" label="Middle Name"></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="Username" label="Username" required></v-text-field>
+                        <v-text-field v-model="LastName" label="Last Name" required></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Email Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="Email" label="Email" required type="email"></v-text-field>
+                        <v-text-field v-model="Email" label="Email" required type="email" hint="email@gmail.com"></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Password Field -->
                     <v-row>
-                      <v-col cols="12">
+                      <v-col cols="6">
                         <v-text-field v-model="Password" label="Password" required type="password"></v-text-field>
                       </v-col>
+                      <v-col cols="6">
+                        <v-text-field v-model="confirmPassword" label="Confirm Password" required type="password"></v-text-field>
+                      </v-col>
                     </v-row>
-                    <!-- Confirm Password Field -->
                     <v-row>
                       <v-col cols="12">
-                        <v-text-field v-model="confirmPassword" label="Confirm Password" required type="password"></v-text-field>
+                        <v-text-field v-model="Address" label="Address" required hint="City, Province"></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12">
+                        <v-text-field v-model="ContactNumber" label="Contact Number" required hint="For Example: 09123456789"></v-text-field>
                       </v-col>
                     </v-row>
                     <!-- Submit Button -->
@@ -79,25 +87,25 @@
         </v-col>
       </v-row>
     </v-container>
-    <navbottom />
   </v-app>
+   
 </template>
 
 <script>
-import navbottom from "@/components/navbottom.vue";
 import axios from "axios";
 export default {
-  components: {
-    navbottom,
-  },
   data() {
     return {
       user:[],
-      Username: "",
+      FirstName: "",
+      MiddleName: "",
+      LastName: "",
       Email: "",
       Password: "",
       confirmPassword: "",
-      User_Role: "User",
+      Address: "",
+      ContactNumber: "",
+      Role: "User",
     };
   },
   methods: {
@@ -110,12 +118,26 @@ export default {
       }
       try {
         const response = await axios.post("register",{
-          Username: this.Username,
+          FirstName: this.FirstName,
+          MiddleName: this.MiddleName,
+          LastName: this.LastName,
           Email: this.Email,
           Password: this.Password,
           confirmPassword: this.confirmPassword,
-          User_Role :this.User_Role,
+          Address: this.Address,
+          ContactNumber: this.ContactNumber,
+          Role :this.Role,
         })
+          this.FirstName="";
+          this.MiddleName="";
+          this.LastName="";
+          this.Email="";
+          this.Password="";
+          this.confirmPassword="";
+          this.Address="";
+          this.ContactNumber="";
+          
+        this.emit('register');
         this.getInfo();
       } catch (error) {
         // Handle network or other errors
@@ -140,8 +162,7 @@ export default {
 }
 
 .royal-blue-button {
-  background-color: royalblue;
-  color: white;
+  color: #5CE1E6;
   width: 100%; /* Adjusted to 100% for full-width button */
   height: 60px; /* Adjusted height */
   font-size: 20px;
@@ -155,27 +176,15 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
-.card {
-  border-radius: 1rem;
-  background: linear-gradient(
-    to bottom,
-    white 50%,
-    #add8e6
-  );
-  /* Vertical gradient from white to light blue */
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(109, 135, 212, 0.5);
-  width: 100%; /* Adjusted to 100% for full-width card */
-  text-align: left;
-  margin: 20px;
+.v-card-text{
+  background: linear-gradient(#FFFFFF,#FFFFFF,#5CE1E6,#5CE1E6);
 }
 
 /* Additional styles for the form */
 .title {
   font-size: 24px;
   /* Adjust font size for mobile */
-  color: royalblue;
+  color: #5CE1E6;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -186,7 +195,7 @@ export default {
   transition: 0.3s ease;
 }
 
-.title::before,
+/* .title::before,
 .title::after {
   position: absolute;
   content: "";
@@ -217,7 +226,7 @@ export default {
 
 .title:hover::after {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .message,
 .signin {

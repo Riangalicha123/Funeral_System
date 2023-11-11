@@ -4,21 +4,25 @@
     <v-table>
       <thead>
         <tr>
-          <th class="text-left">Id</th>
-          <th class="text-left">Username</th>
-          <th class="text-left">Email</th>
-          <th class="text-left">Password</th>
+          
+          <th class="text-left">First Name</th>
+          <th class="text-left">Middle Name</th>
+          <th class="text-left">Last Name</th>
+          <th class="text-left">Address</th>
+          <th class="text-left">Contact Number</th>
           <th class="text-left">Role</th>
           <th class="text-left">Action</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="user in users" :key="user.UserId">
-          <td>{{ user.UserId }}</td>
-          <td>{{ user.Username }}</td>
-          <td>{{ user.Email }}</td>
-          <td>{{ user.Password }}</td>
-          <td>{{ user.User_Role }}</td>
+          
+          <td>{{ user.FirstName }}</td>
+          <td>{{ user.MiddleName }}</td>
+          <td>{{ user.LastName }}</td>
+          <td>{{ user.Address }}</td>
+          <td>{{ user.ContactNumber }}</td>
+          <td>{{ user.Role }}</td>
           <td>
             <th>
               <v-btn color="red-darken-2" @click="deleteRecord(user.UserId)">Delete</v-btn>
@@ -27,6 +31,7 @@
           </td>
         </tr>
       </tbody>
+      
     </v-table>
   </v-container>
 </template>
@@ -37,11 +42,12 @@ export default {
   data() {
     return {
       users:[],
-      UserId:"",
-      Username:"",
-      Email:"",
-      Password:"",
-      User_Role:"",
+      FirstName: "",
+      MiddleName: "",
+      LastName: "",
+      Address: "",
+      ContactNumber: "",
+      Role: "",
     }
   },
   created() {
@@ -55,7 +61,13 @@ export default {
         } catch (error) {
             console.log(error);
         }
-      }
+      },
+    async deleteRecord(recordId){
+        await axios.post("deleteUser",{
+          UserId: recordId,
+        });
+    },
+
     }
 }
 </script>
