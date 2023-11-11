@@ -83,21 +83,20 @@ class UserController extends ResourceController
 
     public function loginAuth()
     {
-        $userModel = new UserAccount();
-   
-        $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password');
-           
-        $user = $userModel->where('email', $email)->first();
-   
+        $json = $this->request->getJSON();
+
+        $Email = $json->Email;
+        $Password = $json->Password;
+
+        $user = $this->userAccounts->where('Email', $Email)->first();
         if(is_null($user)) {
-            return $this->respond(['error' => 'Invalid username or password.'], 401);
+            return $this->respond(['error' => 'Invalid email or password.'], 401);
         }
    
-        $pwd_verify = password_verify($password, $user['password']);
+        $pwd_verify = password_verify($Password, $user['Password']);
    
         if(!$pwd_verify) {
-            return $this->respond(['error' => 'Invalid username or password.'], 401);
+            return $this->respond(['error' => 'Invalid email or password.'], 401);
         }
   
         $key = getenv('JWT_SECRET');
@@ -106,11 +105,11 @@ class UserController extends ResourceController
   
         $payload = array(
             "iss" => "Issuer of the JWT",
-            "aud" => "Audience that the JWT",
+            "aud" => $user['Role'],
             "sub" => "Subject of the JWT",
             "iat" => $iat, //Time the JWT issued at
             "exp" => $exp, // Expiration time of token
-            "email" => $user['email'],
+            "email" => $user['Email'],
         );
           
         $token = JWT::encode($payload, $key, 'HS256');
