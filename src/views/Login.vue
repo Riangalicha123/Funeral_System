@@ -75,13 +75,14 @@
 
 <script>
 import navbottom from "@/components/navbottom.vue";
+import { jwtDecode as jwt_decode } from "jwt-decode";
+import axios from 'axios';
 export default {
   components: {
     navbottom,
   },
   data() {
     return {
-      users: [],
       Email: "",
       Password: "",
     };
@@ -89,21 +90,30 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await axios.post("loginAuth", {
+        const response = await axios.post("/loginAuth", {
           Email: this.Email,
           Password: this.Password,
         });
-        if (response.data.role === "Admin") {
-            // Redirect to admin page
-            this.$router.push("/admin");
-          } else if (response.data.role === "PlanHolder") {
- 
+
+        const decodedToken = jwt_decode(response.data.token);
+        const userRole = decodedToken.aud;
+        console.log(decodedToken)
+
+        document.cookie = `token=${response.data.token}; HttpOnly`;
+
+        switch (userRole) {
+          case "PlanHolder":
             this.$router.push("/");
-          }
-        this.getInfo();
+            break;
+          case "Admin":
+            this.$router.push("/admin");
+            break;
+          default:
+            this.$router.push('/login');
+        }
       } catch (error) {
         // Handle errors
-        console.error("Login error:", error);
+        console.error("Error during login:", error);
       }
     },
   },
