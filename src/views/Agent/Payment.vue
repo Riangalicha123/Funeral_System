@@ -12,7 +12,7 @@
                 background: linear-gradient(
                   to bottom,
                   lightblue,
-                  blue
+                  rgb(10, 10, 20)
                 );
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -28,22 +28,14 @@
               :headers="headers"
               :items="records"
               :search="search"
+              fixed
             >
-              <template v-slot:top>
-                <v-toolbar flat>
-                  <v-spacer></v-spacer>
-                  <v-text-field
-                    v-model="search"
-                    append-icon="mdi-magnify"
-                    label="Search"
-                    single-line
-                    hide-details
-                    class="mx-auto d-flex text-center" 
-                    style="max-width: 800px; margin: 0 auto;"
-                  ></v-text-field>
-                  <v-btn @click="addRecord" color="success">Add</v-btn>
-                </v-toolbar>
-              </template>
+            <template v-slot:top>
+              <v-toolbar flat>
+                <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
+                <v-btn @click="addRecord" color="success">Add</v-btn>
+              </v-toolbar>
+            </template>
               <template v-slot:item.actions="{ item }">
                 <v-icon @click="editRecord(item)">mdi-pencil</v-icon>
                 <v-icon @click="deleteRecord(item)">mdi-delete</v-icon>

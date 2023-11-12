@@ -70,20 +70,23 @@
                 "
               >
               
-              <v-row justify="center">
-                <v-col xs="12" sm="10" md="8" lg="11" offset-lg="1" cols="40" style="color: rgb(25, 152, 194)">
+              <!--<v-row justify="center">
+                <v-col xs="12" sm="10" md="8" lg="11" offset-lg="1" cols="12" class="d-flex flex-column fill-height justify-center align-center text-black">
                   <v-text-field
                     v-model="search"
                     append-icon="mdi-magnify"
                     label="Search"
                     dense
                     rounded
-                    full-width
+                    class="mx-auto"
+                    :style="{ width:'410%'  }"
                     @input="searchItems"
-                    style="margin-top: 90px; color: rgb(25, 152, 194)"
+                    style="color: rgb(25, 152, 194)"
                   ></v-text-field>
                 </v-col>
-              </v-row>
+              </v-row>-->
+              
+              
               
                 Welcome
               </h1>
@@ -106,9 +109,9 @@
           </v-parallax>
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
-              <h2>DAMAYAN BURIAL PROGRAM</h2>
+              <h2 style="color: rgb(37, 85, 230);">DAMAYAN BURIAL PROGRAM</h2>
               <br>
-              <h3>WE COVER:NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION</h3>
+              <h3 style="color: rgb(209, 60, 60);">WE COVER: NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION</h3>
               <br>
               At Our Funeral Home, we understand the importance of providing
               compassionate and supportive funeral services during your difficult
@@ -318,12 +321,14 @@ data: () => ({
     { title: "Create Account", icon: "mdi-account", to: "/account" },
   ],
 }),
+
 methods: {
   showNotification() {
     // Set the notification message you want to display
     this.notificationMessage = "This is a sample notification message.";
   },
 },
+
 };
 </script>
 
