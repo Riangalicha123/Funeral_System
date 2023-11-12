@@ -134,6 +134,8 @@
               .......................details
             </div>
           </v-card-text>
+
+          
         </v-card>
       </v-hover>
     </div>

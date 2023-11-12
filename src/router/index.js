@@ -23,7 +23,7 @@ const routes = [
     component: Service,
   },
   {
-    path: '/message', // Add a new route for registration
+    path: '/home', // Add a new route for registration
     name: 'Messages',
     component: Messages,
   },

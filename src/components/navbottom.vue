@@ -18,7 +18,7 @@ export default {
     ns: [
       { title: "Home", icon: "mdi-home", to: "/" },
       { title: "Service", icon: "mdi-coffin", to: "/services" },
-      { title: "Message", icon: "mdi-email", to: "/message"},
+      { title: "Messages", icon: "mdi-email", to: "/messages"},
       { title: "Feedback", icon: "mdi-comment", to: "/feedback" },
     ],
   }),

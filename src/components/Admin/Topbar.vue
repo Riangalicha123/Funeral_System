@@ -1,8 +1,9 @@
 <template>
-  <v-app-bar app color="white" elevation="3">
+  <v-app-bar app color="rgb(25, 152, 194)" dark elevation="3">
       <v-app-bar-nav-icon @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
-      <v-col lg="5" cols="30">
-        <v-text-field
+      <v-row justify="center">
+        <v-col lg="11" offset-lg="1" cols="30">
+          <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
             label="Search"
@@ -10,8 +11,11 @@
             rounded
             full-width
             @input="searchItems"
+            style="margin-top: -15px;"
+            color="white"
           ></v-text-field>
-      </v-col>
+        </v-col>
+      </v-row>
       <v-btn icon @click="toggleNotificationDialog" style="cursor: pointer">
         <v-badge content="3" color="red">
           <v-icon>mdi-bell</v-icon>

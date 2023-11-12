@@ -24,11 +24,6 @@
         </v-dialog>
       </v-app-bar>
     <div class="chat-container">
-      <!-- Chat toggle button -->
-      <v-btn @click="toggleChat" icon class="chat-toggle-button">
-        <v-icon>{{ chatVisible ? 'mdi-comment' : 'mdi-message-text' }}</v-icon>
-      </v-btn>
-  
       <div v-if="chatVisible" class="chat-messages">
         <div v-for="message in messages" :key="message.id">
           <div class="message" :class="{ 'my-message': message.isMine }">
@@ -50,7 +45,7 @@
   </template>
   
   <script>
-  import { ref } from 'vue';
+  
   import navbottom from "@/components/navbottom.vue";
   export default {
     components:{

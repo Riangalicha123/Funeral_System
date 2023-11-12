@@ -19,7 +19,12 @@
       <template v-slot:append>
         <v-app-bar-nav-icon @click="drawer = !drawer" style="font-size: 38px; color: white !important"></v-app-bar-nav-icon>
       </template>
-    <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
+      <v-app-bar-title class="white--text headline font-weight-medium text-h4 text-center text-md-start">
+        Funeral Homes
+      </v-app-bar-title>
+      
+      
+    
     <v-spacer></v-spacer>
     <v-btn @click="showNotification" icon>
       <v-icon>mdi-bell</v-icon>
@@ -45,48 +50,50 @@
     <!-- Section 1: Hero Banner -->
     <v-row class="d-flex justify-center">
       <v-col cols="12">
-        <v-card
-          class="mx-auto"
-          shaped
-          outlined
-          style="
-            background: linear-gradient(to bottom, rgb(25, 152, 194), white);
-          "
-        >
+        <v-card class="mx-auto" shaped outlined>
           <v-parallax
             src="https://wallpapers.com/images/hd/funeral-background-l8wvr5vc978816f2.jpg"
           >
-            <div
-              class="d-flex flex-column fill-height justify-center align-center text-black"
-            >
+  
+            <div class="d-flex flex-column fill-height justify-center align-center text-black">
               <h1
                 class="text-h2 mb-10"
                 style="
+                  font-family: 'Pacifico', cursive;
                   font-weight: bold;
                   font-size: 15px;
-                  background: linear-gradient(
-                    to bottom,
-                    lightblue,
-                    rgb(37, 85, 230)
-                  );
+                  background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
                   background-clip: text;
                   -webkit-background-clip: text;
                   color: transparent;
                   transition: background 0.3s ease, color 0.3s ease;
                 "
               >
+              
+              <v-row justify="center">
+                <v-col xs="12" sm="10" md="8" lg="11" offset-lg="1" cols="40" style="color: rgb(25, 152, 194)">
+                  <v-text-field
+                    v-model="search"
+                    append-icon="mdi-magnify"
+                    label="Search"
+                    dense
+                    rounded
+                    full-width
+                    @input="searchItems"
+                    style="margin-top: 90px; color: rgb(25, 152, 194)"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              
                 Welcome
               </h1>
+  
               <h2
                 class="subheading"
                 style="
                   font-weight: medium;
                   font-size: 20px;
-                  background: linear-gradient(
-                    to bottom,
-                    lightblue,
-                    rgb(37, 85, 230)
-                  );
+                  background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
                   background-clip: text;
                   -webkit-background-clip: text;
                   color: transparent;
@@ -100,10 +107,9 @@
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
               At Our Funeral Home, we understand the importance of providing
-              compassionate and supportive funeral services during your
-              difficult time of loss. We are committed to helping you through
-              the grieving process and ensuring a meaningful farewell for your
-              loved ones.
+              compassionate and supportive funeral services during your difficult
+              time of loss. We are committed to helping you through the grieving
+              process and ensuring a meaningful farewell for your loved ones.
             </p>
           </v-card-text>
           <v-card-actions class="text-center">
@@ -135,6 +141,23 @@
           >
         </v-card>
       </v-col>
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="380"
+          title="Cremation Services"
+          append-icon="mdi-check"
+          style="background: linear-gradient(to bottom, white, rgb(25, 152, 194));"
+        >
+        <template v-slot:prepend>
+          <v-icon icon="mdi-coffin" color="black"></v-icon>
+        </template>     
+          <v-card-text>
+            Our cremation services provide a respectful and dignified farewell for your loved ones.
+          </v-card-text>
+        </v-card>
+      </v-col>
+      
       <v-col cols="auto">
         <v-card
           class="mx-auto"
@@ -276,6 +299,7 @@
   </v-main>
   
 </v-app>
+<Chat/>
 <navbottom/>
 </template>
 
@@ -286,10 +310,12 @@ const drawer = ref(false);
 </script>
 
 <script>
+import Chat from "@/components/Chat.vue";
 import navbottom from "@/components/navbottom.vue";
 export default {
   components:{
       navbottom,
+      Chat,
   },
 data: () => ({ 
   drawer: null,
