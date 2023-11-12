@@ -100,32 +100,37 @@
                   transition: background 0.3s ease, color 0.3s ease;
                 "
               >
-                Karamay Kaagapay Funeral Home.Co
+                Karamay Kaagapay Funeral Homes.Co
               </h2>
             </div>
           </v-parallax>
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
+              <h2>DAMAYAN BURIAL PROGRAM</h2>
+              <br>
+              <h3>WE COVER:NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION</h3>
+              <br>
               At Our Funeral Home, we understand the importance of providing
               compassionate and supportive funeral services during your difficult
               time of loss. We are committed to helping you through the grieving
               process and ensuring a meaningful farewell for your loved ones.
             </p>
           </v-card-text>
-          <v-card-actions class="text-center">
-            <v-btn color="primary" to="/about">Learn More</v-btn>
-          </v-card-actions>
+         
         </v-card>
       </v-col>
     </v-row>
 
+    
+    
+   
     <!-- Section 2: Services -->
 
     <v-row class="d-flex justify-center">
       <v-col cols="auto">
         <v-card
           class="mx-auto"
-          max-width="380"
+          max-width="420"
           title="Funeral Planning"
           append-icon="mdi-check"
           style="
@@ -144,7 +149,7 @@
       <v-col cols="auto">
         <v-card
           class="mx-auto"
-          max-width="380"
+          max-width="420"
           title="Cremation Services"
           append-icon="mdi-check"
           style="background: linear-gradient(to bottom, white, rgb(25, 152, 194));"
@@ -161,7 +166,7 @@
       <v-col cols="auto">
         <v-card
           class="mx-auto"
-          max-width="380"
+          max-width="420"
           title="Memorial Services"
           append-icon="mdi-check"
           style="
@@ -180,7 +185,7 @@
       <v-col cols="auto">
         <v-card
           class="mx-auto"
-          max-width="380"
+          max-width="420"
           title="Burial"
           append-icon="mdi-check"
           style="
@@ -211,11 +216,7 @@
               style="
                 font-weight: bold;
                 font-size: 15px;
-                background: linear-gradient(
-                  to bottom,
-                  lightblue,
-                  rgb(37, 85, 230)
-                );
+                background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
@@ -224,15 +225,12 @@
             >
               Contact Us
             </h1>
-          </v-card-title>
-          <v-card-text class="text-center">
             <p class="contact-description text-h6">
-              We're here to assist you with any questions, concerns, or to
-              help you schedule an appointment. Don't hesitate to get in touch
-              with us.
+              We're here to assist you with any questions, concerns, or to help you schedule an appointment. Don't hesitate to get in touch with us.
             </p>
-          </v-card-text>
-
+          </v-card-title>
+         
+  
           <v-card-text>
             <div class="contact-info">
               <v-list-item>
@@ -240,25 +238,25 @@
                   <v-icon> mdi-map-marker </v-icon>
                 </template>
                 <template v-slot:default>
-                  <strong>Address:</strong> 123 Sta. Isabel, Calapan City,
-                  Oriental Mindoro
+                  <strong>Address:</strong> 123 Sta. Isabel, Calapan City, Oriental Mindoro
                 </template>
               </v-list-item>
+              
               <v-divider inset></v-divider>
-
+  
               <v-list-item>
                 <template v-slot:prepend>
                   <v-icon> mdi-phone </v-icon>
                 </template>
                 <template v-slot:default>
-                  <strong>Phone:</strong> (123) 456-7890
+                  <strong>Phone:</strong> 0917-674-5813
                 </template>
                 <template v-slot:append>
                   <v-icon> mdi-message-text </v-icon>
                 </template>
               </v-list-item>
               <v-divider inset></v-divider>
-
+  
               <v-list-item>
                 <template v-slot:prepend>
                   <v-icon> mdi-email </v-icon>
@@ -271,18 +269,14 @@
                 </template>
               </v-list-item>
               <v-divider inset></v-divider>
-
+  
               <v-list-item>
                 <template v-slot:prepend>
                   <v-icon> mdi-facebook </v-icon>
                 </template>
                 <template v-slot:default>
                   <strong>Facebook:</strong>
-                  <a
-                    href="https://www.facebook.com/your-funeral-home-page"
-                    target="_blank"
-                    >FuneralHomePage</a
-                  >
+                  <a href="https://www.facebook.com/your-funeral-home-page" target="_blank">FuneralHomePage</a>
                 </template>
                 <template v-slot:append>
                   <v-icon> mdi-message-text </v-icon>
@@ -290,9 +284,7 @@
               </v-list-item>
             </div>
           </v-card-text>
-          <v-card-actions class="text-center">
-            <v-btn color="primary" to="/contact">Get in Touch</v-btn>
-          </v-card-actions>
+          
         </v-card>
       </v-col>
     </v-row>
@@ -338,6 +330,32 @@ methods: {
 
 
 <style>
+.v-card {
+  background-color: #f8f8f8; /* Light gray background */
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.v-card-title h1 {
+  margin: 0; /* Remove margin for the title */
+}
+
+.contact-description {
+  color: #555;
+}
+
+.contact-info strong {
+  color: #333;
+}
+
+.contact-info a {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
 .v-navigation-drawer {
   background: linear-gradient(to bottom right, rgb(25, 152, 194), white);
   width: 260px !important;
