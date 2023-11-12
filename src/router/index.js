@@ -9,6 +9,7 @@ import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import Planholder from '../views/Admin/Planholder.vue';
 import CreateAccount from '../views/Agent/CreateAccount.vue';
+import Payment from '../views/Agent/Payment.vue';
 import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
 const routes = [
@@ -48,6 +49,11 @@ const routes = [
     path: '/account', // Add a new route for registration
     name: 'account',
     component: Account,
+  },
+  {
+    path: '/payment', // Add a new route for registration
+    name: 'payment',
+    component: Payment,
   },
   {
     path: '/admin', // Add a new route for registration
