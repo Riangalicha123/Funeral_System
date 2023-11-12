@@ -8,6 +8,7 @@ import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import Planholder from '../views/Admin/Planholder.vue';
+import Feedbackk from '../views/Admin/Feedback.vue';
 import CreateAccount from '../views/Agent/CreateAccount.vue';
 import Payment from '../views/Agent/Payment.vue';
 import Chat from '../components/Chat.vue';
@@ -64,6 +65,11 @@ const routes = [
     path: '/planholder', // Add a new route for registration
     name: 'planholder',
     component: Planholder,
+  },
+  {
+    path: '/feedbackk', // Add a new route for registration
+    name: 'Feedbackk',
+    component: Feedbackk,
   },
   {
     path: '/agent', // Add a new route for registration
