@@ -22,7 +22,7 @@
                 <v-row>
                   <v-col cols="12">
                     <v-text-field
-                      v-model="fullName"
+                      v-model="edit.fullName"
                       label="Full Name"
                       required>
                     </v-text-field>
@@ -31,7 +31,7 @@
                 <v-row>
                   <v-col cols="12" sm="6" md="6">
                     <v-text-field
-                      v-model="username"
+                      v-model="edit.username"
                       label="Username"
                       required
                       class="custom-text-field">
@@ -39,7 +39,7 @@
                   </v-col>
                   <v-col cols="12" sm="6" md="6">
                     <v-text-field
-                      v-model="email"
+                      v-model="edit.email"
                       label="Email"
                       required
                       class="custom-text-field">
@@ -49,7 +49,7 @@
                 <v-row>
                   <v-col cols="12" sm="6" md="6">
                     <v-text-field
-                      v-model="password"
+                      v-model="edit.password"
                       label="Password"
                       required
                       type="password"
@@ -58,7 +58,7 @@
                   </v-col>
                   <v-col cols="12" sm="6" md="6">
                     <v-text-field
-                      v-model="confirmPassword"
+                      v-model="edit.confirmPassword"
                       label="Confirm Password"
                       required
                       type="password"
@@ -69,7 +69,7 @@
                 <v-row>
                   <v-col cols="12">
                     <v-text-field
-                      v-model="address"
+                      v-model="edit.address"
                       label="Address"
                       class="custom-text-field">
                     </v-text-field>
@@ -78,21 +78,21 @@
                 <v-row>
                   <v-col cols="12" sm="4" md="4">
                     <v-text-field
-                      v-model="age"
+                      v-model="edit.age"
                       label="Age"
                       class="custom-text-field">
                     </v-text-field>
                   </v-col>
                   <v-col cols="12" sm="4" md="4">
                     <v-text-field
-                      v-model="contactNumber"
+                      v-model="edit.contactNumber"
                       label="Contact Number"
                       class="custom-text-field">
                     </v-text-field>
                   </v-col>
                   <v-col cols="12" sm="4" md="4">
                     <v-select
-                      v-model="gender"
+                      v-model="edit.gender"
                       :items="['Male', 'Female', 'Other']"
                       label="Gender"
                       required
@@ -108,6 +108,9 @@
                       class="extra-large-button">SAVE CHANGES
                     </v-btn>
                   </v-col>
+                  <v-col cols="12" class="text-center">
+                      <v-btn color="grey" @click="handleReset" class="extra-large-button">Clear</v-btn>
+                    </v-col>
                 </v-row>
               </v-form>
             </v-card-text>
@@ -123,9 +126,24 @@
     data() {
       return {
         selectedImage: null,
+
+        edit: {
+
+        }
       };
     },
     methods: {
+      handleReset() {
+      this.edit.fullName = '';
+      this.edit.username = '';
+      this.edit.email = '';
+      this.edit.password = '';
+      this.edit.confirmPassword = '';
+      this.edit.address = '';
+      this.edit.age = '';
+      this.edit.contactNumber = '';
+      this.edit.gender = '';
+    },
       signUp() {
         // Handle form submission including the selected image
         console.log("User data:", {
@@ -161,4 +179,5 @@
   .v-text-field {
     margin-bottom: -5% !important;
   }
+
   </style>
