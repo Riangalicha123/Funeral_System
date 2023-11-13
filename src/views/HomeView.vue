@@ -105,11 +105,14 @@
               >
                 Karamay Kaagapay Funeral Homes.Co
               </h2>
+              <h2 style="color: rgb(37, 85, 230);">DAMAYAN BURIAL PROGRAM</h2>
+              <br>
+              
             </div>
           </v-parallax>
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
-              <h2 style="color: rgb(37, 85, 230);">DAMAYAN BURIAL PROGRAM</h2>
+              
               <br>
               <h3 style="color: rgb(209, 60, 60);">WE COVER: NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION</h3>
               <br>
