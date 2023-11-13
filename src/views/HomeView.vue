@@ -2,7 +2,8 @@
   <v-navigation-drawer v-model="drawer" location="right">
     <v-list-item>
       <v-list-title-content>
-        <v-list-item-title class="title"> My Account </v-list-item-title>
+        <v-list-item-title class="title" v-if="jwt"> My Account </v-list-item-title>
+        <v-list-item-title class="title" v-else> My Accounts </v-list-item-title>
       </v-list-title-content>
     </v-list-item>
     <v-divider></v-divider>
@@ -317,6 +318,7 @@ export default {
   },
 data: () => ({ 
   drawer: null,
+  jwt:"",
   notificationMessage: null, // Initialize as an empty string
   items: [
     { title: "Login", icon: "mdi mdi-login", to: "/login" },
