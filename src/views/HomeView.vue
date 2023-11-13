@@ -111,6 +111,34 @@
               
             </div>
           </v-parallax>
+         
+          <v-container class="fill-height" fluid style="min-height: 434px">
+            <v-row>
+              <v-col cols="12" sm="6" md="6">
+                <v-card>
+                  <v-img
+                    src="funeral7.jpg"
+                    height="300" 
+                    width="100%"
+                    cover
+                    class="bg-grey-lighten-2"
+                  ></v-img>
+                </v-card>
+              </v-col>
+        
+              <v-col cols="12" sm="6" md="6">
+                <v-card>
+                  <v-img
+                    src="funeral6.jpg"
+                    height="300" 
+                    width="100%"
+                    cover
+                    class="bg-grey-lighten-2"
+                  ></v-img>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-container>
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
               
@@ -415,5 +443,9 @@ methods: {
 .item-title {
   display: inline !important;
   margin-left: 10px !important;
+}
+.custom-card {
+  border: 1px solid blue !important; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; 
 }
 </style>

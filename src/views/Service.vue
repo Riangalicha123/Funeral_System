@@ -79,21 +79,21 @@ export default {
       notificationMessage: false,
       items: [
         {
-          image: "kabaong1.png",
+          image: "services2.jpg",
           price: "₱14,000.00",
           category: "Package A",
           name: "St. Dominique",
           details: "Floral arrangement with lilies, roses, and carnations. Catered meal for attendees.",
         },
         {
-          image: "kabaong2.png",
+          image: "services1.jpg",
           price: "₱17,000.00",
           category: "Package B",
           name: "St. Francis",
           details: "Premium floral arrangement with orchids, roses, and daisies. Gourmet catering service.",
         },
         {
-          image: "kabaong3.png",
+          image: "services3.jpg",
           price: "₱23,000.00",
           category: "Package C",
           name: "St. Paul",
