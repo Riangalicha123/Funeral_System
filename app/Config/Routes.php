@@ -7,9 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-$routes->get('/registerData', 'UserController::registerData');
+
+
 $routes->post('/register', 'UserController::register');
 $routes->post('/loginAuth', 'UserController::loginAuth');
+$routes->get('/logout', 'UserController::logout');
 
+$routes->get('/registerData', 'UserController::registerData');
 
 $routes->post('/deleteUser', 'UserController::deleteUser');
+
+
+$routes->post('/submit-feedback', 'FeedbackController::submitFeedback');
+$routes->get('/notification', 'FeedbackController::getNotifications');

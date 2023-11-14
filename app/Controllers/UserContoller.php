@@ -80,6 +80,58 @@ class UserController extends ResourceController
             return $this->respond(['message' => 'User not found'], 404);
         }
     }
+    
+    /* public function updateUser()
+    {
+        $json = $this->request->getJSON();
+        $userId = $json->UserId;
+
+        // Check if the user exists
+        $user = $this->userAccounts->find($userId);
+
+        if ($user) {
+            // User found, proceed with update
+            helper(['form']);
+            $rules = [
+                'FirstName' => ['rules' => 'required|max_length[255]'],
+                'MiddleName' => ['rules' => 'max_length[255]'],
+                'LastName' => ['rules' => 'required|max_length[255]'],
+                'Email' => ['rules' => "required|min_length[4]|max_length[255]|valid_email|is_unique[user_accounts.Email,id,$userId]"],
+                'Password' => ['rules' => 'min_length[8]|max_length[255]'],
+                'Address' => ['rules' => 'required|min_length[8]|max_length[255]'],
+                'ContactNumber' => ['rules' => 'required|max_length[11]'],
+                'confirmPassword' => ['rules' => 'matches[Password]']
+            ];
+
+            if ($this->validate($rules)) {
+                $data = [
+                    "FirstName" => $json->FirstName,
+                    "MiddleName" => $json->MiddleName,
+                    "LastName" => $json->LastName,
+                    "Email" => $json->Email,
+                    "Address" => $json->Address,
+                    "ContactNumber" => $json->ContactNumber,
+                ];
+
+                if (!empty($json->Password)) {
+                    $data['Password'] = password_hash($json->Password, PASSWORD_DEFAULT);
+                }
+
+                $this->userAccounts->update($userId, $data);
+                return $this->respond(['message' => 'User updated successfully'], 200);
+            } else {
+                $response = [
+                    'error' => $this->validator->getErrors(),
+                    'message' => 'Invalid Inputs'
+                ];
+                return $this->respond($response);
+            }
+        } else {
+            // User not found
+            return $this->respond(['message' => 'User not found'], 404);
+        }
+    } */
+
 
     public function loginAuth()
     {
@@ -89,7 +141,9 @@ class UserController extends ResourceController
         $Password = $json->Password;
 
         $user = $this->userAccounts->where('Email', $Email)->first();
+
         if(is_null($user)) {
+
             return $this->respond(['error' => 'Invalid email or password.'], 401);
         }
    
@@ -111,6 +165,7 @@ class UserController extends ResourceController
             "exp" => $exp, // Expiration time of token
             "email" => $user['Email'],
         );
+        
           
         $token = JWT::encode($payload, $key, 'HS256');
   
@@ -121,4 +176,6 @@ class UserController extends ResourceController
           
         return $this->respond($response, 200);
     }
+    
+    
 }
