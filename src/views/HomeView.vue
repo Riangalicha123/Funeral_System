@@ -238,35 +238,51 @@
     <!-- First Card: Word of the Day -->
     
     <v-row>
-     <v-col cols="12" md="4" class="ml-3"> 
-      <v-card
-        class="mx-auto"
-        max-width="800"
-        style="
-          background: linear-gradient(to bottom, white, rgb(25, 152, 194));
-          height: 400px; 
-        "
-      >
-      <v-card-text>
-        <h1
-        class="text-h3 mb-10"
-        style="
-          font-weight: bold;
-          font-size: 40px !important;
-          color: rgb(7, 131, 172) !important;
-        "
-      >
-        Branch Information
-      </h1>
-        <p class="text-h4 text--primary">Calapan Branch</p>
-        <p>Location: St.Isabel Calapan City Oriental Mindoro</p>
-        <p>Contact: 0917-674-5813</p>
-        <p class="text--primary">
-          Our main branch is conveniently located in the heart of the city, providing compassionate funeral services to the community.
-        </p>
-      </v-card-text>
-      </v-card>
-    </v-col>
+      <v-col cols="12" md="4" class="ml-3">
+        <v-card
+          class="mx-auto"
+          max-width="800"
+          style="
+            background: linear-gradient(to bottom, white, rgb(25, 152, 194));
+            height: 400px; 
+          "
+        >
+          <v-card-text>
+            <!-- Unique Design for the Card Title with Map Marker Icon -->
+            <div class="d-flex align-center mb-4">
+              
+              <h1 class="text-h3" style="font-weight: bold; font-size: 40px; color: rgb(7, 131, 172) !important;">
+                Branch Information
+              </h1>
+            </div>
+            <br>
+            <br>
+            <!-- Branch Information with Icons -->
+            <v-row>
+              <div class="d-flex align-center mb-4">
+                <v-icon color="primary" class="mr-2">mdi-map-marker-outline</v-icon>
+                <p class="text-h4 text--primary">Calapan Branch</p>
+              </div>
+              
+              <div class="d-flex align-center mb-4">
+                <v-icon color="primary" class="mr-2">mdi-map</v-icon>
+                <p>Location: St. Isabel Calapan City, Oriental Mindoro</p>
+              </div>
+              
+              <div class="d-flex align-center mb-4">
+                <v-icon color="primary" class="mr-2">mdi-phone</v-icon>
+                <p>Contact: 0917-674-5813</p>
+              </div>
+            </v-row>
+             
+      
+            <p class="text--primary">
+              Our main branch is conveniently located in the heart of the city, providing compassionate funeral services to the community.
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      
   
       <!-- Column 2: Branch Information -->
       <v-col cols="12" md="" class="mr-3">
@@ -280,6 +296,9 @@
         >
           <v-card-text>
             <v-row align="end">
+              <!-- Icon for Mission -->
+              
+      
               <v-col cols="11">
                 <h1
                   class="text-h3 mb-10"
@@ -291,23 +310,28 @@
                 >
                   Mission and Vision
                 </h1>
+      
+                <!-- Our Mission -->
                 <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
-                  Our Mission
+                  <v-icon color="primary">mdi-bullseye</v-icon> Our Mission
                 </p>
                 <div class="text--primary" style="font-size: 18px; margin-bottom: 10px;">
-                  To [Describe your mission here.]
+                  To offer/provide affordable, decent services filled with Filipino heart and soul.
                 </div>
+      
+                <!-- Our Vision -->
                 <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
-                  Our Vision
+                  <v-icon color="primary">mdi-eye</v-icon> Our Vision
                 </p>
                 <div class="text--primary" style="font-size: 18px; margin-bottom: 10px;">
-                  To [Describe your vision here.]
+                  To create memorable funeral experiences.
                 </div>
               </v-col>
             </v-row>
           </v-card-text>
         </v-card>
       </v-col>
+      
       
   
       <!-- Column 3: Contact Information -->
