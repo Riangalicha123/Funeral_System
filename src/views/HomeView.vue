@@ -58,16 +58,12 @@
   
             <div class="d-flex flex-column fill-height justify-center align-center text-black">
               <h1
-                class="text-h2 mb-10"
+                
                 style="
-                  font-family: 'Pacifico', cursive;
+                  font-family: 'Pacifico', cursive !important;
                   font-weight: bold;
-                  font-size: 15px;
-                  background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  color: transparent;
-                  transition: background 0.3s ease, color 0.3s ease;
+                  font-size: 90px !important;
+                  color:rgb(7, 131, 172)!important;
                 "
               >
               
@@ -86,17 +82,14 @@
                   ></v-text-field>
                 </v-col>
               </v-row>-->
-              
-              
-              
                 Welcome
               </h1>
-  
               <h2
-                class="subheading"
+                
                 style="
-                  font-weight: medium;
-                  font-size: 20px;
+                font-family: 'Glass Antiqua', sans-serif !important;
+                  font-weight: bold;
+                  font-size: 22px !important;
                   background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
                   background-clip: text;
                   -webkit-background-clip: text;
@@ -106,7 +99,7 @@
               >
                 Karamay Kaagapay Funeral Homes.Co
               </h2>
-              <h2 style="color: rgb(37, 85, 230);">DAMAYAN BURIAL PROGRAM</h2>
+              <h2 style="color: rgb(55, 96, 221);">DAMAYAN BURIAL PROGRAM</h2>
               <br>
               
             </div>
@@ -141,9 +134,9 @@
           </v-container>
           <v-card-text style="text-align: center">
             <p class="hero-description text-h6">
-              
-              <br>
-              <h3 style="color: rgb(209, 60, 60);">WE COVER: NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION</h3>
+              <h3 style="color: rgb(209, 60, 60); font-family: 'Valera Round', sans-serif;">
+                WE COVER: NO AGE AND BENEFICIARIES LIMIT AND ANY HEALTHY CONDITION
+            </h3>            
               <br>
               At Our Funeral Home, we understand the importance of providing
               compassionate and supportive funeral services during your difficult
@@ -242,31 +235,116 @@
     </v-row>
 
     <!-- Section 3: Contact -->
-    <v-row class="d-flex justify-center">
-      <v-col cols="12">
-        <v-card class="mx-auto" shaped outlined>
+    <!-- First Card: Word of the Day -->
+    
+    <v-row>
+     <v-col cols="12" md="4" class="ml-3"> 
+      <v-card
+        class="mx-auto"
+        max-width="800"
+        style="
+          background: linear-gradient(to bottom, white, rgb(25, 152, 194));
+          height: 400px; 
+        "
+      >
+      <v-card-text>
+        <h1
+        class="text-h3 mb-10"
+        style="
+          font-weight: bold;
+          font-size: 40px !important;
+          color: rgb(7, 131, 172) !important;
+        "
+      >
+        Branch Information
+      </h1>
+        <p class="text-h4 text--primary">Calapan Branch</p>
+        <p>Location: St.Isabel Calapan City Oriental Mindoro</p>
+        <p>Contact: 0917-674-5813</p>
+        <p class="text--primary">
+          Our main branch is conveniently located in the heart of the city, providing compassionate funeral services to the community.
+        </p>
+      </v-card-text>
+      </v-card>
+    </v-col>
+  
+      <!-- Column 2: Branch Information -->
+      <v-col cols="12" md="" class="mr-3">
+        <v-card
+          class="mx-auto"
+          max-width="600"
+          style="
+            background: linear-gradient(to bottom, white, rgb(25, 152, 194));
+            height: 400px;
+          "
+        >
+          <v-card-text>
+            <v-row align="end">
+              <v-col cols="11">
+                <h1
+                  class="text-h3 mb-10"
+                  style="
+                    font-weight: bold;
+                    font-size: 40px !important;
+                    color: rgb(7, 131, 172) !important;
+                  "
+                >
+                  Mission and Vision
+                </h1>
+                <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
+                  Our Mission
+                </p>
+                <div class="text--primary" style="font-size: 18px; margin-bottom: 10px;">
+                  To [Describe your mission here.]
+                </div>
+                <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
+                  Our Vision
+                </p>
+                <div class="text--primary" style="font-size: 18px; margin-bottom: 10px;">
+                  To [Describe your vision here.]
+                </div>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      
+  
+      <!-- Column 3: Contact Information -->
+      <v-col cols="12" md="4" class="mr-3"> 
+        <v-card
+          class="mx-auto"
+          max-width="900"
+          style="
+            background: linear-gradient(to bottom, white, rgb(25, 152, 194));
+            height: 400px; 
+          "
+        >
           <v-card-title class="text-h3 text-center">
             <h1
               class="text-h3 mb-10"
               style="
-                font-weight: bold;
-                font-size: 15px;
-                background: linear-gradient(to bottom, lightblue, rgb(37, 85, 230));
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: background 0.3s ease, color 0.3s ease;
+              
+              font-weight: bold;
+              font-size: 40px !important;
+              color:rgb(7, 131, 172)!important;
+                
               "
             >
               Contact Us
             </h1>
             <p class="contact-description text-h6">
-              We're here to assist you with any questions, concerns, or to help you schedule an appointment. Don't hesitate to get in touch with us.
+              We're here to assist you with any questions .
             </p>
+            <p class="contact-description text-h6"> Don't hesitate to get in touch with us.</p>
           </v-card-title>
-         
   
           <v-card-text>
+            <div class="contact-info">
+              
+              <v-divider inset></v-divider>
+  
+               <v-card-text>
             <div class="contact-info">
               <v-list-item>
                 <template v-slot:prepend>
@@ -319,10 +397,13 @@
               </v-list-item>
             </div>
           </v-card-text>
-          
+              
+            </div>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
+    
   </v-main>
   
 </v-app>
