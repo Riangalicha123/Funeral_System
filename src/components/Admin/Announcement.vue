@@ -1,5 +1,4 @@
 <template>
-    <v-app>
       <v-container>
         <v-row justify="center" style="padding-top: 10%">
           <v-col cols="12" sm="8" md="6">
@@ -25,11 +24,14 @@
                         rows="5"
                         outlined
                       ></v-textarea>
-                    </v-col>
-                  </v-row>
-                  <v-row>
+                        </v-col>
+                        </v-row>
+                        <v-row>
                     <v-col cols="12" class="text-center">
-                      <v-btn type="submit" color="primary">Submit Announcement</v-btn>
+                    <v-btn color="rgb(25, 152, 194"  @click="signUp" class="extra-large-button">Submit </v-btn>
+                  </v-col>
+                    <v-col cols="12" class="text-center">
+                      <v-btn color="grey" @click="handleReset" class="extra-large-button">Clear</v-btn>
                     </v-col>
                   </v-row>
                 </v-form>
@@ -38,7 +40,6 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-app>
   </template>
   
   <script>
@@ -52,6 +53,10 @@
       };
     },
     methods: {
+    handleReset() {
+      this.Email = "";
+      this.Message = "";
+    },
       async submitAnnouncement() {
         try {
           const response = await axios.post("/submit-announcement", {
