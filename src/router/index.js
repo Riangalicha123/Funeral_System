@@ -60,6 +60,7 @@ const routes = [
     path: '/admin', // Add a new route for registration
     name: 'admin',
     component: Admin,
+    meta:{ requiresAuth: true}
   },
   {
     path: '/planholder', // Add a new route for registration
@@ -91,4 +92,27 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+router.beforeEach(async (to, from, next) => {
+  const isLoggedin = await checkUserLogin(); // Assuming checkUserLogin is asynchronous
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (!isLoggedin) {
+      // Pass the current route as a query parameter for redirection after login
+      next({ path: "/login", query: { redirect: to.fullPath } });
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+async function checkUserLogin() {
+  const userToken = sessionStorage.getItem("token");
+  // Simulating an asynchronous check, replace this with your actual async logic
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(!!userToken);
+    }, 1000);
+  });
+}
+
 export default router

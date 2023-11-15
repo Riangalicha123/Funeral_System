@@ -94,10 +94,9 @@ export default {
           Email: this.Email,
           Password: this.Password,
         });
-        sessionStorage.setItem("jwt", response.data.token);
+        sessionStorage.setItem("token", response.data.token);
         const decodedToken = jwt_decode(response.data.token);
         const userRole = decodedToken.aud;
-        console.log(decodedToken)
 
         document.cookie = `token=${response.data.token}; HttpOnly`;
 

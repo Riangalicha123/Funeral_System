@@ -2,17 +2,30 @@
   <v-navigation-drawer v-model="drawer" location="right">
     <v-list-item>
       <v-list-title-content>
-        <v-list-item-title class="title" v-if="jwt"> My Account </v-list-item-title>
-        <v-list-item-title class="title" v-else> My Accounts </v-list-item-title>
+        <v-list-item-title class="title"> My Account </v-list-item-title>
       </v-list-title-content>
     </v-list-item>
     <v-divider></v-divider>
     <v-list dense nav>
-      <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
+      <!-- Show Login and Register when user is not logged in -->
+      <v-list-item v-if="!loggedIn" @click="redirectToLogin" link>
         <template v-slot:prepend>
-          <v-icon>{{ item.icon }}</v-icon>
+          <v-icon>mdi mdi-login</v-icon>
         </template>
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
+        <v-list-item-title>Login</v-list-item-title>
+      </v-list-item>
+      <v-list-item v-if="!loggedIn" @click="redirectToRegister" link>
+        <template v-slot:prepend>
+          <v-icon>mdi-account-plus</v-icon>
+        </template>
+        <v-list-item-title>Register</v-list-item-title>
+      </v-list-item>
+      <!-- Show Logout when user is logged in -->
+      <v-list-item v-if="loggedIn" @click="logout" link>
+        <template v-slot:prepend>
+          <v-icon>mdi-logout</v-icon>
+        </template>
+        <v-list-item-title>Logout</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -444,6 +457,8 @@ const drawer = ref(false);
 <script>
 import Chat from "@/components/Chat.vue";
 import navbottom from "@/components/navbottom.vue";
+import { jwtDecode as jwt_decode } from "jwt-decode";
+import axios from 'axios';
 export default {
   components:{
       navbottom,
@@ -451,16 +466,18 @@ export default {
   },
 data: () => ({ 
   drawer: null,
-  jwt:"",
+  loggedIn: false,
   notificationMessage: null, // Initialize as an empty string
-  items: [
-    { title: "Login", icon: "mdi mdi-login", to: "/login" },
-    { title: "Register", icon: "mdi-account-plus", to: "/register" },
-    { title: "Create Account", icon: "mdi-account", to: "/account" },
-  ],
 }),
 
 methods: {
+  redirectToLogin() {
+    this.$router.push("/login");
+  },
+  redirectToRegister() {
+    this.$router.push("/register");
+    
+  },
   showNotification() {
     // Set the notification message you want to display
     this.notificationMessage = "This is a sample notification message.";
