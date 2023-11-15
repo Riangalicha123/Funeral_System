@@ -31,6 +31,7 @@ export default {
         {icon: "mdi-microsoft-windows", text: "Dashboard", to:"/admin"},
         {icon: "mdi-account", text: "PlanHolder", to: "/planholder"},
         {icon: "mdi-comment", text: "Feedback", to: "/feedbackk"},
+        {icon: "mdi-mail", text: "Announcement", to: "/announcement"},
       ],
     };
   },

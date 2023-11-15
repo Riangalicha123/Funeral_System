@@ -16,9 +16,11 @@ import Sidebar from "@/components/Admin/Sidebar.vue";
 import Topbar from "@/components/Admin/Topbar.vue";
 import Dashboard from "@/components/Admin/Dashboard.vue";
 import Chat from "@/components/Chat.vue";
+import Announcement from "@/components/Admin/Announcement.vue";
+
 export default {
   name: "Admin",
-  components: { Topbar, Sidebar, Dashboard,Chat},
+  components: { Topbar, Sidebar, Dashboard, Chat, Announcement, },
   data: () => ({
     cards: ["Today", "Yesterday"],
     drawer: null,

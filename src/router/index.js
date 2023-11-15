@@ -13,6 +13,8 @@ import CreateAccount from '../views/Agent/CreateAccount.vue';
 import Payment from '../views/Agent/Payment.vue';
 import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
+import Announcement from '../views/Admin/Announcement.vue';
+
 const routes = [
   {
     path: '/', // Add a new route for registration
@@ -86,6 +88,11 @@ const routes = [
     path: '/admin/profile', // Add a new route for registration
     name: 'EditProfile',
     component: EditProfile,
+  },
+  {
+    path: '/announcement', // Add a new route for registration
+    name: 'Announcenment',
+    component: Announcement,
   },
 ]
 const router = createRouter({
