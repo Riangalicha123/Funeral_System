@@ -1,43 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" location="right">
-    <v-list-item>
-      <v-list-title-content>
-        <v-list-item-title class="title"> My Account </v-list-item-title>
-      </v-list-title-content>
-    </v-list-item>
-    <v-divider></v-divider>
-    <v-list dense nav>
-      <v-list-item @click="redirectToLogin" link>
-        <template v-slot:prepend>
-          <v-icon>mdi mdi-login</v-icon>
-        </template>
-        <v-list-item-title>Login</v-list-item-title>
-      </v-list-item>
-      <v-list-item @click="redirectToRegister" link>
-        <template v-slot:prepend>
-          <v-icon>mdi-account-plus</v-icon>
-        </template>
-        <v-list-item-title>Register</v-list-item-title>
-      </v-list-item>
-      
-    </v-list>
-  </v-navigation-drawer>
-  <v-app-bar scroll-behavior="inverted" color="rgb(25, 152, 194)" dark dense>
-      <template v-slot:append>
-        <v-app-bar-nav-icon @click="drawer = !drawer" style="font-size: 38px; color: white !important"></v-app-bar-nav-icon>
-      </template>
-      <v-app-bar-title class="white--text headline font-weight-medium text-h4 text-center text-md-start">
-        Funeral Homes
-      </v-app-bar-title>
-      
-  </v-app-bar>
-<v-app id="inspire">
-  
 
-  
-
-  <v-main>
-    <!-- Section 1: Hero Banner -->
     <v-row class="d-flex justify-center">
       <v-col cols="12">
         <v-card class="mx-auto" shaped outlined>
@@ -416,51 +378,12 @@
         </v-card>
       </v-col>
     </v-row>
-    
-  </v-main>
-  
-</v-app>
-<Chat/>
-<navbottom/>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const drawer = ref(false);
-</script>
-
 <script>
-import Chat from "@/components/Chat.vue";
-import navbottom from "@/components/navbottom.vue";
-import { jwtDecode as jwt_decode } from "jwt-decode";
-import axios from 'axios';
 export default {
-  components:{
-      navbottom,
-      Chat,
-  },
-data: () => ({ 
-  drawer: null,
-  loggedIn: false,
-}),
-
-methods: {
-  redirectToLogin() {
-    this.$router.push("/login");
-  },
-  redirectToRegister() {
-    this.$router.push("/register");
-    
-  },
-  
-},
-
-};
+    name: 'planholder-home',
+}
 </script>
-
-
-
 <style>
 .v-card {
   background-color: #f8f8f8; /* Light gray background */

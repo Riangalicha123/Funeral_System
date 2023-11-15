@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { jwtDecode as jwt_decode } from "jwt-decode";
+
 import Homeview from '../views/HomeView.vue';
 import Service from '../views/Service.vue';
 import Messages from '../views/Messages.vue';
@@ -7,13 +9,24 @@ import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
-import Planholder from '../views/Admin/Planholder.vue';
+import PlanHolderr from '../views/Admin/Planholder.vue';
 import Feedbackk from '../views/Admin/Feedback.vue';
 import CreateAccount from '../views/Agent/CreateAccount.vue';
 import Payment from '../views/Agent/Payment.vue';
 import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
 import Announcement from '../views/Admin/Announcement.vue';
+
+
+
+//Planholder Portal
+import Planholder from '../views/planholder/layout/Planholder.vue'
+import PlanHome from '../views/planholder/content/PlanHome.vue'
+import PlanService from '../views/planholder/content/PlanService.vue'
+import PlanMessage from '../views/planholder/content/PlanMessage.vue'
+import PlanFeedback from '../views/planholder/content/PlanFeedback.vue'
+
+
 
 const routes = [
   {
@@ -36,8 +49,35 @@ const routes = [
     name: 'Feedback',
     component: Feedback,
   },
-
-
+  {
+    path: '/planholder', // Add a new route for registration
+    name: 'planholder',
+    component: Planholder,
+    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] },
+    children:[
+      {
+        path: 'home',
+        name: 'planholder-home',
+        component: PlanHome
+      },
+      {
+        path: 'service',
+        name: 'planholder-service',
+        component: PlanService
+      },
+      {
+        path: 'message',
+        name: 'planholder-message',
+        component: PlanMessage
+      },
+      {
+        path: 'feedback',
+        name: 'planholder-feedback',
+        component: PlanFeedback
+      },
+    ]
+  },
+  
   {
     path: '/register', // Add a new route for registration
     name: 'register',
@@ -62,12 +102,12 @@ const routes = [
     path: '/admin', // Add a new route for registration
     name: 'admin',
     component: Admin,
-    meta:{ requiresAuth: true}
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
-    path: '/planholder', // Add a new route for registration
-    name: 'planholder',
-    component: Planholder,
+    path: '/planholderr', // Add a new route for registration
+    name: 'planholderr',
+    component: PlanHolderr,
   },
   {
     path: '/feedbackk', // Add a new route for registration
@@ -99,27 +139,24 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
-router.beforeEach(async (to, from, next) => {
-  const isLoggedin = await checkUserLogin(); // Assuming checkUserLogin is asynchronous
-  if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (!isLoggedin) {
-      // Pass the current route as a query parameter for redirection after login
-      next({ path: "/login", query: { redirect: to.fullPath } });
-    } else {
-      next();
+router.beforeEach((to, from, next) => {
+  const token = sessionStorage.getItem('token');
+  if(to.meta.requiresAuth){
+    if(!token){
+      next('/login');
+    }else{
+      const decodedToken = jwt_decode(token);
+      const userRole = decodedToken.aud;
+
+      if (to.meta.allowedRoles.includes(userRole)){
+        next();
+      }else {
+        next('/forbidden');
+      }
     }
-  } else {
+  }else {
     next();
   }
 });
-async function checkUserLogin() {
-  const userToken = sessionStorage.getItem("token");
-  // Simulating an asynchronous check, replace this with your actual async logic
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(!!userToken);
-    }, 1000);
-  });
-}
 
 export default router

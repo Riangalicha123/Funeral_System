@@ -94,18 +94,17 @@ export default {
           Email: this.Email,
           Password: this.Password,
         });
-        sessionStorage.setItem("token", response.data.token);
+        sessionStorage.setItem('token', response.data.token);
         const decodedToken = jwt_decode(response.data.token);
         const userRole = decodedToken.aud;
 
-        document.cookie = `token=${response.data.token}; HttpOnly`;
 
         switch (userRole) {
           case "PlanHolder":
-            this.$router.push("/");
+            this.$router.push('/planholder/home');
             break;
           case "Admin":
-            this.$router.push("/admin");
+            this.$router.push('/admin');
             break;
           default:
             this.$router.push('/login');
