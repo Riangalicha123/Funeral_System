@@ -101,7 +101,7 @@ export default {
 
         switch (userRole) {
           case "PlanHolder":
-            this.$router.push('/planholder/home');
+            this.$router.push('/');
             break;
           case "Admin":
             this.$router.push('/admin');

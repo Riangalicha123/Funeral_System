@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { jwtDecode as jwt_decode } from "jwt-decode";
 
-import Homeview from '../views/HomeView.vue';
+import HomeView from '../views/HomeView.vue';
 import Service from '../views/Service.vue';
 import Messages from '../views/Messages.vue';
 import Feedback from '../views/Feedback.vue';
@@ -9,7 +9,7 @@ import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
-import PlanHolderr from '../views/Admin/Planholder.vue';
+import PlanHolder from '../views/Admin/Planholder.vue';
 import Feedbackk from '../views/Admin/Feedback.vue';
 import CreateAccount from '../views/Agent/CreateAccount.vue';
 import Payment from '../views/Agent/Payment.vue';
@@ -18,21 +18,11 @@ import EditProfile from '../views/Admin/EditProfile.vue';
 import Announcement from '../views/Admin/Announcement.vue';
 
 
-
-//Planholder Portal
-import Planholder from '../views/planholder/layout/Planholder.vue'
-import PlanHome from '../views/planholder/content/PlanHome.vue'
-import PlanService from '../views/planholder/content/PlanService.vue'
-import PlanMessage from '../views/planholder/content/PlanMessage.vue'
-import PlanFeedback from '../views/planholder/content/PlanFeedback.vue'
-
-
-
 const routes = [
   {
     path: '/', // Add a new route for registration
     name: 'home',
-    component: Homeview,
+    component: HomeView,
   },
   {
     path: '/services', // Add a new route for registration
@@ -48,34 +38,7 @@ const routes = [
     path: '/feedback', // Add a new route for registration
     name: 'Feedback',
     component: Feedback,
-  },
-  {
-    path: '/planholder', // Add a new route for registration
-    name: 'planholder',
-    component: Planholder,
-    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] },
-    children:[
-      {
-        path: 'home',
-        name: 'planholder-home',
-        component: PlanHome
-      },
-      {
-        path: 'service',
-        name: 'planholder-service',
-        component: PlanService
-      },
-      {
-        path: 'message',
-        name: 'planholder-message',
-        component: PlanMessage
-      },
-      {
-        path: 'feedback',
-        name: 'planholder-feedback',
-        component: PlanFeedback
-      },
-    ]
+    meta:{ requiresAuth: true,allowedRoles: ['PlanHolder'] }
   },
   
   {
@@ -105,14 +68,16 @@ const routes = [
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
-    path: '/planholderr', // Add a new route for registration
-    name: 'planholderr',
-    component: PlanHolderr,
+    path: '/planholder', // Add a new route for registration
+    name: 'planholder',
+    component: PlanHolder,
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
     path: '/feedbackk', // Add a new route for registration
     name: 'Feedbackk',
     component: Feedbackk,
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
     path: '/agent', // Add a new route for registration
@@ -133,6 +98,7 @@ const routes = [
     path: '/announcement', // Add a new route for registration
     name: 'Announcenment',
     component: Announcement,
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
 ]
 const router = createRouter({

@@ -112,7 +112,10 @@
         
       },
       logOut() {
-        
+        // Remove the token from the client-side storage
+        sessionStorage.removeItem('token');
+        this.token = false; // Update the token state
+        this.$router.push('/login');
       },
     },
   };

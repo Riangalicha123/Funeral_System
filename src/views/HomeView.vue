@@ -7,17 +7,30 @@
     </v-list-item>
     <v-divider></v-divider>
     <v-list dense nav>
-      <v-list-item @click="redirectToLogin" link>
+      <v-list-item v-if="token" @click="profile" link>
         <template v-slot:prepend>
-          <v-icon>mdi mdi-login</v-icon>
+          <v-icon>mdi-account</v-icon>
         </template>
-        <v-list-item-title>Login</v-list-item-title>
+        <v-list-item-title>{{ LastName }}</v-list-item-title>
       </v-list-item>
-      <v-list-item @click="redirectToRegister" link>
+      <v-list-item v-if="token" @click="logout" link>
+        <template v-slot:prepend>
+          <v-icon>mdi-logout</v-icon>
+        </template>
+        <v-list-item-title>Logout</v-list-item-title>
+      </v-list-item>
+      
+      <v-list-item v-else>
         <template v-slot:prepend>
           <v-icon>mdi-account-plus</v-icon>
         </template>
-        <v-list-item-title>Register</v-list-item-title>
+        <v-list-item-title @click="redirectToRegister" link>Register</v-list-item-title>
+      </v-list-item>
+      <v-list-item v-else>
+        <template v-slot:prepend>
+          <v-icon>mdi mdi-login</v-icon>
+        </template>
+        <v-list-item-title @click="redirectToLogin" link>Login</v-list-item-title>
       </v-list-item>
       
     </v-list>
@@ -30,6 +43,21 @@
         Funeral Homes
       </v-app-bar-title>
       
+      <v-spacer></v-spacer>
+      <v-btn @click="showNotification" icon>
+        <v-icon>mdi-bell</v-icon>
+      </v-btn>
+      <v-dialog v-model="notificationMessage" max-width="400">
+        <v-card>
+          <v-card-title>Notification</v-card-title>
+          <v-card-text>{{ notificationMessage }}</v-card-text>
+          <v-card-actions>
+            <v-btn color="primary" @click="notificationMessage = false"
+              >Close</v-btn
+            >
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
   </v-app-bar>
 <v-app id="inspire">
   
@@ -442,18 +470,47 @@ export default {
   },
 data: () => ({ 
   drawer: null,
-  loggedIn: false,
+  notificationMessage: null, // Initialize as an empty string
+  LastName: "",
+  token: sessionStorage.getItem('token') !== null,
+
 }),
+created() {
+    // Fetch user details and set LastName when component is created
+    if (this.token) {
+      this.fetchUserDetails();
+    }
+  },
 
 methods: {
-  redirectToLogin() {
-    this.$router.push("/login");
+  async fetchUserDetails() {
+      try {
+        const token = sessionStorage.getItem("token");
+        const decodedToken = jwt_decode(token);
+        this.LastName = decodedToken.sub; // Replace with the actual field in your token
+      } catch (error) {
+        console.error("Error fetching user details:", error);
+      }
+    },
+  showNotification() {
+      // Set the notification message you want to display
+      this.notificationMessage = "This is a sample notification message.";
+    },
+    redirectToLogin() {
+      this.$router.push("/login");
   },
   redirectToRegister() {
-    this.$router.push("/register");
-    
+      this.$router.push("/register");
   },
-  
+  logout() {
+    // Remove the token from the client-side storage
+    sessionStorage.removeItem('token');
+    this.token = false; // Update the token state
+    this.$router.push('/login');
+  },
+  profile(){
+
+  },
 },
 
 };

@@ -19,7 +19,18 @@
               <v-form @submit.prevent="submitFeedback">
                 <v-row>
                   <v-col cols="12">
-                    <v-text-field v-model="Email" label="Email"></v-text-field>
+                    <!-- Email Field -->
+                    <v-text-field
+                      v-if="token"
+                      v-model="Email"
+                      readonly
+                    ></v-text-field>
+                    <v-text-field
+                      v-else
+                      v-model="Email"
+                      label="Email"
+                      required
+                    ></v-text-field>
                   </v-col>
                 </v-row>
                 <v-row>
@@ -48,6 +59,7 @@
 
 <script>
 import navbottom from "@/components/navbottom.vue";
+import { jwtDecode as jwt_decode } from "jwt-decode";
 import axios from "axios";
 export default {
   components: {
@@ -55,18 +67,26 @@ export default {
   },
   data() {
     return {
-      Email: "",
+      Email: this.getEmailFromToken(),
       Message: "",
+      token: sessionStorage.getItem('token') !== null,
     };
   },
   methods: {
+    getEmailFromToken() {
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      const decodedToken = jwt_decode(token);
+      return decodedToken.email; // Assuming the email is stored in 'sub' field
+    }
+    return "";
+  },
     async submitFeedback() {
       try {
         const response = await axios.post("/submit-feedback", {
           Email: this.Email,
           Message: this.Message,
         });
-        this.Email = "";
         this.Message = "";
       } catch (error) {
         console.error(error);
