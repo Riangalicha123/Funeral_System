@@ -1,6 +1,10 @@
 <template>
   <v-app>
     <v-container class="py-5 h-100">
+      <v-snackbar v-model="snackbar" :timeout="3000">
+    {{ snackbarMessage }}
+    <v-btn color="error" text @click="snackbar = false">Close</v-btn>
+  </v-snackbar>
       <v-row justify="center" align="center" class="h-100">
         <v-col>
           <v-card class="elevation-3" shaped>
@@ -9,7 +13,7 @@
               <v-col md="6" lg="5" class="d-none d-md-block">
                 <v-img
                   :width="500"
-                  :height="390"
+                  :height="430"
                   aspect-ratio="16/9"
                   cover
                   src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -33,7 +37,9 @@
                           label="Email"
                           required
                           type="email"
+                          :error-messages="validationErrors.email ? [validationErrors.email] : []"
                         ></v-text-field>
+                        <v-messages :value="validationErrors.email"></v-messages>
                       </v-col>
                     </v-row>
                     <!-- Password Field -->
@@ -44,7 +50,9 @@
                           label="Password"
                           required
                           type="password"
+                          :error-messages="validationErrors.password ? [validationErrors.password] : []"
                         ></v-text-field>
+                        <v-messages :value="validationErrors.password"></v-messages>
                       </v-col>
                     </v-row>
                     <!-- Submit Button -->
@@ -85,10 +93,36 @@ export default {
     return {
       Email: "",
       Password: "",
+      validationErrors: {
+      email: null,
+      password: null,
+    },
+    snackbar: false,
+      snackbarMessage: "",
     };
   },
   methods: {
+    
     async login() {
+      this.validationErrors = {
+    email: null,
+    password: null,
+  };
+
+  // Validate email
+  if (!this.Email) {
+    this.validationErrors.email = "Email is required.";
+  }
+
+  // Validate password
+  if (!this.Password) {
+    this.validationErrors.password = "Password is required.";
+  }
+
+  // If there are validation errors, stop the login process
+  if (this.validationHasErrors()) {
+    return;
+  }
       try {
         const response = await axios.post("/loginAuth", {
           Email: this.Email,
@@ -112,8 +146,15 @@ export default {
       } catch (error) {
         // Handle errors
         console.error("Error during login:", error);
+
+        this.snackbarMessage = "Invalid email or password.";
+        this.snackbar = true;
       }
     },
+    validationHasErrors() {
+  // Check if there are any validation errors
+  return Object.values(this.validationErrors).some(error => error !== null);
+},
   },
 };
 </script>
@@ -289,5 +330,10 @@ export default {
   background-color: rgba(11, 69, 243, 0.9);
   cursor: pointer;
   transition: 0.3s ease;
+}
+.v-messages {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
 }
 </style>

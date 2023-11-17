@@ -138,16 +138,11 @@
       </v-card>
     </v-dialog>
   </v-container>
-  <navbottom />
 </template>
 
 <script>
 import axios from 'axios';
-import navbottom from "@/components/navbottom.vue";
 export default {
-  components: {
-    navbottom,
-  },
   data() {
     return {
       headers: [

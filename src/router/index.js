@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue';
 import Service from '../views/Service.vue';
 import Messages from '../views/Messages.vue';
 import Feedback from '../views/Feedback.vue';
+
 import Register from '../views/Register.vue';
 import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
@@ -17,31 +18,31 @@ import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
 import Announcement from '../views/Admin/Announcement.vue';
 
-
+import Forbidden from '../views/Forbidden.vue';
 const routes = [
   {
     path: '/', // Add a new route for registration
     name: 'home',
     component: HomeView,
-    meta:{ allowedRoles: ['PlanHolder'] }
+    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/services', // Add a new route for registration
     name: 'Service',
     component: Service,
-    meta:{ allowedRoles: ['PlanHolder'] }
+    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/home', // Add a new route for registration
     name: 'Messages',
     component: Messages,
-    meta:{ allowedRoles: ['PlanHolder'] }
+    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/feedback', // Add a new route for registration
     name: 'Feedback',
     component: Feedback,
-    meta:{ allowedRoles: ['PlanHolder'] }
+    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   
   {
@@ -102,6 +103,11 @@ const routes = [
     name: 'Announcenment',
     component: Announcement,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
+  },
+  {
+    path: '/forbidden', // Add a new route for registration
+    name: 'Forbidden',  
+    component: Forbidden,
   },
 ]
 const router = createRouter({

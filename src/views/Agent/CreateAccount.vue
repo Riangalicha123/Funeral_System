@@ -129,7 +129,7 @@ export default {
       confirmPassword: "",
       Address: "",
       ContactNumber: "",
-      Role: "User",
+      Role: "PlanHolder",
     };
   },
 
