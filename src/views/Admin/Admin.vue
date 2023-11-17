@@ -4,7 +4,7 @@
     <Topbar @drawerEvent="drawer = !drawer" />
     <v-main style="background-color: #f5f5f5;">
       <v-container class="py-8 px-6" fluid>
-        
+        <Dashboard/>
         <Chat/>
       </v-container>
     </v-main>

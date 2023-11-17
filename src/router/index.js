@@ -23,22 +23,25 @@ const routes = [
     path: '/', // Add a new route for registration
     name: 'home',
     component: HomeView,
+    meta:{ allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/services', // Add a new route for registration
     name: 'Service',
     component: Service,
+    meta:{ allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/home', // Add a new route for registration
     name: 'Messages',
     component: Messages,
+    meta:{ allowedRoles: ['PlanHolder'] }
   },
   {
     path: '/feedback', // Add a new route for registration
     name: 'Feedback',
     component: Feedback,
-    meta:{ requiresAuth: true,allowedRoles: ['PlanHolder'] }
+    meta:{ allowedRoles: ['PlanHolder'] }
   },
   
   {

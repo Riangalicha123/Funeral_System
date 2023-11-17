@@ -19,18 +19,11 @@
         </template>
         <v-list-item-title>Logout</v-list-item-title>
       </v-list-item>
-      
-      <v-list-item v-else>
-        <template v-slot:prepend>
-          <v-icon>mdi-account-plus</v-icon>
-        </template>
-        <v-list-item-title @click="redirectToRegister" link>Register</v-list-item-title>
-      </v-list-item>
-      <v-list-item v-else>
+      <v-list-item v-else @click="redirectToLogin">
         <template v-slot:prepend>
           <v-icon>mdi mdi-login</v-icon>
         </template>
-        <v-list-item-title @click="redirectToLogin" link>Login</v-list-item-title>
+        <v-list-item-title link>Login</v-list-item-title>
       </v-list-item>
       
     </v-list>
