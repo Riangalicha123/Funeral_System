@@ -18,10 +18,6 @@
         </v-card>
       </v-dialog>
     </v-app-bar>
-<br>
-<br>
-<br>
-<br>
 
     <v-container fluid>
       <div class="center-container">
@@ -33,34 +29,39 @@
                   <v-expand-transition>
                     <div
                       v-if="isHovering"
-                      class="d-flex transition-fast-in-fast-out"
-                      :style="{ backgroundColor: 'rgb(25, 152, 194)', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center' }"
+                      class="overlay d-flex transition-fast-in-fast-out"
                     >
                       <span class="text-h2">{{ item.price }}</span>
                     </div>
                   </v-expand-transition>
                 </v-img>
-  
-                <div class="center-container">
-                  <v-card-text class="pt-6">
-                    <div class="font-weight-light text-grey text-h6 mb-2">
-                      {{ item.category }}
-                    </div>
-  
-                    <h3 class="text-h4 font-weight-light text-blue mb-2">
-                      {{ item.name }}
-                    </h3>
-  
-                    <div class="font-weight-light text-h6 mb-2">
-                      {{ item.details }}
-                    </div>
-                  </v-card-text>
-                </div>
+
+                <v-card-text class="pt-6 text-center" style="background-color: rgb(248, 248, 248); box-shadow: 0 4px 8px rgba(0.2, 0.2, 0.2, 0.1);">
+                  <div class="font-weight-light text-grey text-h6 mb-2">
+                    {{ item.category }}
+                  </div>
+
+                  <h3 class="text-h4 font-weight-light text-blue mb-2">
+                    {{ item.name }}
+                  </h3>
+
+                  <div class="font-weight-light text-h6 mb-2">
+                    {{ item.details }}
+                  </div>
+                  <div class="ratings">
+                    <v-icon v-for="n in 5" :key="n" :color="n <= item.rating ? 'blue' : 'grey'">
+                      {{ n <= item.rating ? 'mdi-star' : 'mdi-star-outline' }}
+                    </v-icon>
+                    <span class="rating-value">{{ item.rating.toFixed(1) }}</span>
+                  </div>
+                  <v-btn @click="addToPlan(item)" color="primary" class="mt-3">Add to Plan</v-btn>
+                </v-card-text>
               </v-card>
             </v-hover>
           </v-col>
         </v-row>
       </div>
+      
     </v-container>
 
     <navbottom />
@@ -80,24 +81,51 @@ export default {
       items: [
         {
           image: "services2.jpg",
-          price: "₱14,000.00",
+          price: "₱24,000.00",
           category: "Package A",
           name: "St. Dominique",
           details: "Floral arrangement with lilies, roses, and carnations. Catered meal for attendees.",
+          rating: 4.5,
         },
         {
           image: "services1.jpg",
-          price: "₱17,000.00",
+          price: "₱27,000.00",
           category: "Package B",
           name: "St. Francis",
           details: "Premium floral arrangement with orchids, roses, and daisies. Gourmet catering service.",
+          rating: 3.0,
         },
         {
           image: "services3.jpg",
-          price: "₱23,000.00",
+          price: "₱33,000.00",
           category: "Package C",
           name: "St. Paul",
           details: "Luxury floral arrangements with exotic flowers. VIP catering experience.",
+          rating: 3.5,
+        },
+        {
+          image: "kabaong1.png",
+          price: "₱14,000.00",
+          category: "Casket A",
+          name: "St. Therese",
+          details: "Made of wood and a standard size, it is a quality casket.",
+          rating: 4.5,
+        },
+        {
+          image: "kabaong2.png",
+          price: "₱17,000.00",
+          category: "Casket B",
+          name: "St. Martin",
+          details: "Made of wood and a medium size, it is a quality casket.",
+          rating: 2.5,
+        },
+        {
+          image: "kabaong3.png",
+          price: "₱23,000.00",
+          category: "Casket C",
+          name: "St. Lance",
+          details: "Made of wood and a large size, it is a quality casket.",
+          rating: 3.0,
         },
         // Add more items as needed
       ],
@@ -107,30 +135,49 @@ export default {
     showNotification() {
       this.notificationMessage = "This is a notification message.";
     },
+    addToPlan(item) {
+    console.log(`Added ${item.name} to the plan!`);
+  },
   },
 };
 </script>
 
-<style>
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: 0.9;
-  position: absolute;
-  width: 100%;
-  height: 100%;
 
-}
-.center-container {
+<style>
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(25, 152, 194);
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 10vh;
 }
+
+.center-container {
+  min-height: 20vh; 
+  margin-top: -100px; 
+  padding: 20px; 
+  margin-bottom: 60px; 
+}
+
 @media screen and (max-width: 600px) {
   .center-container {
-    min-height: 50vh;
+    min-height: 30vh; 
   }
 }
+.ratings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
 </style>

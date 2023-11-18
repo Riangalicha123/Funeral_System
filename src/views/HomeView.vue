@@ -72,12 +72,12 @@
                 style="
                   font-family: 'Pacifico', cursive !important;
                   font-weight: bold;
-                  font-size: 90px !important;
+                  font-size: 70px !important;
                   color:rgb(7, 131, 172)!important;
                 "
               >
               
-              <!--<v-row justify="center">
+              <v-row justify="center">
                 <v-col xs="12" sm="10" md="8" lg="11" offset-lg="1" cols="12" class="d-flex flex-column fill-height justify-center align-center text-black">
                   <v-text-field
                     v-model="search"
@@ -86,12 +86,12 @@
                     dense
                     rounded
                     class="mx-auto"
-                    :style="{ width:'410%'  }"
+                    :style="{ width: '120%' }"
                     @input="searchItems"
                     style="color: rgb(25, 152, 194)"
                   ></v-text-field>
                 </v-col>
-              </v-row>-->
+              </v-row>
                 Welcome
               </h1>
               <h2
@@ -118,10 +118,10 @@
           <v-container class="fill-height" fluid style="min-height: 434px">
             <v-row>
               <v-col cols="12" sm="6" md="6">
-                <v-card>
+                <v-card >
                   <v-img
                     src="funeral7.jpg"
-                    height="300" 
+                    height="400" 
                     width="100%"
                     cover
                     class="bg-grey-lighten-2"
@@ -133,7 +133,7 @@
                 <v-card>
                   <v-img
                     src="funeral6.jpg"
-                    height="300" 
+                    height="400" 
                     width="100%"
                     cover
                     class="bg-grey-lighten-2"
@@ -184,7 +184,7 @@
           >
         </v-card>
       </v-col>
-      <v-col cols="auto">
+      <!--<v-col cols="auto">
         <v-card
           class="mx-auto"
           max-width="420"
@@ -199,7 +199,7 @@
             Our cremation services provide a respectful and dignified farewell for your loved ones.
           </v-card-text>
         </v-card>
-      </v-col>
+      </v-col>-->
       
       <v-col cols="auto">
         <v-card
@@ -258,37 +258,47 @@
           "
         >
           <v-card-text>
-            <!-- Unique Design for the Card Title with Map Marker Icon -->
-            <div class="d-flex align-center mb-4">
-              
-              <h1 class="text-h3" style="font-weight: bold; font-size: 40px; color: rgb(7, 131, 172) !important;">
+           
+            <v-card-title class="text-h3 text-center">
+              <h1
+                class="text-h3 mb-10"
+                style="
+                
+                font-weight: bold;
+                font-size: 40px !important;
+                color:rgb(7, 131, 172)!important;
+                  
+                "
+              >
                 Branch Information
               </h1>
-            </div>
+              <p class="contact-description text-h6">
+                Our city's central branch offers compassionate
+              </p>
+              <p class="contact-description text-h6">
+                funeral services to the community. 
+              </p>
+            </v-card-title>
+            <v-divider inset></v-divider>
             <br>
-            <br>
+            
             <!-- Branch Information with Icons -->
             <v-row>
               <div class="d-flex align-center mb-4">
                 <v-icon color="primary" class="mr-2">mdi-map-marker-outline</v-icon>
-                <p class="text-h4 text--primary">Calapan Branch</p>
+                <p >Calapan Branch</p>
               </div>
-              
+              <v-divider inset></v-divider>
               <div class="d-flex align-center mb-4">
                 <v-icon color="primary" class="mr-2">mdi-map</v-icon>
                 <p>Location: St. Isabel Calapan City, Oriental Mindoro</p>
               </div>
-              
+              <v-divider inset></v-divider>
               <div class="d-flex align-center mb-4">
                 <v-icon color="primary" class="mr-2">mdi-phone</v-icon>
                 <p>Contact: 0917-674-5813</p>
               </div>
             </v-row>
-             
-      
-            <p class="text--primary">
-              Our main branch is conveniently located in the heart of the city, providing compassionate funeral services to the community.
-            </p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -310,16 +320,21 @@
               
       
               <v-col cols="11">
-                <h1
-                  class="text-h3 mb-10"
-                  style="
+                <v-card-title class="text-h3 text-center">
+                  <h1
+                    class="text-h3 mb-10"
+                    style="
+                    
                     font-weight: bold;
                     font-size: 40px !important;
-                    color: rgb(7, 131, 172) !important;
-                  "
-                >
-                  Mission and Vision
-                </h1>
+                    color:rgb(7, 131, 172)!important;
+                      
+                    "
+                  >
+                    Mission & Vision
+                  </h1>
+                  
+                </v-card-title>
       
                 <!-- Our Mission -->
                 <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
@@ -328,7 +343,8 @@
                 <div class="text--primary" style="font-size: 18px; margin-bottom: 10px;">
                   To offer/provide affordable, decent services filled with Filipino heart and soul.
                 </div>
-      
+                <v-divider inset></v-divider>
+                <br>
                 <!-- Our Vision -->
                 <p class="text-h4 text--primary" style="font-size: 28px; margin-bottom: 10px;">
                   <v-icon color="primary">mdi-eye</v-icon> Our Vision

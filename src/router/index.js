@@ -109,6 +109,11 @@ const routes = [
     name: 'Forbidden',  
     component: Forbidden,
   },
+  {
+    path: '/messages', // Add a new route for registration
+    name: 'Messages',  
+    component: Messages,
+  },
 ]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

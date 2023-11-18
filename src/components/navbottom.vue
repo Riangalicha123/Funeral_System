@@ -8,6 +8,7 @@
         <v-list-item-title style="padding: 0">{{ n.title }}</v-list-item-title>
       </v-btn>
     </v-list-item>
+    
   </v-bottom-navigation>
 </template>
 
