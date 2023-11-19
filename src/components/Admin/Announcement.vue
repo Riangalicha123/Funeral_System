@@ -39,7 +39,10 @@
             </v-card>
           </v-col>
         </v-row>
-      </v-container>
+         <div v-if="show" class="notification">
+           Notification ID: {{ notification.NotificationId }} - User ID: {{ notification.UserId }} - {{ notification.Message }}
+         </div>
+      </v-container> 
   </template>
   
   <script>
@@ -50,9 +53,19 @@
       return {
         Email: "",
         Message: "",
+        show: false,
+        notification: {},
       };
     },
     methods: {
+    showNotification(notification) {
+      this.notification = notification;
+      this.show = true;
+      
+      setTimeout(() => {
+        this.show = false;
+      }, 3000);
+      },
     handleReset() {
       this.Email = "";
       this.Message = "";
@@ -60,13 +73,18 @@
       async submitAnnouncement() {
         try {
           const response = await axios.post("/submit-announcement", {
-            Email: this.Email,
-            Message: this.Message,
+            message: this.message,
           });
-          this.Email = "";
-          this.Message = "";
+          this.message = "";
+
+          this.showNotification({
+            NotificationId: response.data.NotificationId,
+            UserId: response.data.UserId,
+            message: response.data.message,
+          });
         } catch (error) {
           console.error(error);
+          this.showNotification({ Message: 'Error submitting announcement. Please try again.' });
         }
       },
     },
