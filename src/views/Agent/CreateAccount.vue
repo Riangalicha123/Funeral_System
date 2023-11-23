@@ -4,32 +4,32 @@
     <Topbar @drawerEvent="drawer = !drawer" />
     <v-main style="background-color: #f5f5f5">
       <v-app>
-        <v-container class="py-5 h-100">
+        <v-container class="py-5 h-100 mt-0">
           <v-row justify="center" align="center" class="h-100">
             <v-col>
               <v-card class="elevation-3" shaped>
                 <!-- Right Column (Register Form) -->
-                <v-col cols="12" class="d-flex align-center">
+                <v-col cols="14" class="d-flex align-center">
                   <v-card-text>
                     <v-form @submit.prevent="register">
                       <v-card-title class="title">Register for PlanHolder</v-card-title>
                       <br />
                       <!-- Username Field -->
                       <v-row>
-                        <v-col cols="4">
+                        <v-col cols="4" sm="4">
                           <v-text-field
                             v-model="FirstName"
                             label="First Name"
                             required
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="4">
+                        <v-col cols="4" sm="4">
                           <v-text-field
                             v-model="MiddleName"
                             label="Middle Name"
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="4">
+                        <v-col cols="4" sm="4">
                           <v-text-field
                             v-model="LastName"
                             label="Last Name"
@@ -39,7 +39,7 @@
                       </v-row>
                       <!-- Email Field -->
                       <v-row>
-                        <v-col cols="11">
+                        <v-col cols="4" sm="4" >
                           <v-text-field
                             v-model="Email"
                             label="Email"
@@ -48,10 +48,7 @@
                             hint="email@gmail.com"
                           ></v-text-field>
                         </v-col>
-                      </v-row>
-                      <!-- Password Field -->
-                      <v-row>
-                        <v-col cols="6">
+                        <v-col cols="4" sm="4">
                           <v-text-field
                             v-model="Password"
                             label="Password"
@@ -59,7 +56,7 @@
                             type="password"
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="4" sm="4">
                           <v-text-field
                             v-model="confirmPassword"
                             label="Confirm Password"
@@ -69,7 +66,7 @@
                         </v-col>
                       </v-row>
                       <v-row>
-                        <v-col cols="11">
+                        <v-col cols="14" >
                           <v-text-field
                             v-model="Address"
                             label="Address"
@@ -77,9 +74,7 @@
                             hint="City, Province"
                           ></v-text-field>
                         </v-col>
-                      </v-row>
-                      <v-row>
-                        <v-col cols="11">
+                        <v-col cols="14">
                           <v-text-field
                             v-model="ContactNumber"
                             label="Contact Number"
@@ -87,15 +82,19 @@
                             hint="For Example: 09123456789"
                           ></v-text-field>
                         </v-col>
+                        
                       </v-row>
+                        
+                     
+                     
                       <!-- Submit Button -->
-                      <v-row>
-                        <v-col cols="12">
-                          <v-btn type="submit" class="royal-blue-button"
-                            >Submit</v-btn
-                          >
+                      <v-row class="d-flex justify-center align-center">
+                        <v-col>
+                          <v-btn type="submit" class="royal-blue-button" >Submit</v-btn>
+
                         </v-col>
                       </v-row>
+                      
                     </v-form>
                   </v-card-text>
                 </v-col>

@@ -77,7 +77,7 @@
                 "
               >
               
-              <v-row justify="center">
+              <!--<v-row justify="center">
                 <v-col xs="12" sm="10" md="8" lg="11" offset-lg="1" cols="12" class="d-flex flex-column fill-height justify-center align-center text-black">
                   <v-text-field
                     v-model="search"
@@ -89,6 +89,21 @@
                     :style="{ width: '120%' }"
                     @input="searchItems"
                     style="color: rgb(25, 152, 194)"
+                  ></v-text-field>
+                </v-col>
+              </v-row>-->
+              <v-row justify="center">
+                <v-col lg="11" offset-lg="1" cols="30">
+                  <v-text-field
+                    v-model="search"
+                    append-icon="mdi-magnify"
+                    label="Search"
+                    dense
+                    rounded
+                    full-width
+                    @input="searchItems"
+                    style="margin-top: -15px;"
+                    color="white"
                   ></v-text-field>
                 </v-col>
               </v-row>
@@ -476,6 +491,7 @@ export default {
   components:{
       navbottom,
       Chat,
+      
   },
 data: () => ({ 
   drawer: null,
@@ -489,6 +505,22 @@ created() {
     if (this.token) {
       this.fetchUserDetails();
     }
+  },
+  setup() {
+    // Other setup code...
+
+    const services = ref([
+      {
+        title: "Funeral Planning",
+        description: "We help you plan every detail of the funeral to create a meaningful and personalized service.",
+      },
+      // Add other service objects here...
+    ]);
+
+    return {
+      // Other returned properties...
+      services,
+    };
   },
 
 methods: {

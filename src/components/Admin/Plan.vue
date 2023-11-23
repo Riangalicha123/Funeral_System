@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <v-card-title class="headline text-left" style="color: rgb(25, 152, 194); font-size: 34px">Users</v-card-title>
-    <v-table>
+  
+    <v-card-title style="margin-bottom: 20px;" >Users</v-card-title>
+    <v-table style="margin-bottom: -200px;">
       <thead>
         <tr>
           
@@ -33,7 +33,7 @@
       </tbody>
       
     </v-table>
-  </v-container>
+
 </template>
 
 <script>

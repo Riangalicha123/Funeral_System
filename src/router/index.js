@@ -83,11 +83,7 @@ const routes = [
     component: Feedbackk,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
-  {
-    path: '/agent', // Add a new route for registration
-    name: 'agent',
-    component: CreateAccount,
-  },
+ 
   {
     path: '/chat',
     name: 'chat',

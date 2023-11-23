@@ -26,8 +26,9 @@
         <v-divider></v-divider>
 
         <div class="chat-messages">
+          <!-- Display messages from both user and admin -->
           <div v-for="message in messages" :key="message.id">
-            <div class="message" :class="{ 'my-message': message.isMine }">
+            <div class="message" :class="{ 'my-message': message.isMine, 'admin-message': message.isAdmin }">
               <p>
                 {{ message.sender }}: {{ message.text }}
                 <span class="message-time">{{ message.timestamp }}</span>
@@ -64,7 +65,15 @@ export default {
   data() {
     return {
       notificationMessage: false,
-      messages: [],
+      messages: [
+        {
+          id: Date.now() - 1,
+          sender: 'Admin',
+          text: 'Welcome! How can I assist you?',
+          isAdmin: true,
+          timestamp: new Date().toLocaleString(),
+        },
+      ],
       newMessage: "",
       chatVisible: true,
     };
@@ -76,7 +85,7 @@ export default {
     sendMessage() {
       if (this.newMessage.trim() !== "") {
         const timestamp = new Date().toLocaleString();
-        
+
         this.messages.push({
           id: Date.now(),
           sender: 'You',
@@ -85,7 +94,13 @@ export default {
           timestamp: timestamp,
         });
 
-      
+        this.messages.push({
+          id: Date.now() + 1,
+          sender: 'Admin',
+          text: 'Thank you for your message. I will get back to you shortly.',
+          isAdmin: true,
+          timestamp: new Date().toLocaleString(),
+        });
 
         this.newMessage = "";
       }
@@ -96,6 +111,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 /* Add your styles here */

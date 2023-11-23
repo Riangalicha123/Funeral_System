@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="center-container">
       <v-row justify="center">
         <v-col cols="12" sm="8" md="10">
           <v-card elevation="2">
@@ -66,16 +66,15 @@
                     </v-text-field>
                   </v-col>
                 </v-row>
+                
                 <v-row>
-                  <v-col cols="12">
+                  <v-col cols="12" sm="4" md="4">
                     <v-text-field
                       v-model="edit.address"
                       label="Address"
                       class="custom-text-field">
                     </v-text-field>
                   </v-col>
-                </v-row>
-                <v-row>
                   <v-col cols="12" sm="4" md="4">
                     <v-text-field
                       v-model="edit.age"
@@ -90,15 +89,7 @@
                       class="custom-text-field">
                     </v-text-field>
                   </v-col>
-                  <v-col cols="12" sm="4" md="4">
-                    <v-select
-                      v-model="edit.gender"
-                      :items="['Male', 'Female', 'Other']"
-                      label="Gender"
-                      required
-                      class="custom-text-field">
-                    </v-select>
-                  </v-col>
+                  
                 </v-row>
                 <v-row>
                   <v-col cols="12" class="text-center">
@@ -179,5 +170,11 @@
   .v-text-field {
     margin-bottom: -5% !important;
   }
-
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin-top: 30px;
+  }
   </style>

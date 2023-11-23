@@ -54,7 +54,7 @@
                     </v-icon>
                     <span class="rating-value">{{ item.rating.toFixed(1) }}</span>
                   </div>
-                  <v-btn @click="addToPlan(item)" color="primary" class="mt-3">Add to Plan</v-btn>
+                 <!-- <v-btn @click="addToPlan(item)" color="primary" class="mt-3">Add to Plan</v-btn>-->
                 </v-card-text>
               </v-card>
             </v-hover>
