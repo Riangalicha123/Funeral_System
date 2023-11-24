@@ -110,6 +110,12 @@ const routes = [
     name: 'Messages',  
     component: Messages,
   },
+  {
+    path: '/agent', // Add a new route for registration
+    name: 'agent',
+    component: CreateAccount,
+  },
+
 ]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

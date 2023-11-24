@@ -5,7 +5,6 @@
       <v-spacer></v-spacer>
     </v-app-bar>
     <navbottom />
-    <v-container>
       <v-row justify="center" style="padding-top: 10%">
         <v-col cols="12" sm="8" md="6">
           <v-card elevation="2">
@@ -53,7 +52,6 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
   </v-app>
 </template>
 

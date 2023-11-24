@@ -88,33 +88,34 @@
   </v-app-bar>
   <v-container style="margin-top:50px;">
     <v-card-title class="headline text-center" style="color: rgb(25, 152, 194); font-size: 34px">Payment Records</v-card-title>
-    <v-data-table :headers="headers" :items="paymentRecords" :search="search" class="elevation-1">
-      <template v-slot:top>
-        <v-toolbar flat>
-          <v-toolbar-title>Karamay Kaagapay Funeral Homes.Co</v-toolbar-title>
-          <v-divider class="mx-4" inset vertical></v-divider>
-          <v-btn color="primary" @click="addPaymentRecordDialog">Add</v-btn>
-          <v-btn color="primary" @click="editPaymentRecordDialog(item)">Edit</v-btn>
-          <v-btn color="primary" @click="deletePaymentRecord(item)">Delete</v-btn>
-        
-        </v-toolbar>
-      </template>
-     <!-- <template v-slot:item.actions="{ item }">
-        <v-icon small @click="editPaymentRecordDialog(item)">mdi-pencil</v-icon>
-        <v-icon small @click="deletePaymentRecord(item)">mdi-delete</v-icon>
-      </template>-->
-    </v-data-table>
+    <v-data-table :items="payments" :search="search" class="elevation-1">
+    <template v-slot:top>
+      <v-toolbar flat>
+        <v-toolbar-title>Karamay Kaagapay Funeral Homes.Co</v-toolbar-title>
+        <v-divider class="mx-4" inset vertical></v-divider>
+        <v-btn color="primary" @click="openAddPaymentRecordDialog">Add</v-btn>
+      </v-toolbar>
+    </template>
+
+    <template v-slot:item.actions="{ item }">
+      <v-icon small @click="editPaymentRecordDialog(item)">mdi-pencil</v-icon>
+      <v-icon small @click="deletePaymentRecordDialog(item.UserId)">mdi-delete</v-icon>
+      <!-- Add the following two lines for update and delete buttons -->
+      <v-btn @click="updatePaymentRecordDialog(item)">Update</v-btn>
+      <v-btn @click="deletePaymentRecordDialog(item.UserId)">Delete</v-btn>
+    </template>
+  </v-data-table>
 
     <v-dialog v-model="addPaymentRecordDialogVisible" max-width="600">
       <v-card>
         
         <v-card-text>
-          <v-text-field v-model="selectedPaymentRecord.lastName" label="Last Name"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.firstName" label="First Name"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.services" label="Services"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.amount" label="Amount" type="number"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.status" label="Status"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.date" label="Date" type="date"></v-text-field>
+          <v-text-field v-model="LastName" label="Last Name"></v-text-field>
+          <v-text-field v-model="FirstName" label="First Name"></v-text-field>
+          <v-combobox v-model="Services" label="Services"></v-combobox>
+          <v-text-field v-model="Amount" label="Amount" type="number"></v-text-field>
+          <v-text-field v-model="Status" label="Status"></v-text-field>
+          <v-text-field v-model="Date" label="Date" type="date"></v-text-field>
         </v-card-text>
         <v-card-actions>
           <v-btn @click="savePaymentRecord">Save</v-btn>
@@ -123,16 +124,16 @@
       </v-card>
     </v-dialog>
 
-    <v-dialog v-model="editPaymentRecordDialogVisible" max-width="600">
+    <!-- <v-dialog v-model="editPaymentRecordDialogVisible" max-width="600">
       <v-card>
         <v-card-title>Edit Funeral Service Record</v-card-title>
         <v-card-text>
-          <v-text-field v-model="selectedPaymentRecord.lastName" label="Last Name"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.firstName" label="First Name"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.services" label="Services"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.amount" label="Amount" type="number"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.status" label="Status"></v-text-field>
-          <v-text-field v-model="selectedPaymentRecord.date" label="Date" type="date"></v-text-field>
+          <v-text-field v-model="LastName" label="Last Name"></v-text-field>
+          <v-text-field v-model="FirstName" label="First Name"></v-text-field>
+          <v-text-field v-model="Services" label="Services"></v-text-field>
+          <v-text-field v-model="Amount" label="Amount" type="number"></v-text-field>
+          <v-text-field v-model="Status" label="Status"></v-text-field>
+          <v-text-field v-model="Date" label="Date" type="date"></v-text-field>
           
         </v-card-text>
         <v-card-actions>
@@ -146,19 +147,19 @@
         <v-card-title>Delete Funeral Service Record</v-card-title>
         <v-card-text>
           
-          <div>Last Name: {{ selectedPaymentRecord.lastName }}</div>
-          <div>First Name: {{ selectedPaymentRecord.firstName }}</div>
-          <div>Services: {{ selectedPaymentRecord.services }}</div>
-          <div>Amount: {{ selectedPaymentRecord.amount }}</div>
-          <div>Status: {{ selectedPaymentRecord.status }}</div>
-          <div>Date: {{ selectedPaymentRecord.date }}</div>
+          <div>Last Name: {{ LastName }}</div>
+          <div>First Name: {{ FirstName }}</div>
+          <div>Services: {{ Services }}</div>
+          <div>Amount: {{ Amount }}</div>
+          <div>Status: {{ Status }}</div>
+          <div>Date: {{ Date }}</div>
         </v-card-text>
         <v-card-actions>
           <v-btn @click="deletePaymentRecord">Delete</v-btn>
           <v-btn @click="closeDeletePaymentRecordDialog">Cancel</v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
     
   </v-container>
 </template>
@@ -169,173 +170,106 @@ import Topbar from "@/components/Agent/Topbar.vue";
 export default {
   components: { Topbar},
   data() {
-    return {
-      
-      paymentRecords: [],
-      search: '',
-      addPaymentRecordDialogVisible: false,
-      editPaymentRecordDialogVisible: false,
-      deletePaymentRecordDialogVisible: false,
-      selectedPaymentRecord: {
-        lastName: '',
-        firstName: '',
-        services: '',
-        amount: null,
-        status: '',
-        date: '',
-        
-      },
-      notificationDialogVisible: false,
+  return {
+    search: '',
+    editPaymentRecordDialogVisible: false,
+    addPaymentRecordDialogVisible: false,
+    payments: [],
+    LastName: "",
+    FirstName: "",
+    Amount: "",
+    Services: "",
+    Status: "",
+    Date: "",
+    selectedPaymentRecord: null, // Add this line if it's not already present
+    notificationDialogVisible: false,
         userMenuVisible: false,
         pros: [
         {title: "Profile", to:"/admin/profile"},
       ],
-     
-    };
-    
-  },
-  created() {
-    
-    this.paymentRecords = [
-      {
-        lastName: 'Doe',
-        firstName: 'John',
-        services: 'Package A',
-        amount: 500.00,
-        status: 'Paid',
-        date: '2023-11-13',
-      },
-      {
-        lastName: 'Doe',
-        firstName: 'John',
-        services: 'Package A',
-        amount: 500.00,
-        status: 'Paid',
-        date: '2023-11-13',
-      },
-      {
-        lastName: 'Doe',
-        firstName: 'John',
-        services: 'Package A',
-        amount: 500.00,
-        status: 'Paid',
-        date: '2023-11-13',
-      },
-      {
-        lastName: 'Smith',
-        firstName: 'Jane',
-        services: 'Package B',
-        amount: 300.00,
-        status: 'Pending',
-        date: '2023-11-14',
-      },
-      {
-        lastName: 'Johnson',
-        firstName: 'Bob',
-        services: 'Package C',
-        amount: 800.00,
-        status: 'Unpaid',
-        date: '2023-11-15',
-      },
-      {
-        lastName: 'Smith',
-        firstName: 'Jane',
-        services: 'Package B',
-        amount: 300.00,
-        status: 'Pending',
-        date: '2023-11-14',
-      },{
-        lastName: 'Smith',
-        firstName: 'Jane',
-        services: 'Package B',
-        amount: 300.00,
-        status: 'Pending',
-        date: '2023-11-14',
-      },
-    ];
+  };
+},
+created() {
+    this.getInfo();
   },
   methods: {
-  addPaymentRecordDialog() {
-    this.selectedPaymentRecord = {
-      lastName: '',
-      firstName: '',
-      services: '',
-      amount: null,
-      status: '',
-      date: '',
-    };
-    this.addPaymentRecordDialogVisible = true;
-  },
-  closeAddPaymentRecordDialog() {
-    this.addPaymentRecordDialogVisible = false;
-  },
-  editPaymentRecordDialog(paymentRecord) {
-    this.selectedPaymentRecord = { ...paymentRecord };
-    this.editPaymentRecordDialogVisible = true;
-  },
-  closeEditPaymentRecordDialog() {
-    this.editPaymentRecordDialogVisible = false;
-  },
-  async savePaymentRecord() {
-    // Save the payment record, e.g., make an API call
-
-    this.closeAddPaymentRecordDialog();
-    this.getPaymentRecords();
-  },
-  async updatePaymentRecord() {
-    
-
-    this.closeEditPaymentRecordDialog();
-    this.getPaymentRecords();
-  },
-  async deletePaymentRecord(paymentRecord) {
-    
-
-    this.closeDeletePaymentRecordDialog();
-    this.getPaymentRecords();
-  },
-  async confirmDeletePaymentRecord() {
-  try {
-    
-    const response = await axios.delete(`/api/payment-records/${this.selectedPaymentRecord.id}`);
-
-    if (response.status === 200) {
-      
-      const indexToDelete = this.paymentRecords.indexOf(this.selectedPaymentRecord);
-
-      if (indexToDelete !== -1) {
-        this.paymentRecords.splice(indexToDelete, 1);
+    async getInfo() {
+      try {
+        const inf = await axios.get('getPayment');
+        this.payments = inf.data;
+      } catch (error) {
+        console.error(error);
       }
-
-      this.closeDeletePaymentRecordDialog();
-    } else {
-      
-      console.error('Failed to delete payment record');
-    }
-  } catch (error) {
-    console.error('Error during delete request:', error);
-  }
-},
-
-  toggleNotificationDialog() {
-        this.notificationDialogVisible = !this.notificationDialogVisible;
-      },
-      closeNotificationDialog() {
-        this.notificationDialogVisible = false;
-      },
-      toggleUserMenu() {
-        this.userMenuVisible = !this.userMenuVisible;
-      },
-      viewProfile() {
-        
-      },
-      logOut() {
-        
-        sessionStorage.removeItem('token');
-        this.token = false;
-        this.$router.push('/login');
-      },
     },
+    async openAddPaymentRecordDialog() {
+      this.addPaymentRecordDialogVisible = true;
+    },
+    async addPaymentRecord() {
+      try {
+
+        const response = await axios.post("insertPayment", {
+          LastName: this.LastName,
+          FirstName: this.FirstName,
+          Amount: this.Amount,
+          Services: this.Services,
+          Status: this.Status,
+          Date: this.Date,
+        });
+
+        this.LastName = "";
+        this.FirstName = "";
+        this.Amount = "";
+        this.Services = "";
+        this.Status = "";
+        this.Date = "";
+        this.getInfo();
+      } catch (error) {
+        if (error.response && error.response.status === 400) {
+          console.error("Validation error:", error.response.data.messages.error);
+        } else {
+          console.error("Error:", error);
+        }
+      }
+      this.addPaymentRecordDialogVisible = false;
+    },
+    closeAddPaymentRecordDialog() {
+      this.addPaymentRecordDialogVisible = false;
+    },
+    editPaymentRecordDialog(paymentRecord) {
+      this.selectedPaymentRecord = { ...paymentRecord };
+      this.editPaymentRecordDialogVisible = true;
+    },
+    closeEditPaymentRecordDialog() {
+      this.editPaymentRecordDialogVisible = false;
+    },
+    async savePaymentRecord() {
+        try {
+            await this.addPaymentRecord();
+        } catch (error) {
+            console.error(error);
+        }
+        this.closeAddPaymentRecordDialog();
+    },
+    async updatePaymentRecord() {
+      try {
+        // Implement update logic here
+        // Example: await axios.put(`/api/payment-records/${this.selectedPaymentRecord.UserId}`, updatedData);
+      } catch (error) {
+        console.error('Error during update request:', error);
+      }
+      this.closeEditPaymentRecordDialog();
+    },
+    async deletePaymentRecord(userId) {
+      try {
+        // Implement delete logic here
+        // Example: await axios.delete(`/api/payment-records/${userId}`);
+      } catch (error) {
+        console.error('Error during delete request:', error);
+      }
+      // Update payments after deletion
+      this.getInfo();
+    },
+  },
 
     
   

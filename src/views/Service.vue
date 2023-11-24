@@ -64,8 +64,9 @@
       
     </v-container>
 
-    <navbottom />
+    
   </v-app>
+  <navbottom />
 </template>
 
 <script>

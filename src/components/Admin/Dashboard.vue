@@ -35,7 +35,7 @@ export default {
   methods: {
     async fetchTotalPlanHolders() {
       try {
-        const response = await axios.get('/totalplanholder');
+        const response = await axios.get('/registerData');
         this.totalPlanHolders = response.data.length; // Assuming the response is an array of plan holders
       } catch (error) {
         console.error('Error fetching total plan holders:', error);
