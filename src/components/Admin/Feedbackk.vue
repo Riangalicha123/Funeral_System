@@ -1,6 +1,5 @@
 <template>
-    
-      <v-card-title class="headline text-left" style="color: rgb(25, 152, 194); font-size: 34px">Feedbacks</v-card-title>
+    <v-container style="margin-top:50px;"><v-card-title class="headline text-left" style="color: rgb(25, 152, 194); font-size: 34px">Feedbacks</v-card-title>
       <v-table>
         <thead>
           <tr>
@@ -17,7 +16,8 @@
           </tr>
         </tbody>
         
-      </v-table>
+      </v-table></v-container>
+      
     
   </template>
   

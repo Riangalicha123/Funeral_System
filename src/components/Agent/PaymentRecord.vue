@@ -1,24 +1,27 @@
 <template>
-  
-  <v-container style="margin-top:50px;">
-  
+    <v-container style="margin-top:50px;">
+      
   <v-data-table
     :headers="headers"
-    :items="users"
+    :items="payments"
     :search="search"
-    :sort-by="[{ key: 'MiddleName', order: 'asc' }]"
+    :sort-by="[{ key: 'FirstName', order: 'asc' }]"
   >
+  
     <template v-slot:top>
       <v-toolbar
         flat
       >
       
+      <h3>Payment Acceptance</h3>
         <v-divider
           class="mx-4"
           inset
           vertical
         ></v-divider>
         <v-spacer></v-spacer>
+        
+        
         <v-dialog
           v-model="dialog"
           max-width="500px"
@@ -32,12 +35,12 @@
         placeholder="Type to search..."
         @input="handleSearch"
       ></v-text-field>
-              <v-btn
-                color="primary"
-                dark
-                class="justify-md-end"
-                v-bind="props"
-              >
+            <v-btn
+              color="primary"
+              dark
+              class="mb-2"
+              v-bind="props"
+            >
               Add
             </v-btn>
           </template>
@@ -47,27 +50,10 @@
             </v-card-title>
 
             <v-card-text>
+              
                 
                 <v-row>
                   
-                  <v-col
-                    cols="12"
-                    
-                  >
-                    <v-text-field
-                      v-model="editedItem.FirstName"
-                      label="First Name"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                    cols="12"
-                    
-                  >
-                    <v-text-field
-                      v-model="editedItem.MiddleName"
-                      label="Middle Name"
-                    ></v-text-field>
-                  </v-col>
                   <v-col
                     cols="12"
                     
@@ -82,8 +68,8 @@
                     
                   >
                     <v-text-field
-                      v-model="editedItem.Address"
-                      label="Address"
+                      v-model="editedItem.FirstName"
+                      label="First Name"
                     ></v-text-field>
                   </v-col>
                   <v-col
@@ -91,8 +77,8 @@
                     
                   >
                     <v-text-field
-                      v-model="editedItem.ContactNumber"
-                      label="Contact"
+                      v-model="editedItem.Services"
+                      label="Services"
                     ></v-text-field>
                   </v-col>
                   <v-col
@@ -100,8 +86,26 @@
                     
                   >
                     <v-text-field
-                      v-model="editedItem.Role"
-                      label="Role"
+                      v-model="editedItem.Amount"
+                      label="Amount"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col
+                    cols="12"
+                    
+                  >
+                    <v-text-field
+                      v-model="editedItem.Status"
+                      label="Status"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col
+                    cols="12"
+                    
+                  >
+                    <v-text-field
+                      v-model="editedItem.Date"
+                      label="Date"
                     ></v-text-field>
                   </v-col>
                 </v-row>
@@ -165,46 +169,45 @@
   </v-data-table>
  </v-container>
 </template>
-
 <script>
 import axios from 'axios';
 export default {
-  data: () => ({
+    data: () => ({
       search:'',
       dialog: false,
       dialogDelete: false,
       headers: [
         {
-          title: 'First Name',
+          title: 'Last Name',
           align: 'start',
           sortable: false,
-          key: 'FirstName',
+          key: 'LastName',
         },
-        { title: 'Middle Name', key: 'MiddleName' },
-        { title: 'Last Name', key: 'LastName' },
-        { title: 'Address', key: 'Address' },
-        { title: 'Contact', key: 'ContactNumber' },
-        { title: 'Role', key: 'Role' },
+        { title: 'First Name', key: 'FirstName' },
+        { title: 'Services', key: 'Services' },
+        { title: 'Amount', key: 'Amount' },
+        { title: 'Status', key: 'Status' },
+        { title: 'Date', key: 'Date' },
         { title: 'Actions', key: 'actions', sortable: false },
       ],
-      users: [],
+      payments: [],
       editedIndex: -1,
       editedItem: {
-        FirstName: '',
-        MiddleName: '',
         LastName: '',
-        Address: '',
-        Contact: '',
-        Role: '',
+        FirstName: '',
+        Services:'',
+        Amount: '',
+        Status: '',
+        Date: '',
 
       },
       defaultItem: {
-        FirstName: '',
-        MiddleName: '',
         LastName: '',
-        Address: '',
-        Contact: '',
-        Role: '',
+        FirstName: '',
+        Services:'',
+        Amount: '',
+        Status: '',
+        Date: '',
       },
     }),
 
@@ -230,27 +233,27 @@ export default {
     methods: {
       async initialize () {
         try {
-          const respond = await axios.get('registerData');
-            this.users = respond.data;
+          const respond = await axios.get('getPayment');
+            this.payments = respond.data;
         } catch (error) {
           console.log(error);
         }
       },
 
       editItem (item) {
-        this.editedIndex = this.users.indexOf(item)
+        this.editedIndex = this.payments.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
-        this.editedIndex = this.users.indexOf(item)
+        this.editedIndex = this.payments.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialogDelete = true
       },
 
       deleteItemConfirm () {
-        this.users.splice(this.editedIndex, 1)
+        this.payments.splice(this.editedIndex, 1)
         this.closeDelete()
       },
 
@@ -272,12 +275,12 @@ export default {
 
       save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.users[this.editedIndex], this.editedItem)
+          Object.assign(this.payments[this.editedIndex], this.editedItem)
         } else {
-          this.users.push(this.editedItem)
+          this.payments.push(this.editedItem)
         }
         this.close()
       },
     },
-  }
+}
 </script>

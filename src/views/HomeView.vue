@@ -95,13 +95,13 @@
               <v-row justify="center">
                 <v-col lg="11" offset-lg="1" cols="30">
                   <v-text-field
-                    v-model="search"
+                    v-model="searchQuery"
                     append-icon="mdi-magnify"
                     label="Search"
                     dense
                     rounded
                     full-width
-                    @input="searchItems"
+                    @keyup.enter="searchItems"
                     style="margin-top: -15px;"
                     color="white"
                   ></v-text-field>
@@ -494,6 +494,13 @@ export default {
       
   },
 data: () => ({ 
+  searchQuery: "",
+  ns: [
+      { title: "Home", icon: "mdi-home", to: "/" },
+      { title: "Service", icon: "mdi-coffin", to: "/services" },
+      { title: "Messages", icon: "mdi-email", to: "/messages"},
+      { title: "Feedback", icon: "mdi-comment", to: "/feedback" },
+    ],
   drawer: null,
   notificationMessage: null, // Initialize as an empty string
   LastName: "",
@@ -524,6 +531,20 @@ created() {
   },
 
 methods: {
+  searchItems() {
+    // Logic to handle the search and redirection based on the searchQuery
+    if (this.searchQuery === "home") {
+      this.$router.push("/"); // Redirect to Dashboard link
+    } else if (this.searchQuery === "service") {
+      this.$router.push("/services"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "messages") {
+      this.$router.push("/messages"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "feedback") {
+      this.$router.push("/feedback"); // Redirect to PlanHolder link
+    }
+    
+    
+  },
   async fetchUserDetails() {
       try {
         const token = sessionStorage.getItem("token");

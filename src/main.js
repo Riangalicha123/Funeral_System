@@ -6,9 +6,11 @@ import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 import axios from 'axios'
 
+
 axios.defaults.baseURL="http://backend.test/"
 
 loadFonts()
+
 
 createApp(App)
   .use(router)

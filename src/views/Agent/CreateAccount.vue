@@ -1,11 +1,95 @@
 <template>
-  <v-app id="inspire">
-    <Sidebar :drawer="drawer" />
-    <Topbar @drawerEvent="drawer = !drawer" />
-    <v-main style="background-color: #f5f5f5">
-      <v-app>
-        <v-container class="py-5 h-100 mt-0">
-          <v-row justify="center" align="center" class="h-100">
+  <Sidebar/>
+ <v-app-bar app color="rgb(25, 152, 194)" dark elevation="3">
+   <v-app-bar-nav-icon></v-app-bar-nav-icon>
+   <v-row justify="center">
+     <v-col lg="11" offset-lg="1" cols="30">
+       <v-text-field
+         v-model="search"
+         append-icon="mdi-magnify"
+         label="Search"
+         dense
+         rounded
+         full-width
+         @input="searchItems"
+         style="margin-top: -15px;"
+         color="white"
+       ></v-text-field>
+     </v-col>
+   </v-row>
+   
+   <v-btn icon @click="toggleNotificationDialog" style="cursor: pointer" class="ml-auto">
+     <v-badge content="3" color="red">
+       <v-icon>mdi-bell</v-icon>
+     </v-badge>
+   </v-btn>
+   
+   <v-dialog v-model="notificationDialogVisible" max-width="400">
+     <v-card>
+       <v-card-title class="headline">Notifications</v-card-title>
+       <v-divider></v-divider>
+       <v-list>
+         <v-list-item>
+           <v-list-item-avatar>
+             <v-icon color="primary">mdi-email</v-icon>
+           </v-list-item-avatar>
+           <v-list-item-content>
+             <v-list-item-title>New Message</v-list-item-title>
+             <v-list-item-subtitle>John sent you a new message</v-list-item-subtitle>
+           </v-list-item-content>
+         </v-list-item>
+       </v-list>
+       <v-card-actions>
+         <v-btn text @click="closeNotificationDialog">Close</v-btn>
+       </v-card-actions>
+     </v-card>
+   </v-dialog>
+   <v-menu v-model="userMenuVisible" offset-y>
+     <template v-slot:activator="{ attrs, on }">
+       <v-btn icon v-bind="attrs" v-on="on" style="cursor: pointer">
+        
+   <v-btn icon @click="toggleUserMenu" style="cursor: pointer">
+     <v-badge dot bottom color="green">
+       <v-avatar size="40">
+         <v-img src="https://randomuser.me/api/portraits/women/81.jpg" />
+       </v-avatar>
+     </v-badge>
+   </v-btn> 
+       </v-btn>
+     </template>
+     <v-list>
+       <v-list-item two-line>
+         <v-list-item-avatar>
+           <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+         </v-list-item-avatar>
+         <v-list-item-content>
+           <v-list-item-title>Jane Smith</v-list-item-title>
+           <v-list-item-subtitle>Logged In</v-list-item-subtitle>
+         </v-list-item-content>
+       </v-list-item>
+       <v-divider />
+       <v-list-item v-for="pro in pros" :key="pro.icon" :to="pro.to" link>
+         <v-list-item-icon>
+           <v-icon>mdi-account</v-icon>
+         </v-list-item-icon>
+         <v-list-item-title>
+           {{pro.title}}
+         </v-list-item-title>
+       </v-list-item>
+       <v-list-item @click="logOut">
+         <v-list-item-icon>
+           <v-icon>mdi-logout</v-icon>
+         </v-list-item-icon>
+         <v-list-item-title>
+           Logout
+         </v-list-item-title>
+       </v-list-item>
+     </v-list>
+   </v-menu>
+ </v-app-bar>
+ 
+ <v-container style="margin-top:50px;">
+  <v-row justify="center" align="center" class="h-100">
             <v-col>
               <v-card class="elevation-3" shaped>
                 <!-- Right Column (Register Form) -->
@@ -101,22 +185,16 @@
               </v-card>
             </v-col>
           </v-row>
-        </v-container>
-      </v-app>
-    </v-main>
-  </v-app>
+   
+ </v-container>
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 import Sidebar from "@/components/Agent/Sidebar.vue";
-import Topbar from "@/components/Agent/Topbar.vue";
-
 export default {
-  name: "",
-  components: { Topbar, Sidebar },
-
-  data() {
+ components: {Sidebar},
+ data() {
     return {
       drawer: null,
       user: [],

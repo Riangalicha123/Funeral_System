@@ -9,6 +9,7 @@
   "dependencies": {
     "@mdi/font": "^5.9.55",
     "@mdi/js": "^7.3.67",
+    "@syncfusion/ej2-vue-charts": "^23.2.6",
     "@vue/cli": "^5.0.8",
     "apexcharts": "^3.44.0",
     "axios": "^1.6.0",
@@ -25,8 +26,10 @@
     "register-service-worker": "^1.7.2",
     "roboto-fontface": "*",
     "vue": "^3.3.7",
+    "vue-apexcharts": "^1.6.2",
     "vue-chartjs": "^5.2.0",
     "vue-router": "^4.0.3",
+    "vue3-apexcharts": "^1.4.4",
     "vuetify": "^3.4.0",
     "webfontloader": "^1.0.0"
   },

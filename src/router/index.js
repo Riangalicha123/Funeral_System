@@ -11,74 +11,77 @@ import Login from '../views/Login.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import PlanHolder from '../views/Admin/Planholder.vue';
+import AgentRecord from '../views/Admin/AgentRecord.vue';
 import Feedbackk from '../views/Admin/Feedback.vue';
-import CreateAccount from '../views/Agent/CreateAccount.vue';
-import Payment from '../views/Agent/Payment.vue';
 import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
 import Announcement from '../views/Admin/Announcement.vue';
 
+import CreateAccount from '../views/Agent/CreateAccount.vue';
+import Payment from '../views/Agent/Payment.vue';
+
 import Forbidden from '../views/Forbidden.vue';
 const routes = [
   {
-    path: '/', // Add a new route for registration
+    path: '/', 
     name: 'home',
     component: HomeView,
-    meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
+    meta:{allowedRoles: ['PlanHolder'] }
   },
   {
-    path: '/services', // Add a new route for registration
+    path: '/services', 
     name: 'Service',
     component: Service,
     meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
-    path: '/home', // Add a new route for registration
+    path: '/home', 
     name: 'Messages',
     component: Messages,
     meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
-    path: '/feedback', // Add a new route for registration
+    path: '/feedback', 
     name: 'Feedback',
     component: Feedback,
     meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   
   {
-    path: '/register', // Add a new route for registration
+    path: '/register', 
     name: 'register',
     component: Register,
   },
   {
-    path: '/login', // Add a new route for registration
+    path: '/login', 
     name: 'login',
     component: Login,
   },
   {
-    path: '/account', // Add a new route for registration
+    path: '/account', 
     name: 'account',
     component: Account,
   },
   {
-    path: '/payment', // Add a new route for registration
+    path: '/payment', 
     name: 'payment',
     component: Payment,
   },
   {
-    path: '/admin', // Add a new route for registration
+    path: '/admin', 
     name: 'admin',
     component: Admin,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
-    path: '/planholder', // Add a new route for registration
+    path: '/planholder', 
     name: 'planholder',
     component: PlanHolder,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
+  
   {
-    path: '/feedbackk', // Add a new route for registration
+    path: '/feedbackk', 
     name: 'Feedbackk',
     component: Feedbackk,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
@@ -90,30 +93,38 @@ const routes = [
     component: Chat,
   },
   {
-    path: '/admin/profile', // Add a new route for registration
+    path: '/admin/profile', 
     name: 'EditProfile',
     component: EditProfile,
   },
   {
-    path: '/announcement', // Add a new route for registration
+    path: '/announcement', 
     name: 'Announcenment',
     component: Announcement,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   {
-    path: '/forbidden', // Add a new route for registration
+    path: '/admin-record', 
+    name: 'AgentRecord',
+    component: AgentRecord,
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
+  },
+  {
+    path: '/forbidden', 
     name: 'Forbidden',  
     component: Forbidden,
   },
   {
-    path: '/messages', // Add a new route for registration
+    path: '/messages', 
     name: 'Messages',  
     component: Messages,
+    meta:{ requiresAuth: true,allowedRoles: ['PlanHolder'] }
   },
   {
-    path: '/agent', // Add a new route for registration
+    path: '/agent', 
     name: 'agent',
     component: CreateAccount,
+    meta:{ requiresAuth: true,allowedRoles: ['Agent'] }
   },
 
 ]

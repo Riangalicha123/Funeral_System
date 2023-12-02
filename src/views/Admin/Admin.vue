@@ -1,14 +1,8 @@
 <template>
-  <v-app id="inspire">
-    <Sidebar :drawer="drawer" />
-    <Topbar @drawerEvent="drawer = !drawer" />
-    <v-main style="background-color: #f5f5f5;">
-      <v-container class="py-8 px-6" fluid>
+    <Sidebar/>
+    <Topbar/>
         <Dashboard/>
         <Chat/>
-      </v-container>
-    </v-main>
-  </v-app>
 </template>
 <script>
 import Sidebar from "@/components/Admin/Sidebar.vue";
@@ -17,14 +11,12 @@ import Topbar from "@/components/Admin/Topbar.vue";
 import Dashboard from "@/components/Admin/Dashboard.vue";
 import Chat from "@/components/Chat.vue";
 import Announcement from "@/components/Admin/Announcement.vue";
+import TotalPercentage from "@/components/Admin/TotalPercentage.vue";
 
 export default {
+  search:'',
   name: "Admin",
-  components: { Topbar, Sidebar, Dashboard, Chat, Announcement, },
-  data: () => ({
-    cards: ["Today", "Yesterday"],
-    drawer: null,
-  }),
+  components: { Topbar, Sidebar, Dashboard, Chat, Announcement},
   methods: {},
 };
 </script>

@@ -1,18 +1,17 @@
 <template>
-
-      <Sidebar />
-      <v-app-bar app color="rgb(25, 152, 194)" dark elevation="3">
+  <Sidebar/>
+   <v-app-bar app color="rgb(25, 152, 194)" dark elevation="3">
      <v-app-bar-nav-icon></v-app-bar-nav-icon>
      <v-row justify="center">
        <v-col lg="11" offset-lg="1" cols="30">
          <v-text-field
-           v-model="search"
+           v-model="searchQuery"
            append-icon="mdi-magnify"
            label="Search"
            dense
            rounded
            full-width
-           @input="searchItems"
+           @keyup.enter="searchItems"
            style="margin-top: -15px;"
            color="white"
          ></v-text-field>
@@ -88,21 +87,77 @@
        </v-list>
      </v-menu>
    </v-app-bar>
-          <Announcement/>
+   
+   <AgentRecord/>
   </template>
   
   <script>
+  import axios from 'axios';
   import Sidebar from "@/components/Admin/Sidebar.vue";
-  import Topbar from "@/components/Admin/Topbar.vue";
-  import Announcement from "@/components/Admin/Announcement.vue";
-  
+  import AgentRecord from "@/components/Admin/AgentRecord.vue";
   export default {
-    name: "Admin",
-    components: { Topbar, Sidebar, Announcement},
-    data: () => ({
-      cards: ["Today", "Yesterday"],
-      drawer: null,
-    }),
-    methods: {},
-  };
+   components: { Sidebar, AgentRecord},
+   data() {
+    return {
+      searchQuery: "",
+      links: [
+        {icon: "mdi-microsoft-windows", text: "Dashboard", to:"/admin"},
+        {icon: "mdi-account", text: "PlanHolder", to: "/planholder"},
+        {icon: "mdi-account", text: "Agent", to: "/admin-record"},
+        {icon: "mdi-comment", text: "Feedback", to: "/feedbackk"},
+        {icon: "mdi-mail", text: "Announcement", to: "/announcement"},
+        
+      ],
+      notificationDialogVisible: false,
+         userMenuVisible: false,
+         pros: [
+         {title: "Profile", to:"/admin/profile"},
+       ],
+    }
+   },
+   methods: {
+    searchItems() {
+    // Logic to handle the search and redirection based on the searchQuery
+    if (this.searchQuery === "dashboard") {
+      this.$router.push("/admin"); // Redirect to Dashboard link
+    } else if (this.searchQuery === "planholder") {
+      this.$router.push("/planholder"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "agent") {
+      this.$router.push("/admin-record"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "feedbackk") {
+      this.$router.push("/feedbackk"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "announcement") {
+      this.$router.push("/announcement"); // Redirect to PlanHolder link
+    }
+  },
+    toggleNotificationDialog() {
+         this.notificationDialogVisible = !this.notificationDialogVisible;
+       },
+       closeNotificationDialog() {
+         this.notificationDialogVisible = false;
+       },
+       toggleUserMenu() {
+         this.userMenuVisible = !this.userMenuVisible;
+       },
+       viewProfile() {
+         
+       },
+       logOut() {
+         // Remove the token from the client-side storage
+         sessionStorage.removeItem('token');
+         this.token = false; // Update the token state
+         this.$router.push('/login');
+       },
+   }
+  }
+  
   </script>
+  <style scope>
+  .v-application {
+   background-image: url("https://t3.ftcdn.net/jpg/03/27/46/14/360_F_327461491_FWBhMuNNJLZQe1vXboG8eMu8uHGGZ2jf.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+  }
+  </style>

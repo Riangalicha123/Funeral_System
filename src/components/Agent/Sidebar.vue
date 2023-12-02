@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer class="black--text" v-model="drawer" app style="background-color: skyblue;">
+    <v-navigation-drawer class="black--text" app style="background-color: skyblue;">
       <v-img
         height="140"
         class="pa-4"
@@ -11,7 +11,7 @@
         </div>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item v-for="link in links" :key="link.icon" :to="link.to" link>
+        <v-list-item v-for="link in links" :key="link.icon" :to="link.to" :search="search" link>
           <template v-slot:prepend>
           <v-icon >{{ link.icon }}</v-icon>
         </template>
@@ -23,10 +23,10 @@
   
   <script>
   export default {
-    name: "Sidebar",
-    drawer: false,
+    name: "Sidebar",  
     data() {
       return {
+        search:'',
         links: [
           {icon: "mdi-account", text: "Create User Account", to: "/agent"},
           {icon: "mdi-account", text: "Payment Acceptance", to: "/payment"},

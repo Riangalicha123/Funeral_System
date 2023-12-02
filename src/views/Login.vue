@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <v-container class="py-5 h-100">
       <v-snackbar v-model="snackbar" :timeout="3000">
     {{ snackbarMessage }}
     <v-btn color="error" text @click="snackbar = false">Close</v-btn>
@@ -76,7 +75,6 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
     <navbottom />
   </v-app>
 </template>
@@ -136,6 +134,9 @@ export default {
         switch (userRole) {
           case "PlanHolder":
             this.$router.push('/');
+            break;
+          case "Agent":
+            this.$router.push('/agent');
             break;
           case "Admin":
             this.$router.push('/admin');

@@ -1,5 +1,5 @@
 <template>
-      <v-container>
+
         <v-row justify="center" style="padding-top: 10%">
           <v-col cols="12" sm="8" md="6">
             <v-card elevation="2">
@@ -42,7 +42,6 @@
          <div v-if="show" class="notification">
            Notification ID: {{ notification.NotificationId }} - User ID: {{ notification.UserId }} - {{ notification.Message }}
          </div>
-      </v-container> 
   </template>
   
   <script>
