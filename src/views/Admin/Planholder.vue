@@ -124,8 +124,8 @@ export default {
       this.$router.push("/planholder"); // Redirect to PlanHolder link
     }else if (this.searchQuery === "agent") {
       this.$router.push("/admin-record"); // Redirect to PlanHolder link
-    }else if (this.searchQuery === "feedback") {
-      this.$router.push("/feedback"); // Redirect to PlanHolder link
+    }else if (this.searchQuery === "feedbackk") {
+      this.$router.push("/feedbackk"); // Redirect to PlanHolder link
     }else if (this.searchQuery === "announcement") {
       this.$router.push("/announcement"); // Redirect to PlanHolder link
     }

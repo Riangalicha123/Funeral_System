@@ -92,7 +92,6 @@
     <v-card class="mx-auto" height="360">
       <v-card-item title="Payment History (Plan Holder)">
         <PaymentHistory/>
-        
       </v-card-item>
     </v-card>
   </v-col>
