@@ -1,10 +1,14 @@
 <template>
+
+
   <v-app>
+    
       <v-snackbar v-model="snackbar" :timeout="3000">
     {{ snackbarMessage }}
     <v-btn color="error" text @click="snackbar = false">Close</v-btn>
   </v-snackbar>
-      <v-row justify="center" align="center" class="h-100">
+  <v-container>
+    <v-row justify="center" align="center" class="h-100">
         <v-col>
           <v-card class="elevation-3" shaped>
             <v-row no-gutters>
@@ -75,6 +79,8 @@
           </v-card>
         </v-col>
       </v-row>
+    </v-container>
+      
     <navbottom />
   </v-app>
 </template>
