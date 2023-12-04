@@ -18,12 +18,29 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['St. Dominique', 'St. Francis', 'St. Paul', 'St. Therese', 'St. Martin', 'St. Lance'],
-        datasets: [{ label: 'GitHub Commits', data: [40, 20, 12], borderColor: 'rgba(75,192,192,1)', fill: false }]
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
+          {
+            label: 'History',
+            data: [10000, 6000, 4000, 3000, 2500, 2000],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2,
+            fill: false,
+          },
+        ],
       },
       chartOptions: {
-        responsive: true
-      }
+        responsive: true,
+        scales: {
+          x: {
+            type: 'category',
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          },
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
     }
   }
 }

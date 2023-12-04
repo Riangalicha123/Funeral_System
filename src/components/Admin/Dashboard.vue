@@ -25,7 +25,7 @@
   <!-- Right Card -->
   <v-col cols="6" md="3" sm="10">
     <v-card class="info-box" style="border: 2px solid #2196F3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-      <v-row align="center">
+      <!-- <v-row align="center">
         <v-col>
           <v-icon icon="mdi-account" style="color: #2196F3;"></v-icon>
           <v-btn icon @click="navigateToPlanHolder" style="margin-top: 10px;">
@@ -39,12 +39,12 @@
             <p v-else style="font-size: 16px; color: #757575;">No data available</p>
           </v-card-text>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-card>
   </v-col>
   <v-col cols="6" md="3" sm="10">
     <v-card class="info-box" style="border: 2px solid #2196F3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-      <v-row align="center">
+      <!-- <v-row align="center">
         <v-col>
           <v-icon icon="mdi-account" style="color: #2196F3;"></v-icon>
           <v-btn icon @click="navigateToPlanHolder" style="margin-top: 10px;">
@@ -58,12 +58,12 @@
             <p v-else style="font-size: 16px; color: #757575;">No data available</p>
           </v-card-text>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-card>
   </v-col>
   <v-col cols="6" md="3" sm="10">
     <v-card class="info-box" style="border: 2px solid #2196F3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-      <v-row align="center">
+      <!-- <v-row align="center">
         <v-col>
           <v-icon icon="mdi-account" style="color: #2196F3;"></v-icon>
           <v-btn icon @click="navigateToPlanHolder" style="margin-top: 10px;">
@@ -77,7 +77,7 @@
             <p v-else style="font-size: 16px; color: #757575;">No data available</p>
           </v-card-text>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-card>
   </v-col>
   

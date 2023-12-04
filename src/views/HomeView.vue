@@ -61,7 +61,7 @@
     <!-- Section 1: Hero Banner -->
     <v-row class="d-flex justify-center">
       <v-col cols="12">
-        <v-card class="mx-auto" shaped outlined>
+        <v-card  shaped outlined>
           <v-parallax
             src="https://wallpapers.com/images/hd/funeral-background-l8wvr5vc978816f2.jpg"
           >
@@ -110,7 +110,6 @@
                 Welcome
               </h1>
               <h2
-                
                 style="
                 font-family: 'Glass Antiqua', sans-serif !important;
                   font-weight: bold;
@@ -180,7 +179,7 @@
     <!-- Section 2: Services -->
 
     <v-row class="d-flex justify-center">
-      <v-col cols="auto">
+      <v-col cols="12" md="4">
         <v-card
           class="mx-auto"
           max-width="420"
@@ -216,26 +215,21 @@
         </v-card>
       </v-col>-->
       
-      <v-col cols="auto">
+      <v-col cols="12" md="4">
         <v-card
           class="mx-auto"
           max-width="420"
           title="Memorial Services"
           append-icon="mdi-check"
-          style="
-            background: linear-gradient(to bottom, white, rgb(25, 152, 194));
-          "
+          style="background: linear-gradient(to bottom, white, rgb(25, 152, 194));"
         >
           <template v-slot:prepend>
             <v-icon icon="mdi-candle" color="black"></v-icon>
           </template>
-          <v-card-text
-            >We organize beautiful memorial services to honor your loved
-            ones.</v-card-text
-          >
+          <v-card-text>We organize beautiful memorial services to honor your loved ones.</v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="auto">
+      <v-col cols="12" md="4">
         <v-card
           class="mx-auto"
           max-width="420"
@@ -263,7 +257,7 @@
     <!-- First Card: Word of the Day -->
     
     <v-row>
-      <v-col cols="12" md="4" class="ml-3">
+      <v-col cols="12" md="4">
         <v-card
           class="mx-auto"
           max-width="800"
@@ -320,7 +314,7 @@
       
   
       <!-- Column 2: Branch Information -->
-      <v-col cols="12" md="" class="mr-3">
+      <v-col cols="12" md="4" >
         <v-card
           class="mx-auto"
           max-width="600"
@@ -335,9 +329,9 @@
               
       
               <v-col cols="11">
-                <v-card-title class="text-h3 text-center">
+                <v-card-title class="text-h3">
                   <h1
-                    class="text-h3 mb-10"
+                    class="text-h3 mb-10 text-center"
                     style="
                     
                     font-weight: bold;
@@ -376,18 +370,18 @@
       
   
       <!-- Column 3: Contact Information -->
-      <v-col cols="12" md="4" class="mr-3"> 
+      <v-col cols="12" md="4" > 
         <v-card
           class="mx-auto"
           max-width="900"
           style="
             background: linear-gradient(to bottom, white, rgb(25, 152, 194));
-            height: 400px; 
+            height: 405px; 
           "
         >
           <v-card-title class="text-h3 text-center">
             <h1
-              class="text-h3 mb-10"
+              class="text-h3 mb-10 text-center"
               style="
               
               font-weight: bold;
@@ -399,7 +393,7 @@
               Contact Us
             </h1>
             <p class="contact-description text-h6">
-              We're here to assist you with any questions .
+              We're here to assist you with any questions.
             </p>
             <p class="contact-description text-h6"> Don't hesitate to get in touch with us.</p>
           </v-card-title>
