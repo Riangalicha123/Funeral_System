@@ -6,7 +6,7 @@
     :headers="headers"
     :items="users"
     :search="search"
-    :sort-by="[{ key: 'MiddleName', order: 'asc' }]"
+    :sort-by="[{ key: 'UserId', order: 'asc' }]"
   >
     <template v-slot:top>
       <v-toolbar
@@ -175,11 +175,12 @@ export default {
       dialogDelete: false,
       headers: [
         {
-          title: 'First Name',
+          title: '#',
           align: 'start',
           sortable: false,
-          key: 'FirstName',
+          key: 'UserId',
         },
+        { title: 'First Name', key: 'FirstName' },
         { title: 'Middle Name', key: 'MiddleName' },
         { title: 'Last Name', key: 'LastName' },
         { title: 'Address', key: 'Address' },
@@ -190,6 +191,7 @@ export default {
       users: [],
       editedIndex: -1,
       editedItem: {
+        UserId: '',
         FirstName: '',
         MiddleName: '',
         LastName: '',
@@ -199,6 +201,7 @@ export default {
 
       },
       defaultItem: {
+        UserId: '',
         FirstName: '',
         MiddleName: '',
         LastName: '',
@@ -249,8 +252,11 @@ export default {
         this.dialogDelete = true
       },
 
-      deleteItemConfirm () {
-        this.users.splice(this.editedIndex, 1)
+      async deleteItemConfirm () {
+        const response = await axios.post('deleteUser', this.editedItem)
+        console.log(response);
+
+        this.initialize();
         this.closeDelete()
       },
 

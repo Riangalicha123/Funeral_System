@@ -6,7 +6,7 @@
       :headers="headers"
       :items="users"
       :search="search"
-      :sort-by="[{ key: 'MiddleName', order: 'asc' }]"
+      :sort-by="[{ key: 'UserId', order: 'asc' }]"
     >
       <template v-slot:top>
         <v-toolbar
@@ -118,6 +118,7 @@
                     >
                       <v-text-field
                         v-model="editedItem.Role"
+                        label="Role"
                       ></v-text-field>
                     </v-col>
                   </v-row>
@@ -191,11 +192,12 @@
         dialogDelete: false,
         headers: [
           {
-            title: 'First Name',
+            title: '#',
             align: 'start',
             sortable: false,
-            key: 'FirstName',
+            key: 'UserId',
           },
+          { title: 'First Name', key: 'FirstName' },
           { title: 'Middle Name', key: 'MiddleName' },
           { title: 'Last Name', key: 'LastName' },
           { title: 'Address', key: 'Address' },
@@ -206,21 +208,27 @@
         users: [],
         editedIndex: -1,
         editedItem: {
+          UserId: '',
           FirstName: '',
           MiddleName: '',
           LastName: '',
+          Email: '',
+          Password: '',
           Address: '',
           Contact: '',
-          Role: 'Agent',
+          Role: '',
   
         },
         defaultItem: {
+          UserId: '',
           FirstName: '',
           MiddleName: '',
           LastName: '',
+          Email: '',
+          Password: '',
           Address: '',
           Contact: '',
-          Role: 'Agent',
+          Role: '',
         },
       }),
   
@@ -265,11 +273,13 @@
           this.dialogDelete = true
         },
   
-        deleteItemConfirm () {
-          this.users.splice(this.editedIndex, 1)
-          this.closeDelete()
-        },
-  
+        async deleteItemConfirm () {
+        const response = await axios.post('deleteUser', this.editedItem)
+        console.log(response);
+
+        this.initialize();
+        this.closeDelete()
+      },
         close () {
           this.dialog = false
           this.$nextTick(() => {
@@ -286,22 +296,14 @@
           })
         },
   
-        save () {
+        async save () {
           if (this.editedIndex > -1) {
             Object.assign(this.users[this.editedIndex], this.editedItem)
-          } else {
-            axios.post('api/insertRecord', this.editedItem)
-            .then(response => {
-                // Handle the response if needed
-                console.log(response.data);
-                // Assuming the response contains the newly added record, you can add it to the table
-                this.users.push(response.data);
-            })
-            .catch(error => {
-                // Handle the error
-                console.error(error);
-            });
+          }  else {
+          const response = await axios.post('Agentregister', this.editedItem)
+          console.log(response.data);
         }
+        this.initialize();
         this.close();
         },
       },

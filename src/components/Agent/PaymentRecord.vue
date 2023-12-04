@@ -5,7 +5,7 @@
     :headers="headers"
     :items="payments"
     :search="search"
-    :sort-by="[{ key: 'FirstName', order: 'asc' }]"
+    :sort-by="[{ key: 'AcceptanceId', order: 'asc' }]"
   >
   
     <template v-slot:top>
@@ -178,11 +178,12 @@ export default {
       dialogDelete: false,
       headers: [
         {
-          title: 'Last Name',
+          title: '#',
           align: 'start',
           sortable: false,
-          key: 'LastName',
+          key: 'AcceptanceId',
         },
+        { title: 'Last Name', key: 'LastName' },
         { title: 'First Name', key: 'FirstName' },
         { title: 'Services', key: 'Services' },
         { title: 'Amount', key: 'Amount' },
@@ -193,6 +194,7 @@ export default {
       payments: [],
       editedIndex: -1,
       editedItem: {
+        AcceptanceId:'',
         LastName: '',
         FirstName: '',
         Services:'',
@@ -202,6 +204,7 @@ export default {
 
       },
       defaultItem: {
+        AcceptanceId:'',
         LastName: '',
         FirstName: '',
         Services:'',
@@ -252,8 +255,11 @@ export default {
         this.dialogDelete = true
       },
 
-      deleteItemConfirm () {
-        this.payments.splice(this.editedIndex, 1)
+      async deleteItemConfirm () {
+        const response = await axios.post('deletePayment', this.editedItem)
+        console.log(response);
+
+        this.initialize();
         this.closeDelete()
       },
 
@@ -273,12 +279,15 @@ export default {
         })
       },
 
-      save () {
+      async save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.payments[this.editedIndex], this.editedItem)
+          const response = await axios.post('updatePayment', this.editedItem)
+          console.log(response.data);
         } else {
-          this.payments.push(this.editedItem)
+          const response = await axios.post('insertPayment', this.editedItem)
+          console.log(response.data);
         }
+        this.initialize();
         this.close()
       },
     },

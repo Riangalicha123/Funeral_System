@@ -17,11 +17,11 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Label 1', 'Label 2', 'Label 3'],
+        labels: ['Puerto Galera', 'San Teodoro', 'Baco','Calapan City','Naujan'],
         datasets: [{
-          data: [30, 50, 20],
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+          data: [30, 50, 20, 30, 10],
+          backgroundColor: ['#4169E1', '#008000', '#DAA520','#FF8C69', '#9932CC'],
+          hoverBackgroundColor:['#4169E1', '#008000', '#DAA520','#FF8C69', '#9932CC']
         }]
       },
       chartOptions: {

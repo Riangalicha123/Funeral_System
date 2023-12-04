@@ -83,8 +83,15 @@
   
   <v-col cols="12" md="6" class="mt-n4">
     <v-card class="mx-auto" height="360px">
-      <v-card-item title="Weekly | Monthly Services">
+      <v-card-item title="Weekly | Monthly Collection">
         <WMCollection/>
+      </v-card-item>
+    </v-card>
+  </v-col>
+  <v-col cols="12" md="6" class="mt-n4">
+    <v-card class="mx-auto" height="360px">
+      <v-card-item title="Weekly | Monthly Services">
+        <WMServices/>
       </v-card-item>
     </v-card>
   </v-col>
@@ -116,10 +123,11 @@
 import axios from 'axios';
 import TotalPercentage from "@/components/Admin/TotalPercentage.vue";
 import WMCollection from "@/components/Admin/WMCollection.vue";
+import WMServices from "@/components/Admin/WMServices.vue";
 import PaymentHistory from "@/components/Admin/PaymentHistory.vue";
 export default {
   name: 'Dashboard',
-  components: { TotalPercentage, WMCollection, PaymentHistory},
+  components: { TotalPercentage, WMCollection, PaymentHistory,WMServices},
   data() {
     return {
       
