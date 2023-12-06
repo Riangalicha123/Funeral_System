@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'funeral_system',
+        'database' => 'dev',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

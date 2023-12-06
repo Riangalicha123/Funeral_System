@@ -16,6 +16,7 @@ class FeedbackController extends ResourceController
     private $notification;
 
     public function __construct()
+    
     {
         $this->feedbackModel = new FeedbackModel();
         $this->userAccount = new UserAccount();

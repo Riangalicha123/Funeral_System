@@ -69,7 +69,7 @@ header('Access-Control-Allow-Origin: *');
  if($method == "OPTIONS") {
  die();
  }
- 
+
 $app = Config\Services::codeigniter();
 $app->initialize();
 $context = is_cli() ? 'php-cli' : 'web';
