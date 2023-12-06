@@ -12,7 +12,7 @@
       <v-toolbar
         flat
       >
-      
+      <v-toolbar-title>PlanHolder</v-toolbar-title>
         <v-divider
           class="mx-4"
           inset

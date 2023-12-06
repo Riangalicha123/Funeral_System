@@ -12,7 +12,7 @@
         <v-toolbar
           flat
         >
-        
+        <v-toolbar-title>Agent</v-toolbar-title>
           <v-divider
             class="mx-4"
             inset
@@ -300,7 +300,7 @@
           if (this.editedIndex > -1) {
             Object.assign(this.users[this.editedIndex], this.editedItem)
           }  else {
-          const response = await axios.post('Agentregister', this.editedItem)
+          const response = await axios.post('agentregister', this.editedItem)
           console.log(response.data);
         }
         this.initialize();
