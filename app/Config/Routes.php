@@ -33,5 +33,15 @@ $routes->get('/collection', 'Dashboard::collection');
 $routes->get('/services', 'Dashboard::services');
 
 
-$routes->get('/announcement', 'Announcement::announcement');
+$routes->get('/getannouncement', 'Announcement::getannouncement');
+$routes->post('/postannouncement', 'Announcement::postannouncement');
 $routes->get('/', 'Home::index');
+
+
+$routes->get('getAdminProfiles', 'ChatController::getAdminProfiles');
+$routes->get('getAgentProfiles', 'ChatController::getAgentProfiles');
+$routes->get('getmessageAdmin', 'ChatController::getmessageAdmin');
+$routes->get('getmessageAgent', 'ChatController::getmessageAgent');
+$routes->get('getmessagePlanHolder', 'ChatController::getmessagePlanHolder');
+$routes->post('messageForAdmin', 'ChatController::messageForAdmin');
+$routes->post('messageForAgent', 'ChatController::messageForAgent');
