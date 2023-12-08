@@ -26,6 +26,7 @@
         <v-list-item-title link>Login</v-list-item-title>
       </v-list-item>
       
+      
     </v-list>
   </v-navigation-drawer>
   <v-app-bar scroll-behavior="inverted" color="rgb(25, 152, 194)" dark dense>

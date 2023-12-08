@@ -1,121 +1,203 @@
 <template>
   <v-app>
-    <v-app-bar color="rgb(25, 152, 194)" dark dense>
-      <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
-      <v-spacer></v-spacer>
-      <v-btn @click="showNotification">
-        <v-icon>mdi-bell</v-icon>
-      </v-btn>
-      <v-dialog v-model="notificationMessage" max-width="400">
-        <v-card>
-          <v-card-title>Notification</v-card-title>
-          <v-card-text>
-            {{ notificationMessage }}
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" @click="notificationMessage = false">Close</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-app-bar>
-
     <v-container>
-      
-      <v-card class="chat-container" v-show="chatVisible">
-        <v-card-title class="headline">Message</v-card-title>
-        <v-divider></v-divider>
+      <v-row>
+        <!-- Side container for Admin -->
+        <v-col cols="3" md="3" sm="10">
+          <v-card class="info-box" style="border: 2px solid #2196F3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <v-card-text>
+              <p style="font-weight: bold; font-size: 18px; margin-bottom: 5px;">Profile</p>
+              <p v-if="token" style="font-size: 16px;">{{ Email }}</p>
+              <p v-else style="font-size: 16px; color: #757575;">No user</p>
+            </v-card-text>
 
-        <div class="chat-messages">
-          <!-- Display messages from both user and admin -->
-          <div v-for="message in messages" :key="message.id">
-            <div class="message" :class="{ 'my-message': message.isMine, 'admin-message': message.isAdmin }">
-              <p>
-                {{ message.sender }}: {{ message.text }}
-                <span class="message-time">{{ message.timestamp }}</span>
-              </p>
-            </div>
-          </div>
-        </div>
+            <!-- Move the Admin list items to the side container -->
+            <v-list>
+      <v-list-item v-for="user in users" :key="user.id" @click="openMessenger(user.Email)">
+        <p style="font-weight: bold; font-size: 18px; margin-bottom: 5px;">Admin</p>
+        <template v-slot:prepend>
+          <v-icon>mdi-account</v-icon>
+        </template>
+        <v-list-item-title>{{ user.Email }}</v-list-item-title>
+        <!-- Add more v-list-item-content slots for other record details -->
+      </v-list-item>
+    </v-list>
 
-        <!-- Chat input form -->
-        <form class="chat-input" @submit.prevent="sendMessage">
-          <v-text-field v-model="newMessage" label="Type your message" outlined dense full-width></v-text-field>
-          <v-btn type="submit" color="primary" class="send-button">Send</v-btn>
-        </form>
-      </v-card>
-
-      <!-- Chat toggle button -->
-      <v-btn class="chat-toggle-button" fab @click="toggleChatVisibility">
-        <v-icon>{{ chatVisible ? 'mdi-chevron-down' : 'mdi-chat' }}</v-icon>
-      </v-btn>
+    <v-list>
+      <v-list-item v-for="hello in hellos" :key="hello.id" @click="openMessenger(hello.Email)">
+        <p style="font-weight: bold; font-size: 18px; margin-bottom: 5px;">Agent</p>
+        <template v-slot:prepend>
+          <v-icon>mdi-account</v-icon>
+        </template>
+        <v-list-item-title>{{ hello.Email }}</v-list-item-title>
+        <!-- Add more v-list-item-content slots for other record details -->
+      </v-list-item>
+    </v-list>
+          </v-card>
+        </v-col>
+        <v-col cols="9" md="9" sm="10"  >
+          <v-card class="info-box" style="border: 2px solid #2196F3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <v-card-text v-for="message in messages">
+                <p>{{ message.Email }}</p>
+              <p>{{ message.Message }}</p>
+            </v-card-text>
+            <v-card-text v-for="adminmesses in adminmess">
+                <p>{{ adminmesses.Email }}</p>
+              <p>{{ adminmesses.Message }}</p>
+            </v-card-text>
+            <v-form @submit.prevent="submitFeedback">
+                <v-row>
+                  <v-col cols="12">
+                    <!-- Email Field -->
+                    <v-text-field
+                      v-if="token"
+                      v-model="Email"
+                      readonly
+                    ></v-text-field>
+                    <v-text-field
+                      v-else
+                      v-model="Email"
+                      label="Email"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12">
+                    <v-textarea
+                      v-model="Message"
+                      label="Message"
+                      rows="5"
+                      outlined
+                    ></v-textarea>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12">
+                    <v-btn type="submit" color="primary">Submit</v-btn>
+                  </v-col>
+                </v-row>
+              </v-form>
+          </v-card>
+        </v-col>
+        <!-- Main content area -->
+        <v-col cols="9">
+          <v-app-bar color="rgb(25, 152, 194)" dark dense>
+            <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
+            <v-spacer></v-spacer>
+            <v-btn @click="showNotification">
+              <v-icon v-icon>mdi-bell</v-icon>
+            </v-btn>
+            <v-dialog v-model="notificationMessage" max-width="400">
+              <v-card>
+                <v-card-title>Notification</v-card-title>
+                <v-card-text>
+                  {{ notificationMessage }}
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn color="primary" @click="notificationMessage = false">Close</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </v-app-bar>
+           
+            
+        </v-col>
+      </v-row>
     </v-container>
 
-    
     <navbottom />
   </v-app>
 </template>
 
+<!-- ... (existing script and style sections) ... -->
+
+
 <script>
 import navbottom from "@/components/navbottom.vue";
-
+import { jwtDecode as jwt_decode } from "jwt-decode";
+import axios from 'axios';
 export default {
   components: {
     navbottom,
   },
   data() {
     return {
+      users:[],
+      hellos:[],
+      selectedEmail: null,
       notificationMessage: false,
-      messages: [
-        {
-          id: Date.now() - 1,
-          sender: 'Admin',
-          text: 'Welcome! How can I assist you?',
-          isAdmin: true,
-          timestamp: new Date().toLocaleString(),
-        },
-      ],
-      newMessage: "",
-      chatVisible: true,
+      Email: "",
+      token: sessionStorage.getItem('token') !== null,
+      newMessage: '',
+      messages: [],
+      Message: "",
     };
   },
+  created() {
+    this.getmessageplanholder();
+    this.getmessageAdmin();
+    this.getAdminRecord();
+    this.getAgentRecord();
+    if (this.token) {
+      this.fetchUserDetails();
+    }
+  },
   methods: {
+    openMessenger(email) {
+      this.selectedEmail = email;
+      // You can add logic to display the messenger or perform other actions here
+    },
+    async getmessageplanholder () {
+        try {
+          const respond = await axios.get('getmessagePlanHolder');
+            this.messages = respond.data;
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      async getmessageAdmin () {
+        try {
+          const respond = await axios.get('getmessageAdmin');
+            this.adminmess = respond.data;
+        } catch (error) {
+          console.log(error);
+        }
+      },
+    async getAdminRecord () {
+        try {
+          const respond = await axios.get('getAdminProfiles');
+            this.users = respond.data;
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      async getAgentRecord () {
+        try {
+          const respond = await axios.get('getAgentProfiles');
+            this.hellos = respond.data;
+        } catch (error) {
+          console.log(error);
+        }
+      },
     showNotification() {
       this.notificationMessage = "This is a notification message.";
     },
-    sendMessage() {
-      if (this.newMessage.trim() !== "") {
-        const timestamp = new Date().toLocaleString();
-
-        this.messages.push({
-          id: Date.now(),
-          sender: 'You',
-          text: this.newMessage,
-          isMine: true,
-          timestamp: timestamp,
-        });
-
-        this.messages.push({
-          id: Date.now() + 1,
-          sender: 'Admin',
-          text: 'Thank you for your message. I will get back to you shortly.',
-          isAdmin: true,
-          timestamp: new Date().toLocaleString(),
-        });
-
-        this.newMessage = "";
+    async fetchUserDetails() {
+      try {
+        const token = sessionStorage.getItem("token");
+        const decodedToken = jwt_decode(token);
+        this.Email = decodedToken.email;
+      } catch (error) {
+        console.error("Error fetching user details:", error);
       }
     },
-    toggleChatVisibility() {
-      this.chatVisible = !this.chatVisible;
-    },
+    
   },
+  
 };
 </script>
 
-
-<style>
-/* Add your styles here */
-</style>
 
 <style>
 /* Add styles for the message container */

@@ -35,7 +35,7 @@ const routes = [
     meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
   },
   {
-    path: '/home', 
+    path: '/messages', 
     name: 'Messages',
     component: Messages,
     meta:{ requiresAuth: true, allowedRoles: ['PlanHolder'] }
@@ -136,7 +136,7 @@ router.beforeEach((to, from, next) => {
   const token = sessionStorage.getItem('token');
   if(to.meta.requiresAuth){
     if(!token){
-      next('/login');
+      next('/');
     }else{
       const decodedToken = jwt_decode(token);
       const userRole = decodedToken.aud;
