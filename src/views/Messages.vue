@@ -72,8 +72,8 @@
                     ></v-textarea>
                   </v-col>
                 </v-row>
-                <v-row>
-                  <v-col cols="12">
+                <v-row class="d-flex justify-center">
+                  <v-col cols="12" class="text-center">
                     <v-btn type="submit" color="primary">Submit</v-btn>
                   </v-col>
                 </v-row>
