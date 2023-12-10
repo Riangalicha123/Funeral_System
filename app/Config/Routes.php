@@ -13,6 +13,7 @@ $routes->post('/register', 'UserController::register');
 $routes->post('/loginAuth', 'UserController::loginAuth');
 $routes->post('/logout', 'UserController::logout');
 $routes->get('/registerData', 'UserController::registerData');
+$routes->get('/registerDataa', 'UserController::registerDataa');
 $routes->get('/totalplanholder', 'UserController::totalPlanHolders');
 
 $routes->post('/deleteUser', 'UserController::deleteUser');

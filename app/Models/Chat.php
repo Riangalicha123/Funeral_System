@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Notification extends Model
+class Chat extends Model
 {
-    protected $table            = 'notification';
-    protected $primaryKey       = 'NotificationId';
+    protected $table            = 'realtimechat';
+    protected $primaryKey       = 'ChatId';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['FeedbackId', 'ChatId', 'UserId', 'AcceptanceId', 'AnnouncementId'];
+    protected $allowedFields    = ['UserId','Message'];
 
     // Dates
     protected $useTimestamps = false;
