@@ -1,0 +1,289 @@
+ERROR - 2023-11-22 13:40:32 --> mysqli_sql_exception: Table 'apdev.agentaccounts' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\backend\app\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#8 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-22 13:40:32 --> Table 'apdev.agentaccounts' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`UserId`, `1000`.`00` as `Amount`, "Unpaid" as `Status`, CURDATE() as Date
+FROM `agentaccounts`
+JOIN `users` ON `users`.`UserId` = `agentacceptance`.`UserId`
+WHERE `users`.`FirstName` = :users.FirstName:
+AND `users`.`LastName` = :users.LastName:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 13:41:36 --> mysqli_sql_exception: Table 'apdev.agentaccounts' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\backend\app\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#8 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-22 13:41:36 --> Table 'apdev.agentaccounts' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`UserId`, `1000`.`00` as `Amount`, "Unpaid" as `Status`, CURDATE() as Date
+FROM `agentaccounts`
+JOIN `users` ON `users`.`UserId` = `agentacceptance`.`UserId`
+WHERE `users`.`FirstName` = :users.FirstName:
+AND `users`.`LastName` = :users.LastName:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 13:42:44 --> mysqli_sql_exception: Unknown column '1000.00' in 'field list' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\backend\app\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#8 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-22 13:42:44 --> Unknown column '1000.00' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`UserId`, `1000`.`00` as `Amount`, "Unpaid" as `Status`, CURDATE() as Date
+FROM `paymentacceptance`
+JOIN `users` ON `users`.`UserId` = `agentacceptance`.`UserId`
+WHERE `users`.`FirstName` = :users.FirstName:
+AND `users`.`LastName` = :users.LastName:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 13:43:41 --> mysqli_sql_exception: Unknown column 'users.Amount' in 'field list' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\backend\app\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#8 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-22 13:43:41 --> Unknown column 'users.Amount' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`UserId`, `users`.`Amount`, `users`.`Status`, `users`.`Date`
+FROM `paymentacceptance`
+JOIN `users` ON `users`.`UserId` = `agentacceptance`.`UserId`
+WHERE `users`.`FirstName` = :users.FirstName:
+AND `users`.`LastName` = :users.LastName:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AgentController.php(32): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 13:52:38 --> mysqli_sql_exception: Table 'apdev.agentacceptance' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT agentacc...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT agentacc...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT agentacc...')
+#3 C:\laragon\www\backend\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT agentacc...')
+#4 C:\laragon\www\backend\app\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#6 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#7 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-22 13:52:38 --> Table 'apdev.agentacceptance' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT agentacceptance.AcceptanceId, agentacceptance.UserId, agentacceptance.Amount, agentacceptance.Status, agentacceptance.Date
+                    FROM agentacceptance
+                    INNER JOIN users ON users.UserId = agentacceptance.UserId
+                    WHERE users.FirstName = \'\'
+                    AND users.LastName = \'\'
+            ')
+ 2 APPPATH\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 13:56:02 --> mysqli_sql_exception: Table 'apdev.agentacceptance' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT agentacc...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT agentacc...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT agentacc...')
+#3 C:\laragon\www\backend\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT agentacc...')
+#4 C:\laragon\www\backend\app\Controllers\AgentController.php(29): CodeIgniter\Model->__call('query', Array)
+#5 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#6 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#7 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-22 13:56:02 --> Table 'apdev.agentacceptance' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT agentacceptance.AcceptanceId, agentacceptance.UserId, agentacceptance.Amount, agentacceptance.Status, agentacceptance.Date
+                    FROM agentacceptance
+                    INNER JOIN users ON users.UserId = agentacceptance.UserId
+                    WHERE users.FirstName = \'\'
+                    AND users.LastName = \'\'
+            ')
+ 2 APPPATH\Controllers\AgentController.php(29): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 14:03:24 --> mysqli_sql_exception: Table 'apdev.agentacceptance' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT users.Us...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT users.Us...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT users.Us...')
+#3 C:\laragon\www\backend\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.Us...')
+#4 C:\laragon\www\backend\app\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#6 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#7 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-22 14:03:24 --> Table 'apdev.agentacceptance' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.UserId, users.Amount, users.Status, users.Date
+                                                FROM agentacceptance
+                                                JOIN users ON users.UserId = agentacceptance.UserId
+                                                WHERE users.FirstName = \'\' AND users.LastName = \'\'')
+ 2 APPPATH\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 14:03:37 --> mysqli_sql_exception: Table 'apdev.agentacceptance' doesn't exist in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT users.Us...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT users.Us...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT users.Us...')
+#3 C:\laragon\www\backend\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.Us...')
+#4 C:\laragon\www\backend\app\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#6 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#7 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-22 14:03:37 --> Table 'apdev.agentacceptance' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.UserId, users.Amount, users.Status, users.Date
+                                                FROM agentacceptance
+                                                JOIN users ON users.UserId = paymentacceptance.UserId
+                                                WHERE users.FirstName = \'\' AND users.LastName = \'\'')
+ 2 APPPATH\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 14:05:03 --> mysqli_sql_exception: Unknown column 'users.Amount' in 'field list' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT users.Us...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT users.Us...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT users.Us...')
+#3 C:\laragon\www\backend\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.Us...')
+#4 C:\laragon\www\backend\app\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#6 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#7 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-22 14:05:03 --> Unknown column 'users.Amount' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT users.UserId, users.Amount, users.Status, users.Date
+                                                FROM paymentacceptance
+                                                JOIN users ON users.UserId = paymentacceptance.UserId
+                                                WHERE users.FirstName = \'\' AND users.LastName = \'\'')
+ 2 APPPATH\Controllers\AgentController.php(28): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 14:44:55 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::numRows()
+in APPPATH\Controllers\AgentController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 15:07:59 --> mysqli_sql_exception: Column 'UserId' cannot be null in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\AgentController.php(59): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->addPayment()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-22 15:07:59 --> Column 'UserId' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paymentacceptance` (`UserId`, `Amount`, `Status`, `Date`) VALUES (:UserId:, :Amount:, :Status:, :Date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AgentController.php(59): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->addPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-22 15:09:12 --> mysqli_sql_exception: Column 'UserId' cannot be null in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\AgentController.php(59): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->addPayment()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-22 15:09:12 --> Column 'UserId' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paymentacceptance` (`UserId`, `Amount`, `Status`, `Date`) VALUES (:UserId:, :Amount:, :Status:, :Date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AgentController.php(59): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->addPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,361 @@
+ERROR - 2023-11-23 11:24:23 --> mysqli_sql_exception: Duplicate entry '26' for key 'paymentacceptance.UserId' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\AgentController.php(59): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-23 11:24:23 --> Duplicate entry '26' for key 'paymentacceptance.UserId'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paymentacceptance` (`UserId`, `Amount`, `Status`, `Date`) VALUES (:UserId:, :Amount:, :Status:, :Date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AgentController.php(59): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 13:56:57 --> mysqli_sql_exception: Duplicate entry '31' for key 'paymentacceptance.UserId' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\AgentController.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-23 13:56:57 --> Duplicate entry '31' for key 'paymentacceptance.UserId'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paymentacceptance` (`UserId`, `Amount`, `Status`, `Date`) VALUES (:UserId:, :Amount:, :Status:, :Date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AgentController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 15:33:46 --> mysqli_sql_exception: Not unique table/alias: 'paymentacceptance' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `payment...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payment...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payment...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `payment...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\app\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#8 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-23 15:33:46 --> Not unique table/alias: 'paymentacceptance'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `paymentacceptance`.`UserId`, `users`.`FirstName`, `users`.`LastName`, `paymentacceptance`.`Amount`, `paymentacceptance`.`Services`, `paymentacceptance`.`Status`, `paymentacceptance`.`Date`
+FROM (`paymentacceptance`, `paymentacceptance`)
+JOIN `users` ON `paymentacceptance`.`UserId` = `users`.`UserId`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 15:33:49 --> mysqli_sql_exception: Not unique table/alias: 'paymentacceptance' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `payment...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payment...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payment...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `payment...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\app\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#8 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-23 15:33:49 --> Not unique table/alias: 'paymentacceptance'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `paymentacceptance`.`UserId`, `users`.`FirstName`, `users`.`LastName`, `paymentacceptance`.`Amount`, `paymentacceptance`.`Services`, `paymentacceptance`.`Status`, `paymentacceptance`.`Date`
+FROM (`paymentacceptance`, `paymentacceptance`)
+JOIN `users` ON `paymentacceptance`.`UserId` = `users`.`UserId`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 15:34:58 --> mysqli_sql_exception: Not unique table/alias: 'paymentacceptance' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `payment...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payment...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payment...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `payment...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\app\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#8 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-23 15:34:58 --> Not unique table/alias: 'paymentacceptance'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `paymentacceptance`.`UserId`, `users`.`FirstName`, `users`.`LastName`, `paymentacceptance`.`Amount`, `paymentacceptance`.`Services`, `paymentacceptance`.`Status`, `paymentacceptance`.`Date`
+FROM (`paymentacceptance`, `paymentacceptance`)
+JOIN `users` ON `paymentacceptance`.`UserId` = `users`.`UserId`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AgentController.php(47): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 15:38:11 --> mysqli_sql_exception: Unknown column 'pa.UserId' in 'field list' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `pa`.`Us...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pa`.`Us...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pa`.`Us...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pa`.`Us...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\app\Controllers\AgentController.php(30): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#8 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-23 15:38:11 --> Unknown column 'pa.UserId' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `pa`.`UserId`, `u`.`FirstName`, `u`.`LastName`, `pa`.`Amount`, `pa`.`Services`, `pa`.`Status`, `pa`.`Date`
+FROM `paymentacceptance`
+JOIN `users` `u` ON `pa`.`UserId` = `u`.`UserId`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AgentController.php(30): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-23 15:46:46 --> mysqli_sql_exception: Not unique table/alias: 'paymentacceptance' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `payment...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payment...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payment...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `payment...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\backend\app\Controllers\AgentController.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+#7 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#8 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-23 15:46:46 --> Not unique table/alias: 'paymentacceptance'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `paymentacceptance`.`UserId`, `users`.`FirstName`, `users`.`LastName`, `paymentacceptance`.`Amount`, `paymentacceptance`.`Services`, `paymentacceptance`.`Status`, `paymentacceptance`.`Date`
+FROM (`paymentacceptance`, `paymentacceptance`)
+JOIN `users` ON `paymentacceptance`.`UserId` = `users`.`UserId`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AgentController.php(38): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->getPayment()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 16:29:43 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 16:31:03 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 16:31:50 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 16:44:41 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 16:45:11 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:09:55 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:11:01 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:13:04 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:14:03 --> Undefined array key "LastName"
+in APPPATH\Controllers\AgentController.php on line 52.
+ 1 APPPATH\Controllers\AgentController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "LastName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:23:53 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:28:36 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:32:55 --> Undefined array key "FirstName"
+in APPPATH\Controllers\AgentController.php on line 51.
+ 1 APPPATH\Controllers\AgentController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FirstName"', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:39:36 --> Undefined property: stdClass::$userId
+in APPPATH\Controllers\AgentController.php on line 48.
+ 1 APPPATH\Controllers\AgentController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$userId', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:44:04 --> Undefined property: stdClass::$userId
+in APPPATH\Controllers\AgentController.php on line 48.
+ 1 APPPATH\Controllers\AgentController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$userId', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:44:58 --> Undefined property: stdClass::$userId
+in APPPATH\Controllers\AgentController.php on line 48.
+ 1 APPPATH\Controllers\AgentController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$userId', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:46:55 --> Undefined property: stdClass::$firstName
+in APPPATH\Controllers\AgentController.php on line 49.
+ 1 APPPATH\Controllers\AgentController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstName', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:48:35 --> Undefined property: stdClass::$firstName
+in APPPATH\Controllers\AgentController.php on line 49.
+ 1 APPPATH\Controllers\AgentController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstName', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:51:15 --> Undefined property: stdClass::$firstName
+in APPPATH\Controllers\AgentController.php on line 49.
+ 1 APPPATH\Controllers\AgentController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstName', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:51:37 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 61.
+ 1 APPPATH\Controllers\AgentController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:53:16 --> Attempt to read property "FirstName" on null
+in APPPATH\Controllers\AgentController.php on line 50.
+ 1 APPPATH\Controllers\AgentController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "FirstName" on null', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 17:54:41 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 62.
+ 1 APPPATH\Controllers\AgentController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:30:19 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 62.
+ 1 APPPATH\Controllers\AgentController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:36:33 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 62.
+ 1 APPPATH\Controllers\AgentController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:38:55 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 64.
+ 1 APPPATH\Controllers\AgentController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:41:35 --> Undefined property: stdClass::$UserId
+in APPPATH\Controllers\AgentController.php on line 52.
+ 1 APPPATH\Controllers\AgentController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$UserId', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:45:32 --> Undefined property: stdClass::$UserId
+in APPPATH\Controllers\AgentController.php on line 52.
+ 1 APPPATH\Controllers\AgentController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$UserId', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-23 23:46:05 --> Attempt to read property "UserId" on array
+in APPPATH\Controllers\AgentController.php on line 64.
+ 1 APPPATH\Controllers\AgentController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "UserId" on array', 'C:\\laragon\\www\\backend\\app\\Controllers\\AgentController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AgentController->insertPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()

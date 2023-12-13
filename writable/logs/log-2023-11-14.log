@@ -1,0 +1,6 @@
+CRITICAL - 2023-11-14 18:31:54 --> Firebase\JWT\JWT::decode(): Argument #3 ($headers) cannot be passed by reference
+in APPPATH\Controllers\UserController.php on line 190.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()

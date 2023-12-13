@@ -12,6 +12,7 @@ import Account from '../views/Account.vue';
 import Admin from '../views/Admin/Admin.vue';
 import PlanHolder from '../views/Admin/Planholder.vue';
 import AgentRecord from '../views/Admin/AgentRecord.vue';
+import PaymentHistory from '../views/Admin/PaymentHistory.vue';
 import Feedbackk from '../views/Admin/Feedback.vue';
 import Chat from '../components/Chat.vue';
 import EditProfile from '../views/Admin/EditProfile.vue';
@@ -77,6 +78,12 @@ const routes = [
     path: '/planholder', 
     name: 'planholder',
     component: PlanHolder,
+    meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
+  },
+  {
+    path: '/history', 
+    name: 'history',
+    component: PaymentHistory,
     meta:{ requiresAuth: true,allowedRoles: ['Admin'] }
   },
   

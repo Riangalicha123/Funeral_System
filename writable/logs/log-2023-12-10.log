@@ -1,0 +1,947 @@
+CRITICAL - 2023-12-10 02:56:10 --> Class "Dompdf\Options" not found
+in APPPATH\Controllers\UserController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:11:54 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:08 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:56 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:56 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:56 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:56 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:57 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:57 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:57 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:57 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:58 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:58 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:58 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:12:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:13:00 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:13:00 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:13:00 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:05 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(52): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:51 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:55 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:56 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:58 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:20:59 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:00 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:00 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:01 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:01 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:01 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:01 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:01 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:02 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:02 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:02 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:02 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:03 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:04 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:04 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:04 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:04 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:04 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:05 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:05 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:05 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:05 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:06 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:07 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:08 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:21:08 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:35 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:37 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:39 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:40 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:40 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:47:53 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf_template', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:52:35 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 03:52:36 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:13 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:17 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:19 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:20 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:20 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:01:45 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:16:48 --> Call to undefined method App\Models\UserAccount::getData
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(30): CodeIgniter\Model->__call('getData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:16:50 --> Call to undefined method App\Models\UserAccount::getData
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(30): CodeIgniter\Model->__call('getData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:17:02 --> Call to undefined method App\Models\UserAccount::getData
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UserController.php(30): CodeIgniter\Model->__call('getData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:20:35 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:20:43 --> Invalid file: "pdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pdf', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('pdf', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-10 04:22:46 --> Invalid file: "components/Admin/Plan.vue"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/Admin/Plan.vue')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('components/Admin/Plan.vue', [], true)
+ 3 APPPATH\Controllers\UserController.php(60): view('components/Admin/Plan.vue', [...])
+ 4 APPPATH\Controllers\UserController.php(44): App\Controllers\UserController->generatePdf([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->registerDataa()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(86): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-10 07:47:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`apdev`.`announcement`, CONSTRAINT `announcement_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `users` (`UserId`)) in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `an...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `an...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `an...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `an...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\Announcement.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\Announcement->postannouncement()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-10 07:51:15 --> mysqli_sql_exception: Duplicate entry '28' for key 'announcement.UserId' in C:\laragon\www\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `an...', 0)
+#1 C:\laragon\www\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `an...')
+#2 C:\laragon\www\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `an...')
+#3 C:\laragon\www\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `an...', Array, false)
+#4 C:\laragon\www\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\backend\app\Controllers\Announcement.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\backend\system\CodeIgniter.php(942): App\Controllers\Announcement->postannouncement()
+#9 C:\laragon\www\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+#10 C:\laragon\www\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\backend\public\index.php(86): CodeIgniter\CodeIgniter->run()
+#12 {main}

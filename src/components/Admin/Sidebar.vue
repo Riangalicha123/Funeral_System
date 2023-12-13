@@ -30,6 +30,7 @@ export default {
         {icon: "mdi-microsoft-windows", text: "Dashboard", to:"/admin"},
         {icon: "mdi-account", text: "PlanHolder", to: "/planholder"},
         {icon: "mdi-account", text: "Agent", to: "/admin-record"},
+        {icon: "mdi-account", text: "Payment History", to: "/history"},
         {icon: "mdi-comment", text: "Feedback", to: "/feedbackk"},
         {icon: "mdi-mail", text: "Announcement", to: "/announcement"},
         
