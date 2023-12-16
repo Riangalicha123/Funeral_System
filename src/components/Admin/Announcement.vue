@@ -32,7 +32,7 @@
                 </v-row>
                 <v-row>
                   <v-col cols="12" class="text-center">
-                    <v-btn type="submit" color="primary">Submit Feedback</v-btn>
+                    <v-btn type="submit" color="primary">Submit Announcements</v-btn>
                   </v-col>
                 </v-row>
               </v-form>

@@ -3,6 +3,7 @@
     <v-app-bar color="rgb(25, 152, 194)" dark dense>
       <v-app-bar-title class="white--text">Funeral Homes</v-app-bar-title>
       <v-spacer></v-spacer>
+      
       <v-btn @click="showNotification">
         <v-icon>mdi-bell</v-icon>
       </v-btn>
@@ -18,9 +19,11 @@
         </v-card>
       </v-dialog>
     </v-app-bar>
-
+    
     <v-container fluid >
+     
       <div class="scrollable-container">
+        
         <v-row>
           <v-col v-for="(item, i) in items" :key="i" cols="12" md="6" lg="4" xl="3">
             <v-hover v-slot="{ isHovering, props }">
