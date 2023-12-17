@@ -276,9 +276,10 @@ export default {
         })
       },
 
-      save () {
+      async save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.users[this.editedIndex], this.editedItem)
+          const response = await axios.post('updatePlanHolder', this.editedItem)
+        console.log(response.data);
         } else {
           this.users.push(this.editedItem)
         }
