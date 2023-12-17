@@ -16,6 +16,8 @@ $routes->get('/registerData', 'UserController::registerData');
 $routes->get('/registerDataa', 'UserController::registerDataa');
 $routes->get('/totalplanholder', 'UserController::totalPlanHolders');
 
+$routes->post('/updatePlanHolder', 'AgentController::updatePlanHolder');
+
 $routes->post('/deleteUser', 'UserController::deleteUser');
 
 $routes->get('/agentData', 'AgentController::agentData');
@@ -36,8 +38,6 @@ $routes->get('/services', 'Dashboard::services');
 
 $routes->get('/getannouncement', 'Announcement::getannouncement');
 $routes->post('/postannouncement', 'Announcement::postannouncement');
-$routes->get('/', 'Home::index');
-
 
 $routes->get('getAdminProfiles', 'ChatController::getAdminProfiles');
 $routes->get('getAgentProfiles', 'ChatController::getAgentProfiles');
@@ -46,3 +46,4 @@ $routes->get('getmessageAgent', 'ChatController::getmessageAgent');
 $routes->get('getmessagePlanHolder', 'ChatController::getmessagePlanHolder');
 $routes->post('messageForAdmin', 'ChatController::messageForAdmin');
 $routes->post('messageForAgent', 'ChatController::messageForAgent');
+

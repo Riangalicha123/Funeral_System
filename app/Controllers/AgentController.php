@@ -183,5 +183,24 @@ public function deletePayment()
             return $this->respond($response);
         }
     }
+    public function updatePlanHolder()
+    {
+        try {
+            $UserId = $this->request->getVar('UserId');
 
+            $data = [
+                'FirstName'    => $this->request->getVar('FirstName'),
+                'MiddleName'    => $this->request->getVar('MiddleName'),
+                'LastName'    => $this->request->getVar('LastName'),
+                'Address'    => $this->request->getVar('Address'),
+                'Contact'  => $this->request->getVar('Contact'),
+            ];
+
+            $this->userAccounts->where('UserId',$UserId)->set($data)->update();
+
+            return $this->respond(['message' => 'Record Updated Successfully']);
+        } catch (\Throwable $th) {
+            return $this->respond(["error" => "Error" . $th->getMessage()]);
+        }
+    }
 }
