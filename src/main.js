@@ -7,7 +7,7 @@ import { loadFonts } from './plugins/webfontloader'
 import axios from 'axios'
 
 
-axios.defaults.baseURL="http://backend.test/"
+axios.defaults.baseURL="https://kaagapayfuneralhomes.online/funeralapi/"
 
 loadFonts()
 
