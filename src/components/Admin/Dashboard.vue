@@ -83,14 +83,14 @@
   
   <v-col cols="12" md="6" class="mt-n4">
     <v-card class="mx-auto" height="360px">
-      <v-card-item title="Weekly | Monthly Collection">
+      <v-card-item title="Weekly, Monthly & Yearly Collection">
         <WMCollection/>
       </v-card-item>
     </v-card>
   </v-col>
   <v-col cols="12" md="6" class="mt-n4" >
     <v-card class="mx-auto" height="360px">
-      <v-card-item title="Weekly | Monthly Services">
+      <v-card-item title="Weekly, Monthly & Yearly Services">
         <WMServices/>
       </v-card-item>
     </v-card>

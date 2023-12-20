@@ -39,7 +39,7 @@ export default {
       this.chartData = {
         labels: data.monthlyCollection.map(item => item.Month),
         datasets: [{
-          label: 'Collection',
+          label: 'Weekly Monthly & Yearly Total Collection',
           data: data.monthlyCollection.map(item => item.TotalAmount),
           backgroundColor: 'rgba(75, 192, 192, 0.8)',
           borderColor: 'rgba(75, 192, 192, 1)',
