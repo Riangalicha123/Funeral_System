@@ -37,7 +37,7 @@ export default {
       this.chartData = {
         labels: data.servicesData.map(item => item.Service),
         datasets: [{
-          label: 'Total Number of Services',
+          label: 'Weekly Monthly & Yearly Total Number of Services',
           data: data.servicesData.map(item => item.TotalAmount),
           backgroundColor: 'rgba(75, 192, 192, 0.8)',
           borderColor: 'rgba(75, 192, 192, 1)',
